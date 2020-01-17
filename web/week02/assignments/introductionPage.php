@@ -3,6 +3,7 @@
     </head>
 <body>
     <div> 
+    <a href="homePage.html">Go to Home Page</a>;
         <?php
         $name= "Elijah Elliott";
         $aboutME ="I am studying in Software Engineer. 
