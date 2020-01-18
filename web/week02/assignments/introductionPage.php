@@ -35,17 +35,16 @@
   <h1><?php echo $name;?></h1>
   <p><?php echo $family;?></p> 
   <p> 
-     <a href="homePage.html">Go to Home Page</a>;
+     <a href="homePage.html">Go to Home Page</a>
   </p>
 </div>
   
-<div class="container">
+<div class="container" style="font-size: 24px">
   <div class="row">
     <div class="col-sm-4">
       <h3>About Me</h3>
-      <p><?php echo $aboutME;?></p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+      <p style="font-size:"><?php echo $aboutME;?></p>
+     </div>
     <div class="col-sm-4">
         <div class="thumbnail">
             <a href="introductionPage.php" target="_blank">
