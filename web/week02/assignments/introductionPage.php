@@ -31,15 +31,15 @@
         I try to workout everyday. I love to go on a hike or bridge jump 
         at Fun Farm Bridge."
 ?>    
-<div class="jumbotron text-center">
-  <h1><?php echo $name;?></h1>
-  <p><?php echo $family;?></p> 
+<div class="jumbotron text-center" style="background-color: rgb(255, 248, 141)">
+  <h1 style="background-color: rgb(255, 248, 141)"><?php echo $name;?></h1>
+  <p style="background-color: rgb(255, 248, 141)"><?php echo $family;?></p> 
   <p> 
      <a href="homePage.html">Go to Home Page</a>
   </p>
 </div>
   
-<div class="container" style="font-size: 24px">
+<div class="container" style="font-size: 24px" >
   <div class="row">
     <div class="col-sm-4">
       <h3>About Me</h3>
