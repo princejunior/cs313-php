@@ -1,16 +1,41 @@
 <!Doctype html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="homePageStyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header> <h1>Home Page</h1></header>
-    <div> 
-        <a href="introductionPage.php">About Me</a>
-        <video width="320" height="240" autoplay>
-            <source src="/week02/assignments/photo/IMG_1953.mov" type="video">
-        </video>
-        <link>
-    </div>
-
+    <div class="jumbotron text-center">
+            <h1>Elijah Elliott's Home Page</h1>
+          </div>
+          <div class="container">
+                <div class="row">
+                        <div class="col-md-6">
+                            <h3>About Me</h3>
+                            <div class="thumbnail">
+                                <a href="introductionPage.php" target="_blank">
+                                <img class="img-thumbnail" src="photo/IMG_2368.jpeg" 
+                                alt="Family" style="max-width:100%">
+                               </a>
+                                </div>
+                              </div>
+                  <div class="col-md-6">
+                    <h3>Assignments</h3>
+                    <div class="thumbnail">
+                      <a href="photo/codeImg.png" target="_blank">
+                        <img class="img-thumbnail" src="photo/codeImg.png" 
+                        alt="code" style="width:100%">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 </body>
 </html>
