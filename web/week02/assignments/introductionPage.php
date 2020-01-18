@@ -15,12 +15,28 @@
         $name= "Elijah Elliott's Page";
         $family = " I am one of four childeren being the second youngest.";
         $aboutME ="I am studying in Software Engineer. 
-        Home is in Illinois and I do not miss the place. ";
-        $image = "<img src='/photo/IMG_5690.jpeg'";
+        Home is in Illinois and I do not miss the place. I have about 
+        three semesters and an internship before I graduate. I enjoy the 
+        out doors only when its warm outside. This cold winter has been 
+        keeping me indoors unless snowboarding is involved. In the picture 
+        on the left is my brother and on the right is my girlfriend who 
+        I've been dating for 15 months. ";
+        $hobbies = "I enjoy spending my time playing video games, 
+        reading, watching Netflix, working out, and adventures. Two of my 
+        favorite video games are 2K Basketball and Call of Duty. For me to 
+        be good at these games require me to play consecutivley for hours 
+        if I haven't played in awhile. I am currently reading Book for Dummy 
+        on Electronics and the life of Elon Musk. Elon Musk's life is very 
+        extrodinary! Currently I watching 'Night Shift' and it is okay. 
+        I try to workout everyday. I love to go on a hike or bridge jump 
+        at Fun Farm Bridge."
 ?>    
 <div class="jumbotron text-center">
   <h1><?php echo $name;?></h1>
   <p><?php echo $family;?></p> 
+  <p> 
+     <a href="homePage.html">Go to Home Page</a>;
+  </p>
 </div>
   
 <div class="container">
@@ -28,77 +44,24 @@
     <div class="col-sm-4">
       <h3>About Me</h3>
       <p><?php echo $aboutME;?></p>
-      <button type="button" class="btn" href="homePage.html">Go Back</button>
-     <a href="homePage.html">Go to Home Page</a>;
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
     <div class="col-sm-4">
         <div class="thumbnail">
             <a href="introductionPage.php" target="_blank">
-                <img class="img-thumbnail" src="<?php echo $image;?>" 
+                <img class="img-thumbnail" src="photo/IMG_5690.jpeg" 
                 alt="Family" style="max-width:100%">
             </a>
         </div>
     </div>
     <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <h3>Hobbies</h3>        
+      <p><?php echo $hobbies;?></p>
+      
     </div>
   </div>
-</div>
-<script>
-    function changeInfo(value){
-        if(value == "me"){
-            document.getElementByID("aboutME").style.visibility = visible;
-            document.getElementByID("education").style.visibility = hidden;
-            document.getElementByID("goals").style.visibility = hidden;
-        }
-        else if(value == "education"){
-            document.getElementByID("aboutME").style.visibility = hidden;
-            document.getElementByID("education").style.visibility = visible;
-            document.getElementByID("goals").style.visibility = hidden;
-        }
-        else if(value == "goals"){
-            document.getElementByID("aboutME").style.visibility = hidden;
-            document.getElementByID("education").style.visibility = hidden;
-            document.getElementByID("goals").style.visibility = visible;
-        }
-    } 
-</script>
 
-<div class="container">
-<div class="btn-group">
-  <button type="button" class="btn btn-primary" 
-  onclick="changeInfo(this)" value="me">About Me </button>
-  <button type="button" class="btn btn-primary" 
-  onclick="changeInfo(this)" value="education">Education</button>
-  <button type="button" class="btn btn-primary" 
-  onclick="changeInfo(this)" value="goals">Goals</button>
-</div>
-  <div class="row">
-    <div class="col-sm-4" id="aboutMe">
-      <h3>About Me</h3>
-      <p><?php echo $aboutME;?></p>
-      <button type="button" class="btn" href="homePage.html">Go Back</button>
-     <a href="homePage.html">Go to Home Page</a>;
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4" id="education">
-        <div class="thumbnail">
-            <a href="introductionPage.php" target="_blank">
-                <img class="img-thumbnail" src="<?php echo $image;?>" 
-                alt="Family" style="max-width:100%">
-            </a>
-        </div>
-    </div>
-    <div class="col-sm-4" id="goals">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
-</div>
+    
 
         
    
