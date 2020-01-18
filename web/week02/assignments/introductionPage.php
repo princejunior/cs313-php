@@ -32,8 +32,8 @@
         at Fun Farm Bridge."
 ?>    
 <div class="jumbotron text-center" style="background-color: rgb(255, 248, 141)">
-  <h1 style="background-color: rgb(255, 248, 141)"><?php echo $name;?></h1>
-  <p style="background-color: rgb(255, 248, 141)"><?php echo $family;?></p> 
+  <h1><?php echo $name;?></h1>
+  <p><?php echo $family;?></p> 
   <p> 
      <a href="homePage.html">Go to Home Page</a>
   </p>
