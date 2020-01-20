@@ -8,13 +8,15 @@
         $email = htmlspecialchars($_POST["email"]);
         $major = htmlspecialchars($_POST["major"]);
         $comments = htmlspecialchars($_POST["comments"]);
+        $continents = htmlspecialchars($_POST["continents"]);
     ?>
     <body>
         <div> 
             <h1><?php echo $name;?></h1>
-            <p> <?php echo $email;?></p>
-            <p> <?php echo $major;?></p>
-            <p> <?php echo $comments;?></p>
+            <p><?php echo $email;?></p>
+            <p><?php echo $major;?></p>
+            <p><?php echo $comments;?></p>
+            <p><?php echo $continents;?></p>
         </div>
     </body>
 </html>
