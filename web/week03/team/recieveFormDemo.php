@@ -17,7 +17,7 @@
             <p><?php echo $major;?></p>
             <p><?php echo $comments;?></p>
             <p><?php foreach($_POST["continents"] as $selected){
-             echo $selected + "<br>";}?></p>
+             echo $selected . "<br>";}?></p>
         </div>
     </body>
 </html>
