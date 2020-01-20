@@ -8,7 +8,7 @@
         $email = htmlspecialchars($_POST["email"]);
         $major = htmlspecialchars($_POST["major"]);
         $comments = htmlspecialchars($_POST["comments"]);
-        $continents = htmlspecialchars($_POST["continents"]);
+        $continents = htmlspecialchars($_POST["continents[]"]);
     ?>
     <body>
         <div> 
@@ -16,7 +16,8 @@
             <p><?php echo $email;?></p>
             <p><?php echo $major;?></p>
             <p><?php echo $comments;?></p>
-            <p><?php echo $continents;?></p>
+            <p><?php foreach($_POST["continents"] as $selected){
+             echo $selected;}?></p>
         </div>
     </body>
 </html>
