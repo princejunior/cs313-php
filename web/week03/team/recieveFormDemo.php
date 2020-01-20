@@ -11,7 +11,7 @@
     ?>
     <body>
         <div> 
-            <h1><?php echo $name;?></h1><br>
+            <h1><?php echo $name;?></h1>
             <p> <?php echo $email;?></p>
             <p> <?php echo $major;?></p>
             <p> <?php echo $comments;?></p>
