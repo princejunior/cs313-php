@@ -12,8 +12,8 @@
     ?>
     <body>
         <div> 
-            <h1><?php echo $name;?></h1>
-            <p><?php echo $email;?></p>
+            <h1>Your username is <?php echo $name;?></h1>
+            <a href=<?="mailto:$email"?>><?=$email?></a>
             <p><?php echo $major;?></p>
             <p><?php echo $comments;?></p>
             <p><?php foreach($_POST["continents"] as $selected){

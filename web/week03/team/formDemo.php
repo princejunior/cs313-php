@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Form Demo</title>
-    </head>
-    <body>
-        <form method="POST" action="recieveFormDemo.php">
+<?php $major[]= ["Computer Science", "Web Design and Development", 
+    "Computer Information Technology", "Computer Engineering"];
+    ?>
+    <form method="POST" action="recieveFormDemo.php">
             Name:<input type="text" name="name"><br>
             Email:<input type="text" name="email"><br>
-            Major:<input type="radio" name="major" value="Computer Science">Computer Science
-            <input type="radio" name="major" value="Web Design and Development">Web Design and Development
-            <input type="radio" name="major" value="Computer Information Technology">Computer Information Technology
-            <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br>
+            Major:
+            <?php 
+                foreach($major as $selected) {
+                    echo "<input type='radio' name='major' value='$selected'>$selected";
+                }
+            ?>
             Comments:<input type="text" name="comments"><br>
             Which continents have you been too? <br>
             <input type="checkbox" name="continents[]" value="North America">North America
@@ -22,5 +21,3 @@
             <input type="checkbox" name="continents[]" value="Antarctica">Antarctica
             <input type="submit">
         </form>
-    </body>
-</html>
