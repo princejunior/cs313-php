@@ -14,9 +14,10 @@
         <div> 
             <h1>Your username is <?php echo $name;?></h1>
             <a href=<?="mailto:$email"?>><?=$email?></a>
-            <p><?php echo $major;?></p>
-            <p><?php echo $comments;?></p>
-            <p><?php foreach($_POST["continents"] as $selected){
+            <p>Your Major is: <?php echo $major;?></p>
+            <p>Comments: <?php echo $comments;?></p>
+            <p>You have visited the following continents: 
+                <?php foreach($_POST["continents"] as $selected){
              echo $selected . "<br>";}?></p>
         </div>
     </body>

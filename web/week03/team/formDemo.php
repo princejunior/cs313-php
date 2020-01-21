@@ -1,5 +1,5 @@
-<?php $major[]= ["Computer Science", "Web Design and Development", 
-    "Computer Information Technology", "Computer Engineering"];
+<?php $major= array("Computer Science", "Web Design and Development", 
+    "Computer Information Technology", "Computer Engineering");
     ?>
     <form method="POST" action="recieveFormDemo.php">
             Name:<input type="text" name="name"><br>
@@ -7,7 +7,7 @@
             Major:
             <?php 
                 foreach($major as $selected) {
-                    echo "<input type='radio' name='major' value='$selected'>$selected";
+                    echo "<input type='radio' name='major' value='" . $selected. "'>" .$selected;
                 }
             ?>
             Comments:<input type="text" name="comments"><br>
