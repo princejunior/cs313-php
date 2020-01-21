@@ -7,9 +7,9 @@
             Major:
             <?php 
                 foreach($major as $selected) {
-                    echo "<input type='radio' name='major' value='" . $selected. "'>" .$selected;
+                    echo "<input type='radio' name='major' value='$selected'>" .$selected;
                 }
-            ?>
+            ?><br>
             Comments:<input type="text" name="comments"><br>
             Which continents have you been too? <br>
             <input type="checkbox" name="continents[]" value="North America">North America
