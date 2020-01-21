@@ -10,7 +10,7 @@
         $comments = htmlspecialchars($_POST["comments"]);
         $continents = htmlspecialchars($_POST["continents[]"]);
         $continents_dict = array("na"=>"North America", "sa"=>"South America", 
-        "eu"=>"Europe", "as"=>"Asia", "au"=>"Australia", "af"=>"Africa", "an"=>"Antarctica" )
+        "eu"=>"Europe", "as"=>"Asia", "au"=>"Australia", "af"=>"Africa", "an"=>"Antarctica")
     ?>
     <body>
         <div> 
@@ -19,9 +19,12 @@
             <p>Your Major is: <?php echo $major;?></p>
             <p>Comments: <?php echo $comments;?></p>
             <p>You have visited the following continents: 
-                <?php foreach($continents_dict[$selected] as $x => $selected){
-             echo  $selected. "<br>";}?></p>
-             
+                <?php foreach($continents as $selected){
+             echo  "$selected <br>";}?></p>
+             <?php foreach($continents_dict[$continents] as $selected){
+                 echo $selected . "<br>";
+             }
+             ?>
         </div>
     </body>
 </html>
