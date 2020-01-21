@@ -21,6 +21,9 @@
             <p>You have visited the following continents: 
                 <?php foreach($continents as $selected){
              echo $selected . "<br>";}?></p>
+
+<?php foreach($continents_dict as $x => $selected){
+             echo $x . " " . $selected . "<br>";}?></p>
              
         </div>
     </body>
