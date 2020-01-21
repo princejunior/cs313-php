@@ -19,7 +19,7 @@
             <p>Your Major is: <?php echo $major;?></p>
             <p>Comments: <?php echo $comments;?></p>
             <p>You have visited the following continents: 
-                <?php foreach($_POST["continents"] as $selected){
+                <?php foreach($continents as $selected){
              echo $continents_dict[$selected] . "<br>";}?></p>
         </div>
     </body>
