@@ -1,23 +1,28 @@
-<?php $major= array("Computer Science", "Web Design and Development", 
-    "Computer Information Technology", "Computer Engineering");
-    ?>
-    <form method="POST" action="recieveFormDemo.php">
-            Name:<input type="text" name="name"><br>
-            Email:<input type="text" name="email"><br>
-            Major:
-            <?php 
-                foreach($major as $selected) {
-                    echo "<input type='radio' name='major' value='$selected'>" .$selected;
-                }
-            ?><br>
-            Comments:<input type="text" name="comments"><br>
-            Which continents have you been too? <br>
-            <input type="checkbox" name="continents[]" value="North America">North America
-            <input type="checkbox" name="continents[]" value="South America">South America
-            <input type="checkbox" name="continents[]" value="Europe">Europe
-            <input type="checkbox" name="continents[]" value="Asia">Asia
-            <input type="checkbox" name="continents[]" value="Australia">Australia
-            <input type="checkbox" name="continents[]" value="Africa">Africa
-            <input type="checkbox" name="continents[]" value="Antarctica">Antarctica
-            <input type="submit">
-        </form>
+<?php $major= array("Computer Science", "Web Design and Development",  "Computer Information Technology", "Computer Engineering");
+    
+?>
+<form method="POST" action="recieveFormDemo.php">
+  Name:
+  <input type="text" name="name"><br>
+  Email:
+  <input type="text" name="email"><br>
+  Major:
+  <?php 
+    foreach($major as $selected) {
+        echo "<input type='radio' name='major' value='$selected'>" . $selected;
+    }
+  ?><br>
+  Comments:
+  <input type="text" name="comments"><br>
+
+  <p>Which continents have you been to?</p><br>
+  <input type="checkbox" name="continents[]" value="na">North America<br>
+  <input type="checkbox" name="continents[]" value="sa">South America<br>
+  <input type="checkbox" name="continents[]" value="eu">Europe<br>
+  <input type="checkbox" name="continents[]" value="as">Asia<br>
+  <input type="checkbox" name="continents[]" value="au">Australia<br>
+  <input type="checkbox" name="continents[]" value="af">Africa<br>
+  <input type="checkbox" name="continents[]" value="an">Antarctica<br>
+
+  <input type="submit">
+</form>
