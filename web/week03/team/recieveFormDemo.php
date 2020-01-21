@@ -19,8 +19,9 @@
             <p>Your Major is: <?php echo $major;?></p>
             <p>Comments: <?php echo $comments;?></p>
             <p>You have visited the following continents: 
-                <?php foreach($continents as $x => $selected){
-             echo $continents_dict[$selected] . "<br>";}?></p>
+                <?php foreach($continents_dict[$selected] as $x => $selected){
+             echo  $selected. "<br>";}?></p>
+             
         </div>
     </body>
 </html>
