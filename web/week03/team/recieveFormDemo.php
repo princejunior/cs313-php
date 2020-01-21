@@ -21,10 +21,11 @@
             <p>You have visited the following continents: 
                 <?php foreach($continents as $selected){
              echo  "$selected <br>";}?></p>
-             <?php foreach($continents as $selected){
+             
+             <!-- <?php foreach($continents as $selected){
                  echo $continents_dict[$selected] . "<br>";
              }
-             ?>
+             ?> -->
         </div>
     </body>
 </html>
