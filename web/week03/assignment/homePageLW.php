@@ -17,7 +17,8 @@
 <?php
     $trainers = array(
         //Name:$trainers[0][0], Specialist:$trainers[0][1], Cost for service:$trainers[0][2], photo: $trainers[0][3]
-        array("Spencer Serranilla","Cardio",20, "/photos_LW/lwrussiantwist.jpg"),
+        array("Spencer Serranilla","Cardio",20,
+         "https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
         //Name:$trainers[1][0], Specialist:$trainers[1][1], Cost for service:$trainers[1][2], photo: $trainers[0][3]
         array("Elijah Elliott","Power Lifter",30, ""),
         //Name:$trainers[2][0], Specialist:$trainers[2][1], Cost for service:$trainers[2][2], photo: $trainers[0][3]
