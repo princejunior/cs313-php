@@ -67,7 +67,7 @@
                     <li>
                         <span class="item">
                            <span class="item-left">
-                                <img style="width: 55px ; height: auto" src="<?php $trainers[0][3]?>" alt="" />
+                                <img style="width: 55px ; height: auto" src="<?php echo $trainers[0][3]?>" alt="" />
                                 <span class="item-info">
                                     <span><?php echo $trainers[0][1]?> Program</span>
                                     <span>price: $<?php echo $trainers[0][2]?></span>
