@@ -151,7 +151,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
-                        src=<?php echo $trainers[0][3]?> data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                        src="<?php echo $trainers[0][3]?>" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                         <div class="card-body">
                                 <h3 class="card-title"><?php echo $trainers[0][0]?></h3>
                                 <h5 class="card-title"><?php echo $trainers[0][1]?></h5>
