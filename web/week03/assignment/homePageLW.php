@@ -14,7 +14,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<?php
+    $trainers = array(
+        //Name:$trainers[0][0], Specialist:$trainers[0][1], Cost for service:$trainers[0][2], photo: $trainers[0][3]
+        array("Spencer Serranilla","Cardio",20, "/photos_LW/lwrussiantwist.jpg"),
+        //Name:$trainers[1][0], Specialist:$trainers[1][1], Cost for service:$trainers[1][2], photo: $trainers[0][3]
+        array("Elijah Elliott","Power Lifter",30, ""),
+        //Name:$trainers[2][0], Specialist:$trainers[2][1], Cost for service:$trainers[2][2], photo: $trainers[0][3]
+        array("Meghan Hutson"," Yoga",25, ""),
+        //Name:$trainers[3][0], Specialist:$trainers[3][1], Cost for service:$trainers[3][2], photo: $trainers[0][3]
+        array("Pete The Pilot","Hyper Trophy",45, ""),
+        //Name:$trainers[4][0], Specialist:$trainers[4][1], Cost for service:$trainers[4][2], photo: $trainers[0][3]
+        array("Elon Musk","Power Lifter",55,""),
+        //Name:$trainers[5][0], Specialist:$trainers[5][1], Cost for service:$trainers[5][2], photo: $trainers[0][3]
+        array("Steve Job","Yoga",55, ""),
+        //Name:$trainers[6][0], Specialist:$trainers[6][1], Cost for service:$trainers[6][2], photo: $trainers[0][3]
+        array("Nikola Tesla","Cardio",25, ""),
+        //Name:$trainers[7][0], Specialist:$trainers[7][1], Cost for service:$trainers[7][2], photo: $trainers[0][3]
+        array("Bill Gates","Crossfit",65, ""),
+        //Name:$trainers[8][0], Specialist:$trainers[8][1], Cost for service:$trainers[8][2], photo: $trainers[0][3]
+        array("Jeff Bezos","Pilates",55, "")
+    )?>
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid">
     <div class="navbar-header">
@@ -46,10 +66,10 @@
                     <li>
                         <span class="item">
                            <span class="item-left">
-                                <img style="width: 55px ; height: auto" src="/photos_LW/lwrussiantwist copy 2.jpg" alt="" />
+                                <img style="width: 55px ; height: auto" src="/photos_LW/lwrussiantwist.jpg" alt="" />
                                 <span class="item-info">
-                                    <span>Cardio Program</span>
-                                    <span>price: $20</span>
+                                    <span><?php echo $trainers[0][1]?> Program</span>
+                                    <span>price: $<?php echo $trainers[0][2]?></span>
                                 </span>
                             </span>
                             <span class="item-right">
@@ -107,30 +127,8 @@
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
-  </div>
-</nav>
-<?php
-    $trainers = array(
-        //Name:$trainers[0][0], Specialist:$trainers[0][1], Cost for service:$trainers[0][2], photo: $trainers[0][3]
-        array("Spencer Serranilla","Cardio",20, "/photos_LW/lwrussiantwist copy 2.jpg"),
-        //Name:$trainers[1][0], Specialist:$trainers[1][1], Cost for service:$trainers[1][2], photo: $trainers[0][3]
-        array("Elijah Elliott","Power Lifter",30, ""),
-        //Name:$trainers[2][0], Specialist:$trainers[2][1], Cost for service:$trainers[2][2], photo: $trainers[0][3]
-        array("Meghan Hutson"," Yoga",25, ""),
-        //Name:$trainers[3][0], Specialist:$trainers[3][1], Cost for service:$trainers[3][2], photo: $trainers[0][3]
-        array("Pete The Pilot","Hyper Trophy",45, ""),
-        //Name:$trainers[4][0], Specialist:$trainers[4][1], Cost for service:$trainers[4][2], photo: $trainers[0][3]
-        array("Elon Musk","Power Lifter",55,""),
-        //Name:$trainers[5][0], Specialist:$trainers[5][1], Cost for service:$trainers[5][2], photo: $trainers[0][3]
-        array("Steve Job","Yoga",55, ""),
-        //Name:$trainers[6][0], Specialist:$trainers[6][1], Cost for service:$trainers[6][2], photo: $trainers[0][3]
-        array("Nikola Tesla","Cardio",25, ""),
-        //Name:$trainers[7][0], Specialist:$trainers[7][1], Cost for service:$trainers[7][2], photo: $trainers[0][3]
-        array("Bill Gates","Crossfit",65, ""),
-        //Name:$trainers[8][0], Specialist:$trainers[8][1], Cost for service:$trainers[8][2], photo: $trainers[0][3]
-        array("Jeff Bezos","Pilates",55, "")
-    )
-?>
+  </div></nav>
+
 <main role="main">
     <section class="jumbotron text-center">
         <div class="container">
