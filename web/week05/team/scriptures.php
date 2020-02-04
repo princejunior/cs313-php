@@ -44,7 +44,7 @@
         $chapter = $sRow["chapter"];
         $verse = $sRow["verse"];
         $content = $sRow["content"];
-        echo "<p>$book $chapter:$verse - \"$content\"</p>";
+        echo "<a href='scripture_details.php'>$book $chapter:$verse</a>";
         }
     }
     else {
