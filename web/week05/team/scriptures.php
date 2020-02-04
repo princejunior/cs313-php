@@ -26,20 +26,18 @@
   //   echo "<p>$book $chapter:$verse - \"$content\"</p>";
   // }
 ?>
-<?php 
-  require "dbConnect.php";
-  $db = get_db();?>
-
   <form action="scriptures.php" method="post">
     <input type="text" name="scripture_book"/>
     <input type="submit" name="Submit" value="Submit"/>
   </form>
 
  <?php
+ require "dbConnect.php";
+ $db = get_db();
     if(isset($_POST["Submit"])) {
-      echo "Submit is set";
       $book = $_POST["scripture_book"];
-      $scripture = $db->prepare("SELECT * FROM scriptures WHERE book = $book");
+      echo "Book is $book";
+      $scripture = $db->prepare("SELECT book, chapter, verse FROM scriptures WHERE book = '$book'");
       $scripture->execute();
       echo "<h1>Scripture Resources</h1>";
       while($sRow = $scripture->fetch(PDO::FETCH_ASSOC)) {
