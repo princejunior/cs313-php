@@ -8,7 +8,7 @@ CREATE TABLE scriptures (
   content   VARCHAR(255) NOT NULL
 );
 INSERT INTO scriptures (book, chapter, verse, content) 
-VALUES ('New Testament', '1', '5', 'And the light shineth in darkness; and the 
+VALUES ('John', '1', '5', 'And the light shineth in darkness; and the 
 darkness comprehended it not.');
 INSERT INTO scriptures (book, chapter, verse, content) 
 VALUES ('Doctrine and Covenants', '88', '49', 'The light shineth in the 
@@ -19,7 +19,7 @@ INSERT INTO scriptures (book, chapter, verse, content)
 VALUES ('Doctrine and Covenants', '93', '28', 'He that keepth his commandments 
 receiveth truth and light, until he is glorified in truth and knowth all things.');
 INSERT INTO scriptures (book, chapter, verse, content) 
-VALUES ('Booh of Mormon', '16', '9', 'He is the light and the life of the world; 
+VALUES ('Mosiah', '16', '9', 'He is the light and the life of the world; 
 yea, a light that is endless, that can never be darkened; yea, and also a life which 
 is endless, that there can be no more death.');
 

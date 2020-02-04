@@ -1,34 +1,17 @@
 <?php
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
+  require "dbConnect.php";
+  $db = get_db();
 
-  $dbOpts = parse_url($dbUrl);
+  $scripture = $db->prepare("SELECT * FROM scriptures");
+  $scripture->execute();
+  echo "<h1>Scripture Resources</h1>";
+  while($sRow = $scripture->fetch(PDO::FETCH_ASSOC)) {
+    $book = $sRow["book"];
+    $chapter = $sRow["chapter"];
+    $verse = $sRow["verse"];
+    $content = $sRow["content"];
+    echo "<p>$book $chapter:$verse - \"$content\"</p>";
+  }
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbBook = $dbOpts["book"];
-  $dbChapter = $dbOpts["chapter"];
-  $dbVerse = $dbOpts["verse"];
-  $dbContent = $dbOpts["content"];
-
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbBook, $dbChapter, $dbVerse, $dbContent);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row)
-{
-  echo 'Book: ' . $row['book'];
-  echo 'Chapter: ' . $row['chapter'];
-  echo 'Verse: ' . $row['verse'];
-  echo 'Content: ' . $row['content'];
-  echo '<br/>';
-}
+  
 ?>
