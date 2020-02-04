@@ -8,7 +8,7 @@
     while($fRow = $family_members->fetch(PDO::FETCH_ASSOC)){
         $first_name = $fRow['first_name'];
         $last_name = $fRow['last_name'];
-        $relationship_id = $fRow['relationship_id'];
+        $relationship_id = $fRow['relationships_id'];
 
         echo "<p>$first_name $last_name is my $relationship_id</p>";
     }
