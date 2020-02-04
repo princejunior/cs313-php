@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,12 +29,15 @@
 <?php 
   require "dbConnect.php";
   $db = get_db();?>
-  <form action="" method="post">
+
+  <form action="scriptures.php" method="post">
     <input type="text" name="scripture_book"/>
     <input type="submit" name="Submit" value="Submit"/>
   </form>
+
  <?php
     if(isset($_POST["Submit"])) {
+      echo "Submit is set";
       $book = $_POST["scripture_book"];
       $scripture = $db->prepare("SELECT * FROM scriptures WHERE book = $book");
       $scripture->execute();
@@ -47,7 +50,7 @@
         }
     }
     else {
-      echo "Nothing ;(";
+      echo "Not submitted yet ;(";
     }
  ?> 
   </body>
