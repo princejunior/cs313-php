@@ -37,7 +37,7 @@
     if(isset($_POST["Submit"])) {
       $book = $_POST["scripture_book"];
       echo "Book is $book";
-      $scripture = $db->prepare("SELECT book, chapter, verse FROM scriptures WHERE book = '$book'");
+      $scripture = $db->prepare("SELECT * FROM scriptures WHERE book = '$book'");
       $scripture->execute();
       echo "<h1>Scripture Resources</h1>";
       while($sRow = $scripture->fetch(PDO::FETCH_ASSOC)) {
