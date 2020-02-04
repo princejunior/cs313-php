@@ -16,47 +16,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<?php
-    class BookItems {
-      // Properties
-        private $items = array(array());
-        public $itemsLength;
-        private $numberOfTimes;
-      
-      // Methods
-    //   function setItems($trainers) {
-    //     $this->numberOfTimes += 1;
-    //     $numberOfTimes = $this->numberOfTimes;   
-             
-    //     for ($row = 0; $row < 4; $row++) {
-    //         for ($col = 0; $col < 3; $col++) {
-    //          $this->items[$row][$col] += $trainers[$row][$col];
-    //         }
-    //       }
-    //      echo "S" .$this->numberOfTimes . "E";
-    // }
-    //   function setItems($trainersName, $trainersSpecialty, $trainersPrice, $trainersPhoto) {
-    //     $this->numberOfTimes += 1;
-    //     $numberOfTimes = $this->numberOfTimes;   
-             
-    //     for ($i = 0; $i < 4; $i++){
-    //         $this->items += array(
-    //             array($trainersName,$trainersSpecialty,$trainersPrice, $trainersPhoto)
-    //         );
-    //     }
-        
-    //     // echo "S" .$this->numberOfTimes . "E";
-    //   }
-      function getItemsLength(){
-        return $this->itemsLength = sizeof($this->items);
-      }
-      function getItems() {
-        return $this->items;
-      } 
-    }
-    ?>
-    <?php  $bookItems = new BookItems();?>
 <?php
         $allItems = $bookItems->getItems();
         // $itemsLength = sizeof($allItems);        
