@@ -130,17 +130,17 @@
                     $profile_img_url = $row['profile_img_url'];
                     $speciality = $row['speciality'];
                     // $id = $row['id'];;
-               echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
+              //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
             }
          ?>
   <!-- END: header -->
   
   <!-- START: section -->
-  <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;file:///Users/elijahelliott/Downloads/trainer/img/hero_bg_1_b.jpg&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5">
+  <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php print_r($_SESSION['trainer']);?></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $name;?></h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>
