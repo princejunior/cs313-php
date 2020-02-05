@@ -323,7 +323,7 @@ SELECT id, username, email, password FROM customer;
 \echo '*********************List all trainer names*********************'
 SELECT name FROM trainer;
 \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
-SELECT name, id, customer_id, profile_img_url FROM trainer;
+SELECT * FROM trainer;
 \echo '************************List  all clients************************'
 SELECT * FROM client;
 \echo '************************List  all clients orders************************'
