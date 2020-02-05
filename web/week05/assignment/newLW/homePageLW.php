@@ -10,13 +10,13 @@
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
-        $book = $row['trainer'];
-        $chapter = $row['chapter'];
-        $verse = $row['verse'];
+        $name = $row['name'];
+        $profile_img_url = $row['profile_img_url'];
+        // $verse = $row['verse'];
         $id = $row['id'];
         // $content = $row['content'];
         // echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
-        echo "<p><strong><a href='scriptureDetails.php?id=$id'>$book $chapter:$verse</a></strong><p>";
+        echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
                     }
 ?>
 
@@ -74,25 +74,6 @@
 <?php 
     // echo '<script> function viewProfile(x){'. $_SESSION["value"] . '=x ;}</script>';
 ?>
-<?php
- require "dbConnect.php";
- $db = get_db();
- $values = array();
-    // if(isset($_POST["Clicked"])) {
-    //   $book = $_POST["scripture_book"];
-    //   echo "Book is $book";
-      $trainer = $db->prepare("SELECT * FROM trainer WHERE trainer = '$book'");
-      $scripture->execute();
-      while($sRow = $scripture->fetch(PDO::FETCH_ASSOC)) {
-        $chapter = $sRow["chapter"];
-        $verse = $sRow["verse"];
-        echo "<a href='scripture_details.php?book=$book&chapter=$chapter&verse=$verse'>$book $chapter:$verse</a>";
-        }
-    }
-    else {
-      echo "Not submitted yet ;(";
-    }
- ?> 
 <?php
     // list of trainers 
     $_SESSION['trainerList'] = array(

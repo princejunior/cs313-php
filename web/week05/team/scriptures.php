@@ -34,6 +34,7 @@
  <?php
  require "dbConnect.php";
  $db = get_db();
+ $values = array();
     if(isset($_POST["Submit"])) {
       $book = $_POST["scripture_book"];
       echo "Book is $book";
@@ -43,8 +44,7 @@
       while($sRow = $scripture->fetch(PDO::FETCH_ASSOC)) {
         $chapter = $sRow["chapter"];
         $verse = $sRow["verse"];
-        $content = $sRow["content"];
-        echo "<a href='scripture_details.php'>$book $chapter:$verse</a>";
+        echo "<a href='scripture_details.php?book=$book&chapter=$chapter&verse=$verse'>$book $chapter:$verse</a>";
         }
     }
     else {
