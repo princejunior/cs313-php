@@ -1,9 +1,9 @@
 <!-- Starts session -->
 <?php 
-    // session_start();
-    // require "../dbConnect.php";
-    // $db = get_db();
-    // $trainerData = NULL;
+    session_start();
+    require "../dbConnect.php";
+    $db = get_db();
+    $trainerData = NULL;
 ?>
     
 
