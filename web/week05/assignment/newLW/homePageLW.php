@@ -58,6 +58,9 @@
     </script>
 </head>
 <body>
+<div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
 <?php
 $statement = $db->prepare("SELECT * FROM trainer");
     $statement->execute();
@@ -69,10 +72,30 @@ $statement = $db->prepare("SELECT * FROM trainer");
         $name = $row['name'];
         $profile_img_url = $row['profile_img_url'];
         // $verse = $row['verse'];
-        $id = $row['id'];
+        $id = $row['id'];?>
+        <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
+                        src=" <?php echo $profile_img_url;?> " data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                        <div class="card-body">
+                                <h3 class="card-title"><?php echo $name;?></h3>
+                                <h5 class="card-title"><?php echo $id;?></h5>
+                            <p class="card-text">
+                                    Description</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
+                                    <button class="btn btn-primary" value="<?php implode($trainers[$i]);?>" onclick="
+                                    addToCart('<?php echo $trainers[$i][0];?>', '<?php echo $trainers[$i][1];?>', '<?php echo $trainers[$i][2];?>', '<?php echo $trainers[$i][3];?>')">Add to Book $<?php echo $trainers[$i][2];?>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <?php
         // $content = $row['content'];
         // echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
-        echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
+        // echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
                     }
 ?>
 <?php
