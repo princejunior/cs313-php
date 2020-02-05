@@ -1,15 +1,7 @@
 <?php 
     session_start();
-    $trainers = $_SESSION['trainerList'];
-    $value = $_SESSION['value'];
-    // foreach($trainers as $x => $x_value) {
-    //   foreach($x_value as $y =>$y_value){
-    //     echo "Key=" . $x . ", x_value=" . $x_value . "y_value = " . $y_value;
-    //   echo "<br>";
-    //   }
-    echo $value;
-      echo $trainers['trainer1']['name'];
-  // }
+    require "../dbConnect.php";
+    $db = get_db();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +27,6 @@
     <![endif]-->
   </head>
 <body>
-
   <!-- START: header -->
   <nav class="navbar navbar-inverse" >
     <div class="container-fluid">
@@ -125,7 +116,23 @@
         </div>
     </div>
 </nav>
-
+<?php
+            $id = $_GET['id'];
+            $statement = $db->prepare("SELECT * FROM scripture WHERE id = $id");
+            $statement->execute();
+            // Go through each result
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+               // The variable "row" now holds the complete record for that
+               // row, and we can access the different values based on their
+               // name
+                $name = $row['name'];
+                    $profile_img_url = $row['profile_img_url'];
+                    $speciality = $row['speciality'];
+                    // $id = $row['id'];;
+               echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
+            }
+         ?>
   <!-- END: header -->
   
   <!-- START: section -->
