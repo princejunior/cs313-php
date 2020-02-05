@@ -244,7 +244,6 @@
                     }
                 ?>
                 <?php 
-                echo displayTrainers();
                     echo displayTrainerProfiles();
                 ?>
             </div>
