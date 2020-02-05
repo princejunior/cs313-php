@@ -118,7 +118,7 @@
 </nav>
 <?php
             $id = $_GET['id'];
-            $statement = $db->prepare("SELECT * FROM scripture WHERE id = $id");
+            $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
             $statement->execute();
             // Go through each result
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
