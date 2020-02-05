@@ -21,6 +21,7 @@ CREATE TABLE trainer
 , customer_id       INT          NOT NULL REFERENCES customer(id)
 , name              VARCHAR(100) NOT NULL
 , profile_img_url   VARCHAR(100) NOT NULL
+, speciality        VARCHAR(50)  NOT NULL 
 );
 
 -- client -- 
@@ -155,66 +156,77 @@ INSERT INTO customer (id
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (1
                         ,1 
                         ,'Spencer Serranilla'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                        ,'Cardio'
                         );
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (2
                         ,2 
                         ,'Elijah Elliott'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                        , 'Power Lifter'
                         );
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url,
+                        speciality) 
                  VALUES (3
                         ,3 
                         ,'Meghan Hutson'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                        );
+                        , 'Yoga');
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (4
                         ,7 
                         ,'Elon Musk'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                        );
+                        , 'Power Lifter');
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (5
                         ,8 
                         ,'Bill Gates'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                        );
+                        , 'Crossfit');
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (6
                         ,9 
-                        ,'Spencer Serranilla'
+                        ,'Pete the Pilot'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                        , 'Hypertrophey'
                         );
 INSERT INTO trainer ( id
                         ,customer_id
                         ,name
-                        , profile_img_url) 
+                        , profile_img_url
+                        ,speciality) 
                  VALUES (7
                         ,10 
-                        ,'Spencer Serranilla'
+                        ,'Jeff Bezos'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                        );
+                        , 'Pilates')
+                        ;
 
 
 -- ----------------------------------------------- --
