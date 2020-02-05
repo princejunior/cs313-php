@@ -5,9 +5,6 @@
     $db = get_db();
     $trainerData = NULL;
 ?>
-    
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

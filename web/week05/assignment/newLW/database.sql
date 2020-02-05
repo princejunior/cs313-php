@@ -172,7 +172,7 @@ INSERT INTO trainer ( id
                  VALUES (2
                         ,2 
                         ,'Elijah Elliott'
-                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg'
                         , 'Power Lifter'
                         );
 INSERT INTO trainer ( id
