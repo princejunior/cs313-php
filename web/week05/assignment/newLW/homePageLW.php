@@ -25,43 +25,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
   <!-- <script type="text/javascript" src=".../jquery.min.js"></script> -->
-  <script>
-    // cartItems = new Array( new Array());
-    cartItemName = [];
-    cartItemSpeciality = [];
-    cartItemPrice = [];
-    cartItemPicURL = [];
-    function addToCart(name,speciality,price,picURL){
-        // this.cartItems.push(name, (speciality,price,picURL));
-        this.cartItemName.push(name);
-        this.cartItemSpeciality.push(speciality);
-        this.cartItemPrice.push(price);
-        this.cartItemPicURL.push(picURL);
-    //  console.log(cartItems);
-     console.log(cartItemName);
-     console.log(cartItemSpeciality);
-     console.log(cartItemPrice);
-     console.log(cartItemPicURL);
-
-    }
-    cartItemName.forEach(printOutCart); 
-    for( var i =0; i < cartItemName.length; i++){
-        printOutCart();
-    }
-    function printOutCart(){
-        var text =""
-        for( var i =0; i < cartItemName.length; i++){
-            text += "<li> <span class='item'>  <span class='item-left'> <img style='width: 55px ; height: auto' src='"+ cartItemPicURL[i] +"' alt='' /> <span class='item-info'> <span>" + cartItemSpeciality[i] + " Program</span> <span>price: $" + cartItemsPrice[i] +"</span> </span></span><span class='item-right'><button class='btn btn-danger  fa fa-close'>Buy</button></span></span></li>";       
-        }
-        document.getElementById("dropBox").innerHTML = text;
-    }
-    </script>
 </head>
+
 <body>
 <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
 <?php
+function displayTrainers(){
 $statement = $db->prepare("SELECT * FROM trainer");
     $statement->execute();
     // Go through each result
@@ -71,7 +42,7 @@ $statement = $db->prepare("SELECT * FROM trainer");
         // name
         $name = $row['name'];
         $profile_img_url = $row['profile_img_url'];
-        // $verse = $row['verse'];
+        $speciality = $row['speciality'];
         $id = $row['id'];?>
         <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
                     <div class="card mb-4 box-shadow">
@@ -85,22 +56,19 @@ $statement = $db->prepare("SELECT * FROM trainer");
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
-                                    <button class="btn btn-primary" value="<?php implode($trainers[$i]);?>" onclick="
-                                    addToCart('<?php echo $trainers[$i][0];?>', '<?php echo $trainers[$i][1];?>', '<?php echo $trainers[$i][2];?>', '<?php echo $trainers[$i][3];?>')">Add to Book $<?php echo $trainers[$i][2];?>
+                                    <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book $<?php echo $trainers[$i][2];?>
                                 </div>
                             </div> 
                         </div>
                     </div>
                 </div>
                 <?php
-        // $content = $row['content'];
-        // echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
-        // echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
+    }
                     }
-?>
-</div>
-</div>
-</div>
+                ?>
+            </div>
+        </div>
+    </div>
 <?php
     // list of trainers 
     $_SESSION['trainerList'] = array(
@@ -283,101 +251,12 @@ $statement = $db->prepare("SELECT * FROM trainer");
         <div class="container">
             <div class="row">
                 <?php 
-                echo displayTrainerProfiles();
+                echo displayTrainers();
+                    echo displayTrainerProfiles();
                 ?>
-                <?php // set session variables using a form 
-                    if(isset($_POST['Submit'])){      
-                        $_SESSION['cartItems'] = $_POST['checkedTrainers'];
-                        print_r($_SESSION['cartItems']);
-         }  else{
-            
-         }
-      ?>
             </div>
         </div>
     </div>
 </main>
 </body>
 </html>
-
-
-<!-- <script type="text/javascript">
-    $(document).ready(function){
-        $.ajax({
-            type: 'post',
-            url: 'homePageLW.php',
-            data:{
-                total_cart_items:"totalItems"
-            },
-            success:function(response){
-                document.getElementById("totalItems").value = response;
-            }
-        });
-    });
-    fuction cart(id){
-        var ele = document.getElementById(id);
-        var img_src = ele.getElementByTagName("img")[0].src;
-        var name = document.getElementById(id + "_name").value;
-        var price = document.getElementById(id + "_price").value;
-
-        $.ajax({
-            type: 'post',
-            url: 'homePageLW.php',
-            data:{
-                item_src:img_src,
-                item_name:name,
-                item_price:price
-            },
-            success:function(response){
-                document.getElementById("total_items").value = response;
-                $('.cap_status').html("Add to Cart").fadeIn('slow').delay(2000).fadeOut('slow');
-            }
-        });
-    }
-    function showCart(){
-        $.ajax({
-            type: 'post',
-            url:'homePageLW.php',
-            data:{
-                showCart: "cart"
-            },
-            success:function(response){
-                document.getElementById("mycart").innerHtml = response;
-                $("#mycart").slideToggle();
-            }
-        });
-    }
-  </script> -->
-
-  <!-- // $_SESSION['itemsInBooking'] = array();
-    // if (isset($_POST['total_cart_items'])){
-    //     echo count($_SESSION['name']);
-    //     exit();
-    // }
-    // if(isset($_POST['item_src'])){
-    //     $_SESSION['name'][] = $_POST['item_name'];
-    //     $_SESSION['price'][] = $_POST['item_price'];
-    //     $_SESSION['src'][] = $_POST['item_src'];
-    //     echo count($_SESSION['name']);
-    //     exit();
-    // }
-    // if(isset($_POST['showcart'])){
-    //     for ($i = 0; $i < count($_SESSION['src']); $i++){
-    //        echo '<li>
-    //                 <span class="item">
-    //                     <span class="item-left">
-    //                         <img style="width: 55px ; height: auto" src="<?php echo $trainers[0][3]?>" alt="" />
-    //                         <span class="item-info">
-    //                             <span> <?php echo $trainers[0][1]?> Program</span>
-    //                             <span>price: $<?php echo $trainers[0][2]?></span>
-    //                         </span>
-    //                     </span>
-    //                     <span class="item-right">
-    //                         <button class="btn btn-danger  fa fa-close">Buy</button>
-    //                     </span>
-    //                 </span>
-    //             </li>';
-    //     }
-    //     exit(); -->
-    <!-- // } -->
-   <!-- ?> -->
