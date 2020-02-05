@@ -98,6 +98,9 @@ $statement = $db->prepare("SELECT * FROM trainer");
         // echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
                     }
 ?>
+</div>
+</div>
+</div>
 <?php
     // list of trainers 
     $_SESSION['trainerList'] = array(
