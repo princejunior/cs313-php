@@ -59,21 +59,21 @@
 </head>
 <body>
 <?php
-// $statement = $db->prepare("SELECT * FROM trainer");
-//     $statement->execute();
-//     // Go through each result
-//     while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-//         // The variable "row" now holds the complete record for that
-//         // row, and we can access the different values based on their
-//         // name
-//         $name = $row['name'];
-//         $profile_img_url = $row['profile_img_url'];
-//         // $verse = $row['verse'];
-//         $id = $row['id'];
-//         // $content = $row['content'];
-//         // echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
-//         echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
-//                     }
+$statement = $db->prepare("SELECT * FROM trainer");
+    $statement->execute();
+    // Go through each result
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        // The variable "row" now holds the complete record for that
+        // row, and we can access the different values based on their
+        // name
+        $name = $row['name'];
+        $profile_img_url = $row['profile_img_url'];
+        // $verse = $row['verse'];
+        $id = $row['id'];
+        // $content = $row['content'];
+        // echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
+        echo "<p><strong><a href='profilePageLW.php?id=$id'>View Profile</a></strong><p>";
+                    }
 ?>
 <?php
     // list of trainers 
