@@ -225,7 +225,7 @@
                                 src=" <?php echo $profile_img_url;?> " data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo $name;?></h3>
-                                <h5 class="card-title"><?php echo $id;?></h5>
+                                <h5 class="card-title"><?php echo $speciality;?></h5>
                                 <p class="card-text">
                                     Description</p>
                                 <div class="d-flex justify-content-between align-items-center">
