@@ -44,7 +44,7 @@ return $db;
         // row, and we can access the different values based on their
         // name
         $name = $row['name'];
-        $picture_img_url = $row['img'];
+        $picture_img_url = $row['image'];
         $description = $row['description'];
         $id = $row['id'];?>
         
