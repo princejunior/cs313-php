@@ -32,7 +32,6 @@ return $db;
 </head>
 <body>
 <?php 
-    require "dbConnect.php";
     $db = get_db();
     $event_participnat_Data = NULL;
 ?>
