@@ -48,7 +48,7 @@ return $db;
         $description = $row['description'];
         $id = $row['id'];?>
         
-        <img src="<?php echo $profile_img_url;?>">
+        <img src="<?php echo $profile_img_url;?>" style="height: 225px; width: 100%; display: block;">
         <p><?php echo $name ?>
         <?php 
     }
