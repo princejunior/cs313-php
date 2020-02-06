@@ -49,8 +49,9 @@ return $db;
         $id = $row['id'];?>
         
         <img src="<?php echo $profile_img_url;?>">
-        </body>
+        <p><?php echo $name ?>
         <?php 
     }
     ?>
+    </body>
 </html>
