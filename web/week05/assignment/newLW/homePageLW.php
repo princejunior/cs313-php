@@ -25,82 +25,6 @@
 </head>
 
 <body>
-
-<?php
-    // list of trainers 
-    $_SESSION['trainerList'] = array(
-        "trainer0"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer1"=> array("name"=>"Elijah Elliott","speciality"=>"Power Lifter","price"=>30, 
-            "profile_imh_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg"),
-        "trainer2"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer3"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer4"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer5"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer6"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer7"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer8"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        "trainer9"=> array("name"=>"Spencer Serranilla","speciality"=>"Cardio","price"=>20,
-            "profile_img_url"=>"https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-    );
-    // list of trainers
-    $trainers = array(
-        //Name:$trainers[0][0], Specialist:$trainers[0][1], Cost for service:$trainers[0][2], photo: $trainers[0][3]
-        array("Spencer Serranilla","Cardio",20,
-         "https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg"),
-        //Name:$trainers[1][0], Specialist:$trainers[1][1], Cost for service:$trainers[1][2], photo: $trainers[0][3]
-        array("Elijah Elliott","Power Lifter",30, 
-        "https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg"),
-        //Name:$trainers[2][0], Specialist:$trainers[2][1], Cost for service:$trainers[2][2], photo: $trainers[0][3]
-        array("Meghan Hutson"," Yoga",25, ""),
-        //Name:$trainers[3][0], Specialist:$trainers[3][1], Cost for service:$trainers[3][2], photo: $trainers[0][3]
-        array("Pete The Pilot","Hyper Trophy",45, ""),
-        //Name:$trainers[4][0], Specialist:$trainers[4][1], Cost for service:$trainers[4][2], photo: $trainers[0][3]
-        array("Elon Musk","Power Lifter",55,""),
-        //Name:$trainers[5][0], Specialist:$trainers[5][1], Cost for service:$trainers[5][2], photo: $trainers[0][3]
-        array("Steve Job","Yoga",55, ""),
-        //Name:$trainers[6][0], Specialist:$trainers[6][1], Cost for service:$trainers[6][2], photo: $trainers[0][3]
-        array("Nikola Tesla","Cardio",25, ""),
-        //Name:$trainers[7][0], Specialist:$trainers[7][1], Cost for service:$trainers[7][2], photo: $trainers[0][3]
-        array("Bill Gates","Crossfit",65, ""),
-        //Name:$trainers[8][0], Specialist:$trainers[8][1], Cost for service:$trainers[8][2], photo: $trainers[0][3]
-        array("Jeff Bezos","Pilates",55, "")
-    );
-    $sizeOfTrainerList = sizeof($trainers);
-// Displays each profile in trainer list
-        function displayTrainerProfiles(){  
-            $trainers = $GLOBALS['trainers']; 
-            for ($i = 0; $i < $GLOBALS['sizeOfTrainerList']; $i++){?>
-                <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
-                        src=" <?php echo $trainers[$i][3]?> " data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                        <div class="card-body">
-                                <h3 class="card-title"><?php echo $trainers[$i][0];?></h3>
-                                <h5 class="card-title"><?php echo $trainers[$i][1];?></h5>
-                            <p class="card-text">
-                                    Description</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="profilePageLW.php"><button class="btn btn-primary" value="<?php echo $i?>" onclick()="viewProfile(<?php echo $i?>)">View Profile</button></a>
-                                    <button class="btn btn-primary" value="<?php implode($trainers[$i]);?>" onclick="
-                                    addToCart('<?php echo $trainers[$i][0];?>', '<?php echo $trainers[$i][1];?>', '<?php echo $trainers[$i][2];?>', '<?php echo $trainers[$i][3];?>')">Add to Book $<?php echo $trainers[$i][2];?>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            <?php }
-        }
-    ?>
-
 <nav class="navbar navbar-inverse" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -124,36 +48,8 @@
             <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
                 <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
 
-                    <li>
-                        <span class="item">
-                           <span class="item-left">
-                                <img style="width: 55px ; height: auto" src="<?php echo $trainers[0][3]?>" alt="" />
-                                <span class="item-info">
-                                    <span><?php echo $trainers[0][1]?> Program</span>
-                                    <span>price: $<?php echo $trainers[0][2]?></span>
-                                </span>
-                            </span>
-                            <span class="item-right">
-                                <button class="btn btn-danger  fa fa-close">Buy</button>
-                            </span>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="item">
-                            <span class="item-left">
-                                <img style="width: 55px ; height: auto" src="<?php echo $trainers[1][3]?>" alt="" />
-                                <span class="item-info">
-                                    <span><?php echo $trainers[1][1]?></span>
-                                    <span>price: $<?php echo $trainers[1][2]?></span>
-                                </span>
-                            </span>
-                            <span class="item-right">
-                                <button class="btn btn-danger  fa fa-close"></button>
-                            </span>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="item">
+                    
+                        <!-- <span class="item">
                             <span class="item-left">
                                 <img src="http://www.prepbootstrap.com/Content/images/template/menucartdropdown/item_3.jpeg" alt="" />
                                 <span class="item-info">
@@ -165,21 +61,7 @@
                                 <button class="btn btn-danger  fa fa-close"></button>
                             </span>
                         </span>
-                    </li>
-                    <li>
-                        <span class="item">
-                            <span class="item-left">
-                                <img src="http://www.prepbootstrap.com/Content/images/template/menucartdropdown/item_4.jpg" alt="" />
-                                <span class="item-info">
-                                    <span>Item name</span>
-                                    <span>price: 7$</span>
-                                </span>
-                            </span>
-                            <span class="item-right">
-                                <button class="btn btn-danger  fa fa-close"></button>
-                            </span>
-                        </span>
-                    </li>              
+                    </li> -->
                     <li class="divider"></li>
                     <li><a class="text-center" href="#">View Cart</a></li>
                 </ul>
@@ -239,9 +121,6 @@
                     </div>
                 <?php
                     }
-                ?>
-                <?php 
-                    echo displayTrainerProfiles();
                 ?>
             </div>
         </div>
