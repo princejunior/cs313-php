@@ -15,10 +15,9 @@
             $last = $row['last_name'];
             $food_id = $row['food_type'];
 
-            $statement = $db->prepare('SELECT food FROM w6_user WHERE ID = :food_id');
-            $statement->bindValue(':personId', $personId);
-            $statement->execute();
-            while($fRow = $statement->fetch(PDO::FETCH_ASSOC)){
+            $foods = $db->prepare('SELECT food FROM w6_user WHERE ID = :food_id');
+            $foods->execute();
+            while($fRow = $foods->fetch(PDO::FETCH_ASSOC)){
                $food = $fRow['food'];
             }
             echo "<h1>$first $last's favorite food is $food</h1>";
