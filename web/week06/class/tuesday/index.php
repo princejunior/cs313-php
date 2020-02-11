@@ -16,6 +16,14 @@
             <div class="col">
                   <select id="inputFood" class="form-control" name="food">
                      <?php
+                     $statement = $db->prepare("SELECT * FROM w6_food");
+                     $statement->execute();
+                     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                     {
+                        $id = $row['id'];
+                        $food = $row['food'];
+                        echo "<option value='$id'>$food</option>";
+                     }
                         // query db
                         // loop through results
                         // output html option for each row
