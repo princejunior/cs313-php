@@ -10,7 +10,7 @@ DROP TABLE customer;
 -- customer -- 
 CREATE TABLE customer
 ( id         SERIAL       NOT NULL PRIMARY KEY
-, username   VARCHAR(50)  NOT NULL UNI
+, username   VARCHAR(50)  NOT NULL UNIQUE
 , email      VARCHAR(50)  NOT NULL UNIQUE
 , password   VARCHAR(50)  NOT NULL
 );
@@ -273,7 +273,7 @@ INSERT INTO content ( trainer_id
                      ,title 
                      ) 
                   VALUES (1
-                         , ''
+                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
