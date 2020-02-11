@@ -117,7 +117,7 @@ INSERT INTO customer (id
                          , password) 
                   VALUES ( 6
                          , 'client03'
-                         , '5@gmail.com'
+                         , '6@gmail.com'
                          , '1234567');  
 INSERT INTO customer (id
                          , username
@@ -125,7 +125,7 @@ INSERT INTO customer (id
                          , password) 
                   VALUES ( 7
                          , 'trainer04'
-                         , '6@gmail.com'
+                         , '7@gmail.com'
                          , '1234567');  
 INSERT INTO customer (id
                          , username
@@ -133,7 +133,7 @@ INSERT INTO customer (id
                          , password) 
                   VALUES ( 8
                          , 'trainer05'
-                         , '6@gmail.com'
+                         , '8@gmail.com'
                          , '1234567');  
 INSERT INTO customer (id
                          , username
@@ -141,7 +141,7 @@ INSERT INTO customer (id
                          , password) 
                   VALUES ( 9
                          , 'trainer06'
-                         , '7@gmail.com'
+                         , '9@gmail.com'
                          , '1234567');  
 INSERT INTO customer (id
                          , username
@@ -149,7 +149,7 @@ INSERT INTO customer (id
                          , password) 
                   VALUES ( 10
                          , 'trainer07'
-                         , '8@gmail.com'
+                         , '10@gmail.com'
                          , '1234567');  
 
 -- ----------------------------------------------- --
