@@ -9,7 +9,8 @@
          $statement = $db->prepare('SELECT * FROM w6_user WHERE Id = :personId');
          $statement->bindValue(':personId', $personId);
          $statement->execute();
-         while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+         while($row = $statement->fetch(PDO::FETCH_ASSOC))
+         {
             $id = $row['id'];
             $first = $row['first_name'];
             $last = $row['last_name'];
