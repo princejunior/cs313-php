@@ -184,7 +184,7 @@
                 </div></div></div>
                 <?php
                   $id = $_GET['id'];
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id");
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
                   $statement->execute();
                   // Go through each result
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -210,10 +210,6 @@
               <?php
             }
          ?>  
-
-
-
-              
               <div class="owl-item active" style="width: 350px; margin-right: 20px;">
               <div class="item">
                 <div class="probootstrap-program">
@@ -305,7 +301,34 @@
                   <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                   <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                 </div>
+                <?php
+                  $id = $_GET['id'];
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Intermediate'");
+                  $statement->execute();
+                  // Go through each result
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                  {
+                    // The variable "row" now holds the complete record for that
+                    // row, and we can access the different values based on their
+                    // name
+                    $post_img_url = $row['post_img_url'];
+                    $post_description = $row['post_description'];
+                    $post_price = $row['post_price'];
+                    $post_difficulty = $row['difficulty'];
+                    $post_title = $row['title'];?>
+              <div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
+                  <h3><?php echo $post_title;?></h3>
+                  <p><?php echo $post_price?></p>
+                  <p><?php echo $post_description;?></p>
+                </div>
+              </div>
+            </div>
 
+              <?php
+            }
+         ?>  
               </div></div><div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
                 <div class="probootstrap-program">
                   <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
