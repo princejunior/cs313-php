@@ -10,8 +10,8 @@ DROP TABLE customer;
 -- customer -- 
 CREATE TABLE customer
 ( id         SERIAL       NOT NULL PRIMARY KEY
-, username   VARCHAR(50)  NOT NULL
-, email      VARCHAR(50)  NOT NULL
+, username   VARCHAR(50)  NOT NULL UNI
+, email      VARCHAR(50)  NOT NULL UNIQUE
 , password   VARCHAR(50)  NOT NULL
 );
 
@@ -39,6 +39,8 @@ CREATE TABLE content
 , post_img_url       VARCHAR(100) NOT NULL
 , post_description   VARCHAR(100) NOT NULL
 , post_price         FLOAT        NOT NULL
+, difficulty         VARCHAR(50)  NOT NULL
+, tittle             VARCHAR(50)  NOT NULL  
 );
 
 -- trainer_client --
@@ -263,26 +265,84 @@ INSERT INTO client ( id
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
 -- ----------------------------------------------- -- 
-INSERT INTO content ( id         
-                     , trainer_id  
+INSERT INTO content ( trainer_id  
                      , post_img_url       
                      , post_description   
-                     , post_price  ) 
-                  VALUES ( 1
-                         ,1
-                         , '3 Month Ab Workout'
+                     , post_price
+                     ,difficulty
+                     ,title 
+                     ) 
+                  VALUES (1
+                         , ''
                          , 'gjhgjhgjhgj'
-                         , 20.00);  
-INSERT INTO content ( id         
-                     , trainer_id  
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month leg Workout');  
+INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
-                     , post_price  ) 
-                  VALUES ( 2
-                         ,1
-                         , '3 Month Hypertrophey Workout'
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (1
+                         , ''
                          , 'gjhgjhgjhgj'
-                         , 20.00);  
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Hypertrophey Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (1
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Power Lifting Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (1
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Abs Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (1
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Yoga Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (1
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Cardio Workout');  
 
 -- ----------------------------------------------- --
 -- ----- POPULATE THE client_order TABLE ----- --
