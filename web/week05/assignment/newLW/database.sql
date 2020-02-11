@@ -40,7 +40,7 @@ CREATE TABLE content
 , post_description   VARCHAR(100) NOT NULL
 , post_price         FLOAT        NOT NULL
 , difficulty         VARCHAR(50)  NOT NULL
-, tittle             VARCHAR(50)  NOT NULL  
+, title             VARCHAR(50)  NOT NULL  
 );
 
 -- trainer_client --
