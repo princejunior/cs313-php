@@ -128,6 +128,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" name="speciality" value="Cardio">Cardio</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
