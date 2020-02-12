@@ -2,7 +2,6 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    $trainerData = NULL;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +49,7 @@
                 </ul>
         </li>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="loginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
