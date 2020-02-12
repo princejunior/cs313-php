@@ -7,7 +7,7 @@ function login(value){
         document.getElementById('login').style.visibility = hidden;
         document.getElementById('signUp').style.visibility = visibility;
         document.getElementById('trainerSignUp').style.visibility = hidden;
-    } else if (value == "login"){
+    } else if (value == "trainerSignUp"){
         document.getElementById('login').style.visibility = hidden;
         document.getElementById('signUp').style.visibility = hidden;
         document.getElementById('trainerSignUp').style.visibility = visibility;
