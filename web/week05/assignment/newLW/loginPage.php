@@ -66,6 +66,7 @@
         $password = "";
     ?>
     <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <div>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
@@ -80,7 +81,7 @@
         </div>
         <form id="login" class="form-signin" action="" method="POST">
             <!-- <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72"> -->
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> -->
             <label for="inputEmail" class="sr-only">Email address</label>
                 <input type="email" id="inputEmail" class="form-control"  name="email" placeholder="Email address" required="" autofocus="">
             <label for="inputPassword" class="sr-only">Password</label>
@@ -95,8 +96,6 @@
         </form>
 
         <form id="signUp" class="form-signin" action="insertNewUsers.php" method="POST">
-            <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>
                 <input type="firstName" id="inputFirstName" class="form-control"  name="first_name" placeholder="First Name" required="" autofocus="">
             <label for="inputEmail" class="sr-only">Last Name</label>
@@ -110,8 +109,6 @@
         </form>
 
         <form id="trainerSignUp" class="form-signin" action="insertNewTrainers.php" method="POST">
-            <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>
                 <input type="firstName" id="inputFirstName" class="form-control"  name="first_name" placeholder="First Name" required="" autofocus="">
             <label for="inputEmail" class="sr-only">Last Name</label>
