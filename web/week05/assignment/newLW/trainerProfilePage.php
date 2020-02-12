@@ -268,7 +268,7 @@
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div> -->
-                  <!-- </div>
+                  </div>
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
@@ -301,7 +301,7 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="owl-controls">
+              <div class="owl-controls">
                 <div class="owl-nav">
                   <div class="owl-prev" style="display: none;">
                     <i class="icon-keyboard_arrow_left owl-direction"></i>
@@ -312,7 +312,7 @@
                 </div>
                 <div class="owl-dots" style="display: none;">
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -589,8 +589,7 @@
               <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
             </ul>
           </div>
-        </div>
-        
+        </div>        
       </div>
        <div class="row">
          <div class="col-md-12 text-center border-top">
