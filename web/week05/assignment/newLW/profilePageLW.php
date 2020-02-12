@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="trainer/css/styles-merged.css">
     <link rel="stylesheet" href="trainer/css/style.min.css">
     <link rel="stylesheet" href="trainer/css/custom.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="trainer/css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Creates a drop down menu for cart -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="trainer/js/vendor/bootstrap.min.js"></script>
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <!-- To add and clear items from booking/cart -->
   <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
   </head>
