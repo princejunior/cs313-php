@@ -179,8 +179,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
-            <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
             <a href='editTrainerProfile.php?id=<?php echo $id?>'><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+            <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners) </h2>
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
               <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
