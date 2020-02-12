@@ -64,7 +64,6 @@
     <?php 
         $email = "";
         $password = "";
-
     ?>
     <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
     <div>
