@@ -20,13 +20,12 @@
     <!-- Creates a drop down menu for cart -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-    <title>Signin Template for Bootstrap</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <script src="/jsFiles/loginPage.js"></script>
-    <link rel="stylesheet" type="text/css" href="/cssFiles/loginPage.css">
+    <script src="jsFiles/loginPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="cssFiles/loginPage.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse" >
