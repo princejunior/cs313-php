@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     require "dbConnect.php";
     $db = get_db();
 ?>
@@ -111,23 +110,16 @@
         </div>
     </div>
 </nav>
-  <?php
-    $id = $_GET['id'];
-    $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
-    $statement->execute();
-    // Go through each result
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-    {
-      // The variable "row" now holds the complete record for that
-      // row, and we can access the different values based on their
-      // name
-      $name = $row['name'];
-      $profile_img_url = $row['profile_img_url'];
-      $speciality = $row['speciality'];
-      // $id = $row['id'];;
-      //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
-    }
-  ?>
+<?php
+  $id = $_GET['id'];
+  $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+  $statement->execute();
+  while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+    $name = $row['name'];
+    $profile_img_url = $row['profile_img_url'];
+    $speciality = $row['speciality'];
+  }
+?>
   <!-- END: header -->
   
   <!-- START: section -->
@@ -283,7 +275,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                <!-- <div class="owl-item" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
                       <a href="#"><img src="trainer/img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
@@ -312,7 +304,7 @@
                       <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
@@ -613,7 +605,7 @@
         </div>
       </div>
     </section> -->
-  </main>
+</main>
   <footer class="probootstrap-footer">
       <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
       <div class="container">
