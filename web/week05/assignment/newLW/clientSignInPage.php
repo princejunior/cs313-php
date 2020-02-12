@@ -25,9 +25,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-    <link href="loginPage.css" rel="stylesheet">
-
+    <script src="loginPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="cssFiles/loginPage.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse" >
@@ -81,7 +80,7 @@
                 <input type="radio" name="options" id="option3" autocomplete="off" onclick="login('trainerSignUp')"> Trainer Sign UP
             </label>
         </div>
-        <form id="login"class="form-signin" style="visibility:visibility" action="action_page.php" method="post">
+        <form id="login"class="form-signin" action="action_page.php" method="post">
             <!-- <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72"> -->
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
@@ -97,7 +96,7 @@
             <!-- <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a> -->
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
-        <form id="signUp" class="form-signin" style="visibility:hidden" action="action_page.php" method="post">
+        <form id="signUp" class="form-signin" action="action_page.php" method="post">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>
@@ -117,7 +116,7 @@
             <!-- <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a> -->
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
-        <form id="trainerSignUp" class="form-signin" style="visibility:hidden" action="action_page.php" method="post">
+        <form id="trainerSignUp" class="form-signin" action="action_page.php" method="post">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>

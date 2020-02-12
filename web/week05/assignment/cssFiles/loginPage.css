@@ -1,0 +1,9 @@
+form#login {
+    visibility: visible; 
+}
+form#signUp {
+    visibility: hidden; 
+}
+form#trainerSignUp {
+    visibility: hidden;
+}
