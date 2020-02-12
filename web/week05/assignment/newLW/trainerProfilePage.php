@@ -192,21 +192,21 @@
                     </div>
                   </div>
                   <?php
-                    $id = $_GET['id'];
-                    $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
-                    $statement->execute();
-                    // Go through each result
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                      // The variable "row" now holds the complete record for that
-                      // row, and we can access the different values based on their
-                      // name
-                      $post_img_url = $row['post_img_url'];
-                      $post_description = $row['post_description'];
-                      $post_price = $row['post_price'];
-                      $post_difficulty = $row['difficulty'];
-                      $post_title = $row['title'];
+                    // $id = $_GET['id'];
+                    // $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                    // $statement->execute();
+                    // // Go through each result
+                    // while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+                    //   // The variable "row" now holds the complete record for that
+                    //   // row, and we can access the different values based on their
+                    //   // name
+                    //   $post_img_url = $row['post_img_url'];
+                    //   $post_description = $row['post_description'];
+                    //   $post_price = $row['post_price'];
+                    //   $post_difficulty = $row['difficulty'];
+                    //   $post_title = $row['title'];
                   ?>
-                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
                         <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
@@ -215,9 +215,9 @@
                         <p><?php echo $post_description;?></p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <?php
-                    }
+                    // }
                   ?>  
                   <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
