@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Live W.O.W.</title>
     <title>uiCookies:Trainer — Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
-    <meta name="description" content="">    
+    <meta name="description" content=""> 
+    <link rel="stylesheet" type="text/css" href="css/editTrainerProfile.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="trainer/css/styles-merged.css">
     <link rel="stylesheet" href="trainer/css/style.min.css">
@@ -80,8 +81,9 @@
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
-  ?>
+?>
   <!-- Accessed from trainer id -->
+  <form>
   <section class="probootstrap-intro probootstrap-intro-inner" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
@@ -107,17 +109,26 @@
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 </div>
+                <?php 
+                  $aboutMe = "The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.";
+                ?>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                    <input class="inputAboutMe" type="text" maxlength="500" value="<?php echo $aboutMe;?>">
+                    <!-- <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-primary">Read more about me</a></p>
+                    <p><a href="#" class="btn btn-primary">Read more about me</a></p> -->
                 </div>
             </div>
+            <?php 
+              $myMission = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.";
+            ?>
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p>
+                    <input class="inputMission" type="text" maxlength="200" value="<?php echo $myMission;?>">                    
+                    <!-- <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p> -->
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Upcoming Events</h4>
@@ -151,9 +162,13 @@
                         </li>
                     </ul>
                 </div>
+                <?php 
+                  $myVision = "The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.";
+                ?>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p>
+                    <input class="inputVission" type="text" maxlength="200" value="<?php echo $myVision;?>">                    
+                    <!-- <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p> -->
                 </div>
             </div>
         </div>
@@ -590,6 +605,7 @@
          </div>
        </div>
      </div>
+  </form>
   </footer>  
   <script src="trainer/js/scripts.min.js"></script>
   <script src="trainer/js/main.min.js"></script>
