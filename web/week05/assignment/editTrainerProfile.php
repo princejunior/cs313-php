@@ -70,27 +70,18 @@
         </div>
     </div>
 </nav>
-
 <?php
     $id = $_GET['id'];
     $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
     $statement->execute();
-    // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      // The variable "row" now holds the complete record for that
-      // row, and we can access the different values based on their
-      // name
       $name = $row['name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
-      // $id = $row['id'];;
-      //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
     }
   ?>
-  <!-- END: header -->
-  
-  <!-- START: section -->
+  <!-- Accessed from trainer id -->
   <section class="probootstrap-intro probootstrap-intro-inner" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
@@ -111,7 +102,7 @@
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <a href="editTrainerProfile.php" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Edit Content</button></a>
+            <a href="" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Edit Content</button></a>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -194,32 +185,32 @@
                     </div>
                   </div>
                   <?php
-                    $id = $_GET['id'];
-                    $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
-                    $statement->execute();
-                    // Go through each result
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                      // The variable "row" now holds the complete record for that
-                      // row, and we can access the different values based on their
-                      // name
-                      $post_img_url = $row['post_img_url'];
-                      $post_description = $row['post_description'];
-                      $post_price = $row['post_price'];
-                      $post_difficulty = $row['difficulty'];
-                      $post_title = $row['title'];
+                    // $id = $_GET['id'];
+                    // $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                    // $statement->execute();
+                    // // Go through each result
+                    // while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+                    //   // The variable "row" now holds the complete record for that
+                    //   // row, and we can access the different values based on their
+                    //   // name
+                    //   $post_img_url = $row['post_img_url'];
+                    //   $post_description = $row['post_description'];
+                    //   $post_price = $row['post_price'];
+                    //   $post_difficulty = $row['difficulty'];
+                    //   $post_title = $row['title'];
                   ?>
-                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
                         <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
                         <h3><?php echo $post_title;?></h3>
-                        <p><?php echo $post_price?></p>
+                        <p><?php echo $post_price;?></p>
                         <p><?php echo $post_description;?></p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <?php
-                    }
+                    // }
                   ?>  
                   <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
