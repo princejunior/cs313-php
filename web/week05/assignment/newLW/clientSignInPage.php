@@ -79,7 +79,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-      <a href="trainerProfilePage.php"><button class="btn btn-lg btn-primary btn-block">Login</button></a>
+      <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a>
       <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
     </form>
 </body>
