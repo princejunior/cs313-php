@@ -7,12 +7,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Live W.O.W.</title>
+    <title>Live W.O.W.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Inside folder -->
+    <link rel="stylesheet" type="text/css" href="homePageStlye.css">
+    <!-- Linking BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Creates a drop down menu for cart -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Signin Template for Bootstrap</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
