@@ -12,7 +12,7 @@
     <title>Live W.O.W.</title>
     <title>uiCookies:Trainer — Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
     <meta name="description" content=""> 
-    <link rel="stylesheet" type="text/css" href="css/editTrainerProfile.css">
+    <link rel="stylesheet" type="text/css" href="cssFiles/editTrainerProfile.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="trainer/css/styles-merged.css">
     <link rel="stylesheet" href="trainer/css/style.min.css">

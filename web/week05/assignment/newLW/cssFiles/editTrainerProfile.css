@@ -1,11 +1,11 @@
 .inputAboutMe{
-    width: 200px;
-    height: auto;
+    width: 100%;
+    height: 500px;
     border: 2px solid black;
 }
 .inputMission{
-    width: 200px;
-    height: auto;
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
 }
 .inputVision{
