@@ -95,7 +95,7 @@
   <!-- END: header -->
   
   <!-- START: section -->
-  <section class="probootstrap-intro probootstrap-intro-inner" 
+  <section class="probootstrap-intro" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
