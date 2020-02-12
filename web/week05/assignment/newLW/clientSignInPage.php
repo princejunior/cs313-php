@@ -25,8 +25,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <script src="loginPage.js"></script>
-    <link rel="stylesheet" type="text/css" href="cssFiles/loginPage.css">
+    <script src="/jsFiles/loginPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cssFiles/loginPage.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse" >
@@ -93,9 +93,9 @@
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-            <!-- <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a> -->
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
+
         <form id="signUp" class="form-signin" action="action_page.php" method="post">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -107,15 +107,10 @@
                 <input type="email" id="inputEmail" class="form-control"  name="email" placeholder="Email address" required="" autofocus="">
             <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
-            <!-- <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me">Remember me
-                </label>
-            </div> -->
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
-            <!-- <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a> -->
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
+
         <form id="trainerSignUp" class="form-signin" action="action_page.php" method="post">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -131,18 +126,14 @@
                 <label>
                     <input type="checkbox" name="speciality" value="Yoga">Yoga
                     <input type="checkbox" name="speciality" value="Power Lifting">Power Lifting
+                    <br>
                     <input type="checkbox" name="speciality" value="Crossfit">Crossfit
                     <input type="checkbox" name="speciality" value="Pilates">Pilates
+                    <br>
                     <input type="checkbox" name="speciality" value="Cardio">Cardio
                 </label>
             </div>
-            <!-- <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me">Remember me
-                </label>
-            </div> -->
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
-            <!-- <a href="trainerSignInPage.php"><button class="btn btn-lg btn-primary btn-block">Trainer Sign Up</button></a> -->
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
     </div>
