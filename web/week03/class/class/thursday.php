@@ -39,5 +39,5 @@
          <?php include 'tuesdayCode.php';?>
       </div>
 		<?php include '../shared/footer.php';?><br><br>
-	</body>
+	</body> 
 </html>
