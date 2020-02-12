@@ -115,7 +115,7 @@
         <div class="container">
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
-                    <figure><img src="<?php echo $profile_img_url;?>)" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                    <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 </div>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
