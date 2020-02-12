@@ -19,7 +19,7 @@
   <!-- Creates a drop down menu for cart -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
-  <script type="text/javascript" src=".../jquery.min.js"></script>
+  <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
   </head>
 <body>
   <!-- START: header -->
@@ -222,7 +222,7 @@
                   <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                     <div class="item">    
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
                         <h3>DIP</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -233,11 +233,7 @@
                     $id = $_GET['id'];
                     $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
                     $statement->execute();
-                    // Go through each result
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                      // The variable "row" now holds the complete record for that
-                      // row, and we can access the different values based on their
-                      // name
                       $post_img_url = $row['post_img_url'];
                       $post_description = $row['post_description'];
                       $post_price = $row['post_price'];
@@ -257,10 +253,10 @@
                   <?php
                     }
                   ?>  
-                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Push Up</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -270,7 +266,7 @@
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Reverse Lunge</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -280,7 +276,7 @@
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Dumbbell Overhead Press</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -290,7 +286,7 @@
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Bulgarian Split Squat</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -306,11 +302,11 @@
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div> -->
-                  <!-- </div>
+                  </div>
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Russian Twist</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -320,7 +316,7 @@
                   <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Dumbbell Squat</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
@@ -330,16 +326,16 @@
                   <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <a href="#"><img src="trainer/img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
                         <h3>Push Up</h3>
                         <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
-              <!-- <div class="owl-controls">
+              <div class="owl-controls">
                 <div class="owl-nav">
                   <div class="owl-prev" style="display: none;">
                     <i class="icon-keyboard_arrow_left owl-direction"></i>
@@ -350,7 +346,7 @@
                 </div>
                 <div class="owl-dots" style="display: none;">
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
