@@ -115,7 +115,8 @@
                 ?>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <input class="inputAboutMe" type="text" maxlength="500" placeholder="<?php echo $aboutMe;?>">
+                    <textarea  class="inputVision" placeholder="<?php echo $aboutMe;?>" rows="4" cols="50"></textarea>
+                    <!-- <input class="inputAboutMe" type="text" maxlength="500" placeholder="<?php echo $aboutMe;?>"> -->
                     <!-- <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     <p><a href="#" class="btn btn-primary">Read more about me</a></p> -->
@@ -127,7 +128,8 @@
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <input class="inputMission" type="text" maxlength="200" placeholder="<?php echo $myMission;?>">                    
+                    <textarea  class="inputVision" placeholder="<?php echo $myMission;?>" rows="4" cols="50"></textarea>
+                    <!-- <input class="inputMission" type="text" maxlength="200" placeholder="<?php echo $myMission;?>">                     -->
                     <!-- <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p> -->
                 </div>
                 <div class="col-md-4 mb30">
@@ -167,8 +169,8 @@
                 ?>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea placeholder="<?php echo $myVision;?>" rows="4" cols="50"></textarea>
-                    <input class="inputVision" type="text" maxlength="200" placeholder="<?php echo $myVision;?>">                    
+                    <textarea  class="inputVision" placeholder="<?php echo $myVision;?>" rows="4" cols="50"></textarea>
+                    <!-- <input class="inputVision" type="text" maxlength="200" placeholder="<?php echo $myVision;?>">                     -->
                     <!-- <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p> -->
                 </div>
             </div>
