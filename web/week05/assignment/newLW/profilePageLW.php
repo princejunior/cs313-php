@@ -110,7 +110,7 @@
             </ul>
         </div>
     </div>
-  </nav>
+</nav>
   <?php
     $id = $_GET['id'];
     $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
@@ -146,7 +146,6 @@
   </section>
   <!-- END: section -->
   <main>
-    
     <section id="next-section" class="probootstrap-section">
       <div class="container">
         <div class="row">

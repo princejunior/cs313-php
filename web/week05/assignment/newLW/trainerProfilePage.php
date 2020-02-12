@@ -166,31 +166,31 @@
         </div>
     </section>
     <section id="next-section" class="probootstrap-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 probootstrap-relative">
-                    <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-                    <ul class="probootstrap-owl-navigation absolute right">
-                        <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
-                        <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 probootstrap-relative">
-                    <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
-                        <div class="owl-stage-outer owl-height" style="height: 480px;">
-                            <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
-                                <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
-                                    <div class="item">    
-                                <div class="probootstrap-program">
-                                    <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
-                                    <h3>DIP</h3>
-                                    <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
-                                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                                </div>
-                            </div>
-                        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
+            <ul class="probootstrap-owl-navigation absolute right">
+              <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
+              <div class="owl-stage-outer owl-height" style="height: 480px;">
+                <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
+                  <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                    <div class="item">    
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
+                        <h3>DIP</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
                   <?php
                     $id = $_GET['id'];
                     $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
