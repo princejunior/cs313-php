@@ -70,7 +70,7 @@
       $speciality = $row['speciality'];
     }
 ?>
-<section id="next-section" class="probootstrap-intro probootstrap-intro-inner">
+<section class="probootstrap-intro probootstrap-intro-inner">
         <div class="container">
             <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
             <div class="row probootstrap-gutter60 mb50">
