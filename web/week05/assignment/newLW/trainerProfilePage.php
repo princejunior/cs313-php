@@ -113,7 +113,7 @@
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <a href="" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-cog" aria-hidden="true">Edit Content</span>  </button></a>
+            <a href="" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Edit Content</button></a>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
