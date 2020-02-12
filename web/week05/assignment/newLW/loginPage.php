@@ -69,13 +69,13 @@
     <div>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" oninput="login('login')" checked> Log In
+                <input type="radio" name="options" id="option1" autocomplete="off" oninput="login(1)" checked> Log In
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off" oninput="login('signUp')"> Sign Up
+                <input type="radio" name="options" id="option2" autocomplete="off" oninput="login(2)"> Sign Up
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option3" autocomplete="off" oninput="login('trainerSignUp')"> Trainer Sign Up
+                <input type="radio" name="options" id="option3" autocomplete="off" oninput="login(3)"> Trainer Sign Up
             </label>
         </div>
         <form id="login" class="form-signin" action="" method="POST">
