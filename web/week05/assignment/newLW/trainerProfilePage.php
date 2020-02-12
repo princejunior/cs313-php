@@ -95,12 +95,12 @@
   <!-- END: header -->
   
   <!-- START: section -->
-  <section class="probootstrap-intro" 
-    style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
+  <section class="probootstrap-intro probootstrap-intro-inner" 
+    style="background-image: url(;<?php echo $profile_img_url;?>); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $name;?></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><span><?php echo $name;?></span></h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>
