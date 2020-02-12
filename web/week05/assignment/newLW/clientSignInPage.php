@@ -24,8 +24,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <script src="jsFiles/loginPage.js"></script>
-    <link rel="stylesheet" type="text/css" href="cssFiles/loginPage.css">
+    <script src="/jsFiles/loginPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cssFiles/loginPage.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse" >

@@ -111,90 +111,90 @@
   </section>
   <!-- END: section -->
   <main>
-  <section id="next-section" class="probootstrap-section">
-<div class="container">
-<div class="row probootstrap-gutter60 mb50">
-<div class="col-md-6">
-<figure><img src="img/about_me.jpg" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-</div>
-<div class="col-md-6">
-<h2 class="probootstrap-heading">About Me</h2>
-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<p><a href="#" class="btn btn-primary">Read more about me</a></p>
-</div>
-</div>
-<div class="row probootstrap-gutter60">
-<div class="col-md-4 mb30">
-<h4 class="mb30">My Mission</h4>
-<p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p>
-</div>
-<div class="col-md-4 mb30">
-<h4 class="mb30">Upcoming Events</h4>
-<ul class="probootstrap-blog-list">
-<li>
-<a href="#">
-<figure class="probootstrap-image"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-<div class="probootstrap-text">
-<h4>Initial into the belt and made herself</h4>
-<span class="meta">September, 14 2017</span>
-</div>
-</a>
-</li>
-<li>
-<a href="#">
-<figure class="probootstrap-image"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-<div class="probootstrap-text">
-<h4>Far far away behind the word mountains</h4>
-<span class="meta">September, 14 2017</span>
-</div>
-</a>
-</li>
-<li>
-<a href="#">
-<figure class="probootstrap-image"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-<div class="probootstrap-text">
-<h4>Bookmarksgrove right at the coast of the Semantics</h4>
-<span class="meta">September, 14 2017</span>
-</div>
-</a>
-</li>
-</ul>
-</div>
-<div class="col-md-4 mb30">
-<h4 class="mb30">My Vision</h4>
-<p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p>
-</div>
-</div>
-</div>
-</section>
+    <section id="next-section" class="probootstrap-section">
+        <div class="container">
+            <div class="row probootstrap-gutter60 mb50">
+                <div class="col-md-6">
+                    <figure><img src="image:url(&quot;<?php echo $profile_img_url;?>&quot;)" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="probootstrap-heading">About Me</h2>
+                    <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p><a href="#" class="btn btn-primary">Read more about me</a></p>
+                </div>
+            </div>
+            <div class="row probootstrap-gutter60">
+                <div class="col-md-4 mb30">
+                    <h4 class="mb30">My Mission</h4>
+                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p>
+                </div>
+                <div class="col-md-4 mb30">
+                    <h4 class="mb30">Upcoming Events</h4>
+                    <ul class="probootstrap-blog-list">
+                        <li>
+                            <a href="#">
+                                <figure class="probootstrap-image"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                                <div class="probootstrap-text">
+                                    <h4>Initial into the belt and made herself</h4>
+                                    <span class="meta">September, 14 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="probootstrap-image"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                                <div class="probootstrap-text">
+                                    <h4>Far far away behind the word mountains</h4>
+                                    <span class="meta">September, 14 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="probootstrap-image"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                                <div class="probootstrap-text">
+                                    <h4>Bookmarksgrove right at the coast of the Semantics</h4>
+                                    <span class="meta">September, 14 2017</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb30">
+                    <h4 class="mb30">My Vision</h4>
+                    <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="next-section" class="probootstrap-section">
         <a href="" class="probootstrap-owl-navigation absolute right"><button> Edit Content </button></a>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 probootstrap-relative">
-            <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-            <ul class="probootstrap-owl-navigation absolute right">
-              <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
-              <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 probootstrap-relative">
-            <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
-              <div class="owl-stage-outer owl-height" style="height: 480px;">
-                <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
-                  <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
-                    <div class="item">    
-                      <div class="probootstrap-program">
-                        <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
-                        <h3>DIP</h3>
-                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
-                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                      </div>
-                    </div>
-                  </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
+                    <ul class="probootstrap-owl-navigation absolute right">
+                        <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
+                        <div class="owl-stage-outer owl-height" style="height: 480px;">
+                            <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
+                                <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                                    <div class="item">    
+                                <div class="probootstrap-program">
+                                    <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
+                                    <h3>DIP</h3>
+                                    <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                                    <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                                </div>
+                            </div>
+                        </div>
                   <?php
                     $id = $_GET['id'];
                     $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
