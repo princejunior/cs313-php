@@ -24,7 +24,7 @@
   <!-- <script type="text/javascript" src=".../jquery.min.js"></script> -->
 </head>
 <body>
-<nav class="navbar navbar-inverse" >
+<nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
