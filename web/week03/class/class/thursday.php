@@ -26,10 +26,9 @@
         </script>
 	</head>
 	<body>
-			<h1>Working with Cookies
-
-
-		<?php include '../../shared/header.php';?><br><br>
+		<h1>Working with Cookies
+		<?php include '../../shared/header.php';?>
+		<br><br>
 		<?php session_start(); ?>
       <h1>PHP Team Activity</h1>
       <div style="width:50%; float:left">
