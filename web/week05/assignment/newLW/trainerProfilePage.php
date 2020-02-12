@@ -115,6 +115,7 @@
         <div class="container">
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
+                    <a href="" class="probootstrap-owl-navigation absolute right"><button> Edit Content </button></a>
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 </div>
                 <div class="col-md-6">
@@ -169,7 +170,6 @@
         </div>
     </section>
     <section id="next-section" class="probootstrap-section">
-        <a href="" class="probootstrap-owl-navigation absolute right"><button> Edit Content </button></a>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 probootstrap-relative">
