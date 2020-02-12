@@ -116,7 +116,7 @@
             <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
             <div class="checkbox mb-3">
-                
+                <label>
                     <input type="checkbox" name="speciality" value="Yoga">Yoga
                     <input type="checkbox" name="speciality" value="Power Lifting">Power Lifting
                     <br>
@@ -124,7 +124,7 @@
                     <input type="checkbox" name="speciality" value="Pilates">Pilates
                     <br>
                     <input type="checkbox" name="speciality" value="Cardio">Cardio
-                
+                </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
