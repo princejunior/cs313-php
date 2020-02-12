@@ -55,6 +55,23 @@
         </div>
     </div>
 </nav>
+<?php
+    $id = $_GET['id'];
+    $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+    $statement->execute();
+    // Go through each result
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    {
+      // The variable "row" now holds the complete record for that
+      // row, and we can access the different values based on their
+      // name
+      $name = $row['name'];
+      $profile_img_url = $row['profile_img_url'];
+      $speciality = $row['speciality'];
+      // $id = $row['id'];;
+      //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
+    }
+?>
 <section id="next-section" class="probootstrap-section">
         <div class="container">
             <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
