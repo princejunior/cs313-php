@@ -42,12 +42,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="viewCartLW.php"><span class="glyphicon glyphicon-shopping-cart"></span>Booking</a></li> -->
                 <li class="dropdown">
-            <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
-                <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
-                    <li class="divider"></li>
-                    <li><a class="text-center" href="#">View Cart</a></li>
-                </ul>
-        </li>
+                    <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span>Booking<span class="caret"></span></a>
+                    <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="viewCartLW.php">View Cart</a></li>
+                    </ul>
+                </li>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <li><a href="loginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>

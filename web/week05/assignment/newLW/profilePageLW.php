@@ -73,7 +73,7 @@
                     </span>
                   </li>
                   <li class="divider"></li>
-                    <li><a class="text-center" href="#">View Cart</a></li>
+                    <li><a class="text-center" href="viewCartLW.php">View Cart</a></li>
                   </li>
                 </ul>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
