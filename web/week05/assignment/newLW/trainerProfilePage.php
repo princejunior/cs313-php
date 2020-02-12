@@ -22,10 +22,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
   <script type="text/javascript" src=".../jquery.min.js"></script>
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
   </head>
 <body>
 <nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
@@ -223,7 +219,7 @@
                   <?php
                     }
                   ?>  
-                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
                         <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
@@ -302,7 +298,7 @@
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
               <!-- <div class="owl-controls">
