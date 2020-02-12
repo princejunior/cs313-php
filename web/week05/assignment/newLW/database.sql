@@ -269,8 +269,8 @@ INSERT INTO content ( trainer_id
                      , post_img_url       
                      , post_description   
                      , post_price
-                     ,difficulty
-                     ,title 
+                     , difficulty
+                     , title 
                      ) 
                   VALUES (1
                          , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'

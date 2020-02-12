@@ -1,4 +1,3 @@
-<!-- Starts session -->
 <?php 
     session_start();
     require "dbConnect.php";
@@ -71,59 +70,22 @@
         </div>
     </div>
 </nav>
-<main role="main">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Live W.O.W.</h1>
-            <p class="lead text-muted">Looking for a personal trainer or classes near you. 
-                    Live WOW is a plateform to help connect you to a 
-                    tailored trainer that is best for you! Trainers found here are certified 
-                    to come to your house, work, and even to a park to help you stay healthy. 
-                    No need to worry, you can pair up with a trainer to fit your busy schedule.</p>
-            <p>
-                <a href="#" class="btn btn-primary my-2">Find the Right Trainer for You</a>
-            </p>
-        </div>
-    </section>
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-            <?php
-                $statement = $db->prepare("SELECT * FROM trainer");
-                $statement->execute();
-                // Go through each result
-                while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                    // The variable "row" now holds the complete record for that
-                    // row, and we can access the different values based on their
-                    // name
-                    $name = $row['name'];
-                    $profile_img_url = $row['profile_img_url'];
-                    $speciality = $row['speciality'];
-                    $id = $row['id'];?>
-                    <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
-                                src=" <?php echo $profile_img_url;?> " data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <h3 class="card-title"><?php echo $name;?></h3>
-                                <h5 class="card-title"><?php echo $speciality;?></h5>
-                                <p class="card-text">
-                                    Description</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
-                                        <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                    }
-                ?>
-            </div>
-        </div>
-    </div>
-</main>
+<body class="text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
+</body>
 </body>
 </html>

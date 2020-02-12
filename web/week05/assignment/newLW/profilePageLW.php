@@ -110,8 +110,8 @@
                     <li><a class="text-center" href="#">View Cart</a></li>
                 </ul>
         </li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
