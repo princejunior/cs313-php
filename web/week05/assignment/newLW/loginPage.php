@@ -48,12 +48,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="viewCartLW.php"><span class="glyphicon glyphicon-shopping-cart"></span>Booking</a></li> -->
                 <li class="dropdown">
-            <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
-                <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
-                    <li class="divider"></li>
-                    <li><a class="text-center" href="#">View Cart</a></li>
-                </ul>
-        </li>
+                    <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
+                    <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="#">View Cart</a></li>
+                    </ul>
+                </li>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
@@ -78,7 +78,7 @@
                 <input type="radio" name="options" id="option3" autocomplete="off" onclick="login('trainerSignUp')"> Trainer Sign Up
             </label>
         </div>
-        <form id="login" class="form-signin" action="action_page.php" method="post">
+        <form id="login" class="form-signin" action="" method="POST">
             <!-- <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72"> -->
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
@@ -94,7 +94,7 @@
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
 
-        <form id="signUp" class="form-signin" action="action_page.php" method="post">
+        <form id="signUp" class="form-signin" action="insertNewUsers.php" method="POST">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>
@@ -109,7 +109,7 @@
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
 
-        <form id="trainerSignUp" class="form-signin" action="action_page.php" method="post">
+        <form id="trainerSignUp" class="form-signin" action="insertNewTrainers.php" method="POST">
             <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">First Name</label>

@@ -45,21 +45,6 @@
                 <li class="dropdown">
             <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
                 <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
-
-                    
-                        <!-- <span class="item">
-                            <span class="item-left">
-                                <img src="http://www.prepbootstrap.com/Content/images/template/menucartdropdown/item_3.jpeg" alt="" />
-                                <span class="item-info">
-                                    <span>Item name</span>
-                                    <span>price: 12$</span>
-                                </span>
-                            </span>
-                            <span class="item-right">
-                                <button class="btn btn-danger  fa fa-close"></button>
-                            </span>
-                        </span>
-                    </li> -->
                     <li class="divider"></li>
                     <li><a class="text-center" href="#">View Cart</a></li>
                 </ul>
@@ -70,5 +55,31 @@
         </div>
     </div>
 </nav>
+<section id="next-section" class="probootstrap-section">
+        <div class="container">
+            <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
+            <div class="row probootstrap-gutter60 mb50">
+                <div class="col-md-6">
+                    <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="probootstrap-heading">About Me</h2>
+                    <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p><a href="#" class="btn btn-primary">Read more about me</a></p>
+                </div>
+            </div>
+            <div class="row probootstrap-gutter60">
+                <div class="col-md-4 mb30">
+                    <h4 class="mb30">My Goals</h4>
+                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p>
+                </div>
+                <div class="col-md-4 mb30">
+                    <h4 class="mb30">My Lifestyle</h4>
+                    <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

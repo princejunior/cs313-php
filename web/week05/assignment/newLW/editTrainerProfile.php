@@ -66,7 +66,7 @@
                     </ul>
                 </li>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="loginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
@@ -181,7 +181,7 @@
           <div class="col-md-12 probootstrap-relative">
             <div>
               <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-              <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+              <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
             </div>  
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>

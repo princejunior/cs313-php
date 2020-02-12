@@ -65,7 +65,7 @@
                     </ul>
                 </li>
                 <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="loginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
@@ -215,13 +215,14 @@
                         <h3><?php echo $post_title;?></h3>
                         <p><?php echo $post_price?></p>
                         <p><?php echo $post_description;?></p>
+                        <a href=""><button>Book Now</button></a>
                       </div>
                     </div>
                   </div>
                   <?php
                     }
                   ?>  
-                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
                         <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
@@ -270,7 +271,7 @@
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div> -->
-                  </div>
+                  <!-- </div>
                   <div class="owl-item" style="width: 350px; margin-right: 20px;">
                     <div class="item">
                       <div class="probootstrap-program">
@@ -300,7 +301,7 @@
                         <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                       </div>
                     </div>
-                  </div>
+                  </div> --> 
                 </div>
               </div>
               <div class="owl-controls">
