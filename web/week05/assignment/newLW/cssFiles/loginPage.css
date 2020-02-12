@@ -1,9 +1,12 @@
 #login {
-    visibility: visible; 
+    /* visibility: visible;  */
+    display: block;
 }
 #signUp {
-    visibility: hidden; 
+    /* visibility: hidden;  */
+    display: none;
 }
 #trainerSignUp {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
