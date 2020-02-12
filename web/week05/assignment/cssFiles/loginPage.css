@@ -1,9 +1,9 @@
-form#login {
+#login {
     visibility: visible; 
 }
-form#signUp {
+#signUp {
     visibility: hidden; 
 }
-form#trainerSignUp {
+#trainerSignUp {
     visibility: hidden;
 }
