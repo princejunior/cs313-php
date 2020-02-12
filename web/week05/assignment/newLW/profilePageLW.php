@@ -185,7 +185,7 @@
           <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
             <div class="owl-stage-outer owl-height" style="height: 480px;">
               <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
-                <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                <!-- <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                   <div class="item">    
                     <div class="probootstrap-program">
                       <a href="#"><img src="trainer/img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
@@ -194,7 +194,7 @@
                       <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <?php
                   $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
                   $statement->execute();
