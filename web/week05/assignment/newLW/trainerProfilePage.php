@@ -69,5 +69,480 @@
         </div>
     </div>
 </nav>
+
+<?php
+    $id = $_GET['id'];
+    $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+    $statement->execute();
+    // Go through each result
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    {
+      // The variable "row" now holds the complete record for that
+      // row, and we can access the different values based on their
+      // name
+      $name = $row['name'];
+      $profile_img_url = $row['profile_img_url'];
+      $speciality = $row['speciality'];
+      // $id = $row['id'];;
+      //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
+    }
+  ?>
+  <!-- END: header -->
+  
+  <!-- START: section -->
+  <section class="probootstrap-intro probootstrap-intro-inner" 
+    style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
+  <div class="container">
+      <div class="row">
+        <div class="col-md-7 probootstrap-intro-text">
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $name;?></h1>
+          <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
+            <h2>Personal Trainer</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="probootstrap-animate fadeInUp probootstrap-animated"><a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+  </section>
+  <!-- END: section -->
+  <main>
+    <section id="next-section" class="probootstrap-section">
+        <a href="" class="probootstrap-owl-navigation absolute right"><button> Edit Content </button></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
+            <ul class="probootstrap-owl-navigation absolute right">
+              <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
+              <div class="owl-stage-outer owl-height" style="height: 480px;">
+                <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
+                  <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                    <div class="item">    
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
+                        <h3>DIP</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <?php
+                    $id = $_GET['id'];
+                    $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                    $statement->execute();
+                    // Go through each result
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+                      // The variable "row" now holds the complete record for that
+                      // row, and we can access the different values based on their
+                      // name
+                      $post_img_url = $row['post_img_url'];
+                      $post_description = $row['post_description'];
+                      $post_price = $row['post_price'];
+                      $post_difficulty = $row['difficulty'];
+                      $post_title = $row['title'];
+                  ?>
+                  <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
+                        <h3><?php echo $post_title;?></h3>
+                        <p><?php echo $post_price?></p>
+                        <p><?php echo $post_description;?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <?php
+                    }
+                  ?>  
+                  <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Push Up</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Reverse Lunge</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Dumbbell Overhead Press</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Bulgarian Split Squat</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>DIP</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div> -->
+                  <!-- </div>
+                  <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Russian Twist</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Dumbbell Squat</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
+                    <div class="item">
+                      <div class="probootstrap-program">
+                        <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                        <h3>Push Up</h3>
+                        <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                        <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <!-- <div class="owl-controls">
+                <div class="owl-nav">
+                  <div class="owl-prev" style="display: none;">
+                    <i class="icon-keyboard_arrow_left owl-direction"></i>
+                  </div>
+                  <div class="owl-next" style="display: none;">
+                    <i class="icon-keyboard_arrow_right owl-direction"></i>
+                  </div>
+                </div>
+                <div class="owl-dots" style="display: none;">
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="probootstrap-section probootstrap-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <h2 class="probootstrap-heading mt0 mb50">Programs (For Intermediate)</h2>
+            <ul class="probootstrap-owl-navigation absolute right">
+              <li><a href="#" class="probootstrap-owl-prev2"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#" class="probootstrap-owl-next2"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <div class="owl-carousel owl-carousel-carousel2 owl-theme owl-loaded">
+            <div class="owl-stage-outer owl-height" style="height: 480px;"><div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;"><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>DIP</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Russian Twist</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+                <?php
+                  $id = $_GET['id'];
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Intermediate'");
+                  $statement->execute();
+                  // Go through each result
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                  {
+                    // The variable "row" now holds the complete record for that
+                    // row, and we can access the different values based on their
+                    // name
+                    $post_img_url = $row['post_img_url'];
+                    $post_description = $row['post_description'];
+                    $post_price = $row['post_price'];
+                    $post_difficulty = $row['difficulty'];
+                    $post_title = $row['title'];?>
+              <div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
+                  <h3><?php echo $post_title;?></h3>
+                  <p><?php echo $post_price?></p>
+                  <p><?php echo $post_description;?></p>
+                </div>
+              </div>
+            </div>
+
+              <?php
+            }
+         ?>  
+              </div></div><div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Push Up</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Reverse Lunge</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Overhead Press</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Bulgarian Split Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>DIP</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Russian Twist</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Push Up</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="icon-keyboard_arrow_left owl-direction"></i></div><div class="owl-next" style="display: none;"><i class="icon-keyboard_arrow_right owl-direction"></i></div></div><div class="owl-dots" style="display: none;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="probootstrap-section probootstrap-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <h2 class="probootstrap-heading mt0 mb50">Programs (For Advance)</h2>
+            <ul class="probootstrap-owl-navigation absolute right">
+              <li><a href="#" class="probootstrap-owl-prev3"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#" class="probootstrap-owl-next3"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <div class="owl-carousel owl-carousel-carousel3 owl-theme owl-loaded">
+            <div class="owl-stage-outer owl-height" style="height: 480px;"><div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;"><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>DIP</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Russian Twist</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+
+              </div></div><div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item active" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Push Up</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Reverse Lunge</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Overhead Press</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Bulgarian Split Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>DIP</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_7.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Russian Twist</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Dumbbell Squat</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 20px;"><div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Push Up</h3>
+                  <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
+                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                </div>
+              </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="icon-keyboard_arrow_left owl-direction"></i></div><div class="owl-next" style="display: none;"><i class="icon-keyboard_arrow_right owl-direction"></i></div></div><div class="owl-dots" style="display: none;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="probootstrap-footer">
+      <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
+      <div class="container">
+      <div class="row mb50">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4>About The Site</h4>
+            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli. <a href="#">Learn More</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+            <h4>Gym Hours</h4>
+            <ul class="probootstrap-footer-link">
+              <li>Week Days: 05:00 – 22:00</li>
+              <li>Saturday: CLOSED</li>
+              <li>Sunday: 05:00 - 22:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-5 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+            <h4>Links</h4>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Join The Club</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="probootstrap-footer-widget">
+            <h4>Contact Info</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+       <div class="row">
+         <div class="col-md-12 text-center border-top">
+           <p class="mb0">© Copyright 2017 <a href="https://uicookies.com/">uiCookies:Trainer</a>. All Rights Reserved. <br> Designed by <a href="https://uicookies.com">uicookies.com</a> Demo Images Unsplash.com &amp; Pexels.com</p>
+         </div>
+       </div>
+     </div>
+  </footer>  
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
 </body>
 </html>

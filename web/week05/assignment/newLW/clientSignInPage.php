@@ -76,10 +76,10 @@
                 <input type="radio" name="options" id="option2" autocomplete="off" onclick="login('signUp')"> Sign Up
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option3" autocomplete="off" onclick="login('trainerSignUp')"> Trainer Sign UP
+                <input type="radio" name="options" id="option3" autocomplete="off" onclick="login('trainerSignUp')"> Trainer Sign Up
             </label>
         </div>
-        <form id="login"class="form-signin" action="action_page.php" method="post">
+        <form id="login" class="form-signin" action="action_page.php" method="post">
             <!-- <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72"> -->
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
