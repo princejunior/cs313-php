@@ -20,10 +20,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
   <script type="text/javascript" src=".../jquery.min.js"></script>
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
   </head>
 <body>
   <!-- START: header -->
