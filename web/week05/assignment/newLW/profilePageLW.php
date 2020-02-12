@@ -245,7 +245,7 @@
                 <?php
                   }
                 ?>  
-                <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                <!-- <div class="owl-item active" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
                       <a href="#"><img src="trainer/img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
@@ -275,7 +275,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="owl-item" style="width: 350px; margin-right: 20px;">
+                <div class="owl-item" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
                       <a href="#"><img src="trainer/img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
@@ -304,7 +304,7 @@
                       <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     </div>
                   </div>
-                </div> -->
+                </div>
                 <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
@@ -324,7 +324,7 @@
                       <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="owl-controls">
