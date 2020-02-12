@@ -83,6 +83,7 @@
         </div>
     </div>
 </nav>
+
 <?php
   $id = $_GET['id'];
   $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
