@@ -205,7 +205,7 @@
                     $post_difficulty = $row['difficulty'];
                     $post_title = $row['title'];
                 ?>
-                <div class="owl-item active" style="width: 350px; margin-right: 20px;">
+                <div class="owl-item" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
                       <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
