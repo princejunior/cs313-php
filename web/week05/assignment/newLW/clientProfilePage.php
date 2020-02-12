@@ -70,7 +70,7 @@
       $speciality = $row['speciality'];
     }
 ?>
-<section id="next-section" class="probootstrap-section">
+<section id="next-section" class="probootstrap-intro probootstrap-intro-inner">
         <div class="container">
             <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
             <div class="row probootstrap-gutter60 mb50">
@@ -83,7 +83,6 @@
                     <h2 class="probootstrap-heading">About Me</h2>
                     <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-primary">Read more about me</a></p>
                 </div>
             </div>
             <div class="row probootstrap-gutter60">
