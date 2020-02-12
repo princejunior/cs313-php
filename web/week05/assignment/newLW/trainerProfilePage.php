@@ -603,8 +603,8 @@
        </div>
      </div>
   </footer>  
-  <script src="newLw/trainer/js/scripts.min.js"></script>
-  <script src="newLw/trainer/js/main.min.js"></script>
-  <script src="newLw/trainer/js/custom.js"></script>
+  <script src="newLW/trainer/js/scripts.min.js"></script>
+  <script src="newLW/trainer/js/main.min.js"></script>
+  <script src="newLW/trainer/js/custom.js"></script>
 </body>
 </html>
