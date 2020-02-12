@@ -50,21 +50,6 @@
                 <li class="dropdown">
             <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
                 <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
-
-                    
-                        <!-- <span class="item">
-                            <span class="item-left">
-                                <img src="http://www.prepbootstrap.com/Content/images/template/menucartdropdown/item_3.jpeg" alt="" />
-                                <span class="item-info">
-                                    <span>Item name</span>
-                                    <span>price: 12$</span>
-                                </span>
-                            </span>
-                            <span class="item-right">
-                                <button class="btn btn-danger  fa fa-close"></button>
-                            </span>
-                        </span>
-                    </li> -->
                     <li class="divider"></li>
                     <li><a class="text-center" href="#">View Cart</a></li>
                 </ul>
@@ -76,20 +61,26 @@
     </div>
 </nav>
 <body class="text-center">
-    <form class="form-signin">
+    <?php 
+        $email = "";
+        $password = "";
+
+    ?>
+    <form class="form-signin" action="action_page.php" method="post">
       <img class="mb-4" src="https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/lwLogo.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <input type="email" id="inputEmail" class="form-control"  name="email" placeholder="Email address" required="" autofocus="">
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <input type="checkbox" value="remember-me">Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <a href="trainerProfilePage.php"><button class="btn btn-lg btn-primary btn-block">Login</button></a>
+      <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
     </form>
 </body>
 </body>

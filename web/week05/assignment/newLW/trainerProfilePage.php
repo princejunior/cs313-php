@@ -43,11 +43,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="viewCartLW.php"><span class="glyphicon glyphicon-shopping-cart"></span>Booking</a></li> -->
                 <li class="dropdown">
-            <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
-                <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
-
-                    
-                        <!-- <span class="item">
+                    <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
+                    <ul id="dropBox" class="dropdown-menu dropdown-cart" role="menu">
+                        <span class="item">
                             <span class="item-left">
                                 <img src="http://www.prepbootstrap.com/Content/images/template/menucartdropdown/item_3.jpeg" alt="" />
                                 <span class="item-info">
@@ -59,13 +57,14 @@
                                 <button class="btn btn-danger  fa fa-close"></button>
                             </span>
                         </span>
-                    </li> -->
-                    <li class="divider"></li>
-                    <li><a class="text-center" href="#">View Cart</a></li>
-                </ul>
-        </li>
-        <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-        <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li class="divider">
+                        </li>
+                        <li><a class="text-center" href="#">View Cart</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>
