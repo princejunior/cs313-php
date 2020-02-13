@@ -25,8 +25,13 @@ try
 	$statement2->bindValue(':first', $first);
 	$statement2->bindValue(':last', $last);
 	$statement2->bindValue(':speciality', $speciality);
-
 	$statement2->execute();
+	$query3 = 'INSERT INTO client (customer_id, first_name, last_name) VALUES (:customer_id, :first, :last)';
+	$statement3 = $db->prepare($query3);
+	$statement3->bindValue(':customer_id', $customerId);
+	$statement3->bindValue(':first', $first);
+	$statement3->bindValue(':last', $last);
+	$statement3->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 	$userId = $db->lastInsertId("trainer_id_seq");
