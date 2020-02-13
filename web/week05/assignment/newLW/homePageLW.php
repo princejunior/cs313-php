@@ -91,7 +91,7 @@
                             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
                                 src=" <?php echo $profile_img_url;?> " data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                             <div class="card-body">
-                                <h3 class="card-title"><?php echo $first_name . $last_name;?></h3>
+                                <h3 class="card-title"><?php echo $first_name . ' '. $last_name;?></h3>
                                 <h5 class="card-title"><?php echo $speciality;?></h5>
                                 <p class="card-text">
                                     Description</p>

@@ -102,7 +102,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $first_name . $last_name;?></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
+            <span><?php echo $first_name;?></span>
+            <?php echo $last_name;?>
+          </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>
