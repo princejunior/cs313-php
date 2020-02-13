@@ -20,7 +20,7 @@ CREATE TABLE trainer
 , customer_id       INT          NOT NULL REFERENCES customer(id)
 , first_name        VARCHAR(100) NOT NULL
 , last_name         VARCHAR(100) NOT NULL
-, profile_img_url   VARCHAR(100) NOT NULL
+, profile_img_url   VARCHAR(100) 
 , speciality        VARCHAR(50)  NOT NULL 
 );
 
