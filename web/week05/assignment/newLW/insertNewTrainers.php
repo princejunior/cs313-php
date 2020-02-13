@@ -21,7 +21,7 @@ try
 	echo $customerId;
 	$query2 = 'INSERT INTO trainer (customer_id, first_name, last_name, speciality) VALUES (customer_id, :first, :last, :speciality)';
 	$statement2 = $db->prepare($query2);
-	$statement2->bindValue(':cusomer_id', $customerId);
+	$statement2->bindValue(':customer_id', $customerId);
 	$statement2->bindValue(':first', $first);
 	$statement2->bindValue(':last', $last);
 	$statement2->bindValue(':speciality', $speciality);
