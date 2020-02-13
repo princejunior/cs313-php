@@ -19,7 +19,9 @@ CREATE TABLE customer
 CREATE TABLE trainer
 ( id                SERIAL       NOT NULL PRIMARY KEY
 , customer_id       INT          NOT NULL REFERENCES customer(id)
-, name              VARCHAR(100) NOT NULL
+, client_id         INT          NOT NULL REFERENCES client(id)
+, first_name        VARCHAR(100) NOT NULL
+, last_name         VARCHAR(100) NOT NULL
 , profile_img_url   VARCHAR(100) NOT NULL
 , speciality        VARCHAR(50)  NOT NULL 
 );
@@ -155,77 +157,77 @@ INSERT INTO customer (id
 -- ----------------------------------------------- --
 -- --------- POPULATE THE TRAINER TABLE --------- --
 -- ----------------------------------------------- --
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (1
-                        ,1 
-                        ,'Spencer Serranilla'
+                 VALUES (1 
+                        ,'Spencer'
+                        , 'Serranilla'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         ,'Cardio'
                         );
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (2
-                        ,2 
-                        ,'Elijah Elliott'
+                 VALUES (2 
+                        ,'Elijah'
+                        ,'Elliott'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg'
                         , 'Power Lifter'
                         );
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
-                        , profile_img_url,
-                        speciality) 
-                 VALUES (3
-                        ,3 
-                        ,'Meghan Hutson'
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url
+                        ,speciality)
+                 VALUES (3 
+                        ,'Meghan'
+                        , 'Hutson'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Yoga');
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
-                        ,speciality) 
-                 VALUES (4
-                        ,7 
-                        ,'Elon Musk'
+                        ,speciality)
+                 VALUES (7 
+                        ,'Elon'
+                        , 'Musk'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Power Lifter');
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
-                        ,speciality) 
-                 VALUES (5
-                        ,8 
-                        ,'Bill Gates'
+                        ,speciality)
+                 VALUES (8 
+                        ,'Bill'
+                        ,'Gates'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Crossfit');
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
-                        ,speciality) 
-                 VALUES (6
-                        ,9 
-                        ,'Pete the Pilot'
+                        ,speciality)
+                 VALUES (9 
+                        ,'Pete' 
+                        ,'the Pilot'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Hypertrophey'
                         );
-INSERT INTO trainer ( id
-                        ,customer_id
-                        ,name
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (7
-                        ,10 
-                        ,'Jeff Bezos'
+                 VALUES (10 
+                        ,'Jeff' 
+                        ,'Bezos'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Pilates')
                         ;

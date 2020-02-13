@@ -89,7 +89,8 @@
   $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
   $statement->execute();
   while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-    $name = $row['name'];
+    $first_name = $row['first_name'];
+    $last_name = $row['last_name'];
     $profile_img_url = $row['profile_img_url'];
     $speciality = $row['speciality'];
   }
@@ -101,7 +102,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $name;?></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><?php echo $first_name . $last_name;?></h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>

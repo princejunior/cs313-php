@@ -3,7 +3,7 @@
 $first = $_POST['firstName'];
 $last = $_POST['lastName'];
 $email = $_POST['email'];
-
+$password = $_POST['password'];
 require("dbConnect.php");
 $db = get_db();
 
