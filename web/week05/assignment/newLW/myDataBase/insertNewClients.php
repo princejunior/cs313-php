@@ -10,11 +10,12 @@ $db = get_db();
 try
 {
 	// insert into database
-	$query = 'INSERT INTO customer (first_name, last_name, email) VALUES (:first, :last, :email)';
+	$query = 'INSERT INTO client (first_name, last_name, email, password) VALUES (:first, :last, :email, :password)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':first', $first);
 	$statement->bindValue(':last', $last);
 	$statement->bindValue(':email', $email);
+	$statement->bindValue(':password', $password);
 	$statement->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
     

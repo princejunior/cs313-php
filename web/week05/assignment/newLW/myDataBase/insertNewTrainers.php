@@ -3,6 +3,7 @@
 $first = $_POST['firstName'];
 $last = $_POST['lastName'];
 $email = $_POST['email'];
+$password = $_POST['password'];
 $speciality = $_POST[''];
 
 require("dbConnect.php");
@@ -21,14 +22,14 @@ try
 	$statement->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
-	$userId = $db->lastInsertId("w6_user_id_seq");
+	$userId = $db->lastInsertId("trainer_id_seq");
 }
 catch (Exception $ex)
 {
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: display.php/?personId=$userId");
+header("Location: trainerProfilePage.php/?Id=$userId");
 
 die(); 
 ?>
