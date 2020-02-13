@@ -195,19 +195,16 @@ INSERT INTO trainer ( customer_id
 -- ----------------------------------------------- --
 -- -------- POPULATE THE RESTAURANT TABLE -------- --
 -- ----------------------------------------------- -- 
-INSERT INTO client ( id
-                        , customer_id
+INSERT INTO client ( customer_id
                         ,first_name
                         ,last_name
                         , profile_img_url) 
-                   VALUES (1
-                          ,4
+                   VALUES (4
                           ,'Rick'
                           ,'askfhj'
                           , 'nkn'
                           );  
-INSERT INTO client ( id
-                        , customer_id
+INSERT INTO client ( customer_id
                         ,first_name
                         ,last_name
                         , profile_img_url) 
@@ -217,13 +214,11 @@ INSERT INTO client ( id
                           ,'hkjfdhka'
                           , 'nnn'
                           ); 
-INSERT INTO client ( id
-                        , customer_id
+INSERT INTO client ( customer_id
                         ,first_name
                         ,last_name
                         , profile_img_url) 
-                   VALUES (3
-                          ,6
+                   VALUES (6
                           ,'Bob'
                           , 'fsdjfkj'
                           , 'jnkjn'
