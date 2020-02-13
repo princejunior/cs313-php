@@ -35,7 +35,7 @@
                         </span>
                         <li class="divider">
                         </li>
-                        <li><a class="text-center" href="#">View Cart</a>
+                        <li><a class="text-center" href="viewCartLW.php">View Cart</a>
                         </li>
                     </ul>
                 </li>
