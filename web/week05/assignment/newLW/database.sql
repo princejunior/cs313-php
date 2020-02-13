@@ -73,84 +73,66 @@ CREATE TABLE client_order_content_items
 -- ----------------------------------------------- --
 -- -------- POPULATE THE  MENU_ITEM TABLE -------- --
 -- ----------------------------------------------- --  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 1
-                         , 'fitness01'
+                  VALUES ( 'fitness01'
                          , '1@gmail.com'
                          , '1234567');  
 INSERT INTO customer (id
                          , username
                          , email
                          , password) 
-                  VALUES ( 2
-                         , 'fitness02'
+                  VALUES ( 'fitness02'
                          , '2@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 3
-                         , 'fitnness03'
+                  VALUES ( 'fitnness03'
                          , '3@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 4
-                         , 'client01'
+                  VALUES ( 'client01'
                          , '4@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 5
-                         , 'client02'
+                  VALUES ( 'client02'
                          , '5@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 6
-                         , 'client03'
+                  VALUES ( 'client03'
                          , '6@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 7
-                         , 'trainer04'
+                  VALUES ( 'trainer04'
                          , '7@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
                   VALUES ( 8
                          , 'trainer05'
                          , '8@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 9
-                         , 'trainer06'
+                  VALUES ( 'trainer06'
                          , '9@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 10
-                         , 'trainer07'
+                  VALUES ( 'trainer07'
                          , '10@gmail.com'
                          , '1234567');  
 
