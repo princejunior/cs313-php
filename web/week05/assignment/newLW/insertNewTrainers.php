@@ -12,11 +12,16 @@ $db = get_db();
 try
 {
 	// insert into database
-	$query = 'INSERT INTO trainer (first_name, last_name, email, speciality) VALUES (:first, :last, :email, :speciality)';
+	$query2 = 'INSERT INTO customer (email, password) VALUES (:email, :password)';
+	$statement = $db->prepare($query2);
+	$statement->bindValue(':email', $email);
+	$statement->bindValue(':password', $password);
+	$customerId = $db->lastInsertId("customer_id_seq");
+	$query = 'INSERT INTO trainer (customer_id, first_name, last_name, speciality) VALUES (customer_id, :first, :last, :speciality)';
 	$statement = $db->prepare($query);
+	$statement->bindValue(':cusomer_id', $customerId);
 	$statement->bindValue(':first', $first);
 	$statement->bindValue(':last', $last);
-	$statement->bindValue(':email', $email);
 	$statement->bindValue(':speciality', $speciality);
 
 	$statement->execute();
