@@ -208,8 +208,7 @@ INSERT INTO client ( customer_id
                         ,first_name
                         ,last_name
                         , profile_img_url) 
-                   VALUES (2
-                          ,5
+                   VALUES (5
                           ,'Morty'
                           ,'hkjfdhka'
                           , 'nnn'
