@@ -19,7 +19,7 @@ try
 	$customerId = $db->lastInsertId("customer_id_seq");
 	
 	echo $customerId;
-	$query2 = 'INSERT INTO trainer (customer_id, first_name, last_name, speciality) VALUES (customer_id, :first, :last, :speciality)';
+	$query2 = 'INSERT INTO trainer (customer_id, first_name, last_name, speciality) VALUES (:customer_id, :first, :last, :speciality)';
 	$statement2 = $db->prepare($query2);
 	$statement2->bindValue(':customer_id', $customerId);
 	$statement2->bindValue(':first', $first);
