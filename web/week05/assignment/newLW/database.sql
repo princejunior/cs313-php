@@ -79,8 +79,7 @@ INSERT INTO customer (username
                   VALUES ( 'fitness01'
                          , '1@gmail.com'
                          , '1234567');  
-INSERT INTO customer (id
-                         , username
+INSERT INTO customer (username
                          , email
                          , password) 
                   VALUES ( 'fitness02'
@@ -119,8 +118,7 @@ INSERT INTO customer (username
 INSERT INTO customer (username
                          , email
                          , password) 
-                  VALUES ( 8
-                         , 'trainer05'
+                  VALUES ( 'trainer05'
                          , '8@gmail.com'
                          , '1234567');  
 INSERT INTO customer (username
