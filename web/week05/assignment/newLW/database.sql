@@ -398,7 +398,8 @@ SELECT c.id     AS "Customer ID"
      , username  AS "Username"
      , email      AS "eamil"
      , password     AS "Password"
-     , t.name           AS "Trainer's Name"
+     , t.first_name           AS "Trainer's First Name"
+     , t.last_name           AS "Trainer's Last Name"
      , t.profile_img_url AS "Picture URL"
    FROM       customer      c 
    right JOIN trainer        t ON c.id  = t.customer_id;
@@ -416,7 +417,8 @@ SELECT c.id     AS "Customer ID"
      , post_img_url  AS "post_img_url"
      , post_description      AS "Description"
      , post_price     AS "Price"
-     , t.name      AS "Trainer's Name"     
+     , t.first_name      AS "Trainer's First Name"     
+     , t.last_name      AS "Trainer's Last Name"     
    FROM       content      co 
    LEFT JOIN trainer        t ON co.trainer_id  = t.id;  
     
