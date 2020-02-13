@@ -346,7 +346,7 @@ INSERT INTO client_order_content_items (client_order_id
                          VALUES ( 1
                                 , 1);    
 \echo '*********************List all customer info*********************'
-SELECT id, username, email, password FROM customer;
+SELECT id, email, password FROM customer;
 \echo '*********************List all trainer names*********************'
 SELECT first_name, last_name FROM trainer;
 \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
@@ -361,7 +361,6 @@ SELECT * FROM content_items;
 SELECT * FROM client_order_content_items;
 \echo '************************view customer info of trainer************************'
 SELECT c.id     AS "Customer ID"
-     , username  AS "Username"
      , email      AS "eamil"
      , password     AS "Password"
      , t.first_name           AS "Trainer's First Name"
@@ -371,7 +370,6 @@ SELECT c.id     AS "Customer ID"
    right JOIN trainer        t ON c.id  = t.customer_id;
 \echo '************************view customer info of clients************************'
    SELECT c.id     AS "Customer ID"
-     , username  AS "Username"
      , email      AS "eamil"
      , password     AS "Password"
      , cl.first_name      AS "Client's First Name"
