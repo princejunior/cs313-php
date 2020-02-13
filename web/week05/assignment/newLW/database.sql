@@ -29,7 +29,8 @@ CREATE TABLE trainer
 CREATE TABLE client
 ( id                SERIAL       NOT NULL PRIMARY KEY
 , customer_id       INT          NOT NULL REFERENCES customer(id)
-, name              VARCHAR(100) NOT NULL
+, first_name        VARCHAR(100) NOT NULL
+, last_name         VARCHAR(100) NOT NULL
 , profile_img_url   VARCHAR(100) NOT NULL
 
 );
@@ -237,29 +238,35 @@ INSERT INTO trainer ( customer_id
 -- ----------------------------------------------- -- 
 INSERT INTO client ( id
                         , customer_id
-                        ,name
+                        ,first_name
+                        ,last_name
                         , profile_img_url) 
                    VALUES (1
                           ,4
                           ,'Rick'
+                          ,'askfhj'
                           , 'nkn'
                           );  
 INSERT INTO client ( id
                         , customer_id
-                        ,name
+                        ,first_name
+                        ,last_name
                         , profile_img_url) 
                    VALUES (2
                           ,5
                           ,'Morty'
+                          ,'hkjfdhka'
                           , 'nnn'
                           ); 
 INSERT INTO client ( id
                         , customer_id
-                        ,name
+                        ,first_name
+                        ,last_name
                         , profile_img_url) 
                    VALUES (3
                           ,6
                           ,'Bob'
+                          , 'fsdjfkj'
                           , 'jnkjn'
                           );  
 
