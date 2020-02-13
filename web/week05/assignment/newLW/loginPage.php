@@ -62,7 +62,7 @@
             <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
         </form>
 
-        <form id="signUp" class="form-signin" action="insertNewUsers.php" method="POST">
+        <form id="signUp" class="form-signin" action="insertNewClients.php" method="POST">
             <label for="inputEmail" class="sr-only">First Name</label>
                 <input type="firstName" id="inputFirstName" class="form-control"  name="first_name" placeholder="First Name" required="" autofocus="">
             <label for="inputEmail" class="sr-only">Last Name</label>
