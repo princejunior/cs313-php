@@ -4,7 +4,7 @@ $first = $_POST['firstName'];
 $last = $_POST['lastName'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$speciality = $_POST[''];
+$speciality = $_POST['speciality'];
 
 require("dbConnect.php");
 $db = get_db();
@@ -12,7 +12,7 @@ $db = get_db();
 try
 {
 	// insert into database
-	$query = 'INSERT INTO customer (first_name, last_name, email) VALUES (:first, :last, :email)';
+	$query = 'INSERT INTO trainer (first_name, last_name, email, speciality) VALUES (:first, :last, :email, :speciality)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':first', $first);
 	$statement->bindValue(':last', $last);
