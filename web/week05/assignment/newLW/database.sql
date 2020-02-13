@@ -19,7 +19,6 @@ CREATE TABLE customer
 CREATE TABLE trainer
 ( id                SERIAL       NOT NULL PRIMARY KEY
 , customer_id       INT          NOT NULL REFERENCES customer(id)
-, client_id         INT          NOT NULL REFERENCES client(id)
 , first_name        VARCHAR(100) NOT NULL
 , last_name         VARCHAR(100) NOT NULL
 , profile_img_url   VARCHAR(100) NOT NULL
