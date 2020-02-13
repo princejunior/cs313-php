@@ -32,11 +32,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="../homePageLW.php">Live W.O.W.</a>
+            <a class="navbar-brand" href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Live W.O.W.</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="./homePageLW.php">Home</a></li>
+<!-- ../homePageLW.php -->
+                <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Home</a></li>
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Nutrionist</a></li>
                 <li><a href="#">Physical Therapist</a></li>
