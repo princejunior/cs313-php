@@ -22,68 +22,7 @@
   </head>
 <body>
   <!-- START: header -->
-<nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="homePageLW.php">Live W.O.W.</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="homePageLW.php">Home</a></li>
-                <li><a href="#">Trainers</a></li>
-                <li><a href="#">Nutrionist</a></li>
-                <li><a href="#">Physical Therapist</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="viewCartLW.php"><span class="glyphicon glyphicon-shopping-cart"></span>Booking</a></li>
-              <li class="dropdown">
-                <a href="viewCartLW.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-gift bigicon"></span> Booking<span class="caret"></span></a>
-                <ul class="dropdown-menu dropdown-cart" role="menu">
-                  <li>
-                    <span class="item">
-                      <span class="item-left">
-                        <img style="width: 55px ; height: auto" src="<?php echo $trainers[0][3]?>" alt="" />
-                        <span class="item-info">
-                          <span><?php echo $trainers[0][1]?> Program</span>
-                          <span>price: $<?php echo $trainers[0][2]?></span>
-                        </span>
-                      </span>
-                      <span class="item-right">
-                        <button class="btn btn-danger  fa fa-close">Buy</button>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="item">
-                      <span class="item-left">
-                        <img style="width: 55px ; height: auto" src="<?php echo $trainers[1][3]?>" alt="" />
-                        <span class="item-info">
-                          <span><?php echo $trainers[1][1]?></span>
-                          <span>price: $<?php echo $trainers[1][2]?></span>
-                        </span>
-                      </span>
-                      <span class="item-right">
-                        <button class="btn btn-danger  fa fa-close"></button>
-                      </span>
-                    </span>
-                  </li>
-                  <li class="divider"></li>
-                    <li><a class="text-center" href="viewCartLW.php">View Cart</a></li>
-                  </li>
-                </ul>
-                <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                <li><a href="clientSignInPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-              </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
+  <?php require 'navBarLW.php'?>
 <?php
   $id = $_GET['id'];
   $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
