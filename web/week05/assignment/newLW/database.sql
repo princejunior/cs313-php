@@ -415,11 +415,12 @@ SELECT c.id     AS "Customer ID"
      , username  AS "Username"
      , email      AS "eamil"
      , password     AS "Password"
-     , cl.name      AS "Client's Name"
+     , cl.first_name      AS "Client's First Name"
+     , cl.last_name      AS "Client's Last Name"
      , cl.profile_img_url AS "Picture URL"
    FROM       customer      c 
    right JOIN client        cl ON c.id  = cl.customer_id;   
-
+\echo '************************view customer info of trainers************************'
    SELECT co.id     AS "Content ID"
      , post_img_url  AS "post_img_url"
      , post_description      AS "Description"
