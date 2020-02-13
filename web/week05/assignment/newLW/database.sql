@@ -41,7 +41,7 @@ CREATE TABLE content
 , post_description   VARCHAR(100) NOT NULL
 , post_price         FLOAT        NOT NULL
 , difficulty         VARCHAR(50)  NOT NULL
-, title             VARCHAR(50)  NOT NULL  
+, title              VARCHAR(50)  NOT NULL  
 );
 
 -- trainer_client --
@@ -382,7 +382,7 @@ INSERT INTO client_order_content_items (client_order_id
 \echo '*********************List all customer info*********************'
 SELECT id, username, email, password FROM customer;
 \echo '*********************List all trainer names*********************'
-SELECT name FROM trainer;
+SELECT first_name, last_name FROM trainer;
 \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
 SELECT * FROM trainer;
 \echo '************************List  all clients************************'
