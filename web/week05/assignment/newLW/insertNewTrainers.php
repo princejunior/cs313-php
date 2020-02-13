@@ -12,7 +12,7 @@ $db = get_db();
 try
 {
 	$query1 = 'INSERT INTO customer (email, password) VALUES (:email, :password)' ;
-	$statement1 = $db->prepare($query2);
+	$statement1 = $db->prepare($query1);
 	$statement1->bindValue(':email', $email);
 	$statement1->bindValue(':password', $password);
 	$statement1->execute();
