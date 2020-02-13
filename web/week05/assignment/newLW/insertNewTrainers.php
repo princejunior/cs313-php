@@ -24,7 +24,7 @@ try
 	// 	die();
 	// }
 
-	$query2 = 'INSERT INTO customer (email, password) VALUES (:email, :password)';
+	$query2 = 'INSERT INTO customer (email, password) VALUES (:email, :password) RETURNING id' ;
 	$statement = $db->prepare($query2);
 	$statement->bindValue(':email', $email);
 	$statement->bindValue(':password', $password);
