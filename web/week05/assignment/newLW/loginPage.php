@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="cssFiles/loginPage.css">
 </head>
 <body>
+<?php require 'navBarLW.php'?>
 <nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
     <div class="container-fluid">
         <div class="navbar-header">
