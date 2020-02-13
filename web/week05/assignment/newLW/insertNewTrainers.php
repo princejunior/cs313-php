@@ -1,7 +1,7 @@
 <?php
 // retrieve POST data from the other page
-$first = $_POST['firstName'];
-$last = $_POST['lastName'];
+$first = $_POST['first_name'];
+$last = $_POST['last_name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $speciality = $_POST['speciality'];
