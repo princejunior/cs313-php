@@ -236,7 +236,7 @@ INSERT INTO trainer ( customer_id
                         ,'Jessica' 
                         ,'Gunn'
                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
-                        , 'Core Strengthening and HIIT Training')
+                        , 'Core Strengthening and HIIT')
                         ;
 
 
@@ -386,11 +386,11 @@ INSERT INTO content ( trainer_id
                      , title 
                      ) 
                   VALUES (8
-                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'
-                     , 'gjhgjhgjhgj'
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'
+                     , 'Only have a barbell and weighted plates then this is the workout for you!' 
                          , 20.00
                          , 'Beginner'
-                         , '3 Month leg Workout');  
+                         , '3 Month HIIT Workout'); 
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -399,7 +399,20 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                         
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                        
+                         , 'You need this program since it only requires you! This program will help stregthen your core with out weights.'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Abs Workout');   
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (8
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -412,7 +425,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                         
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -425,20 +438,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                        
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Abs Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (8
-                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                        
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                        
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
