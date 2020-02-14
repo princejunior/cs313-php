@@ -2,6 +2,7 @@ DROP TABLE client_order_content_items;
 DROP TABLE client_order;
 DROP TABLE content_items;
 DROP TABLE content;
+DROP TABLE trainer_description;
 DROP TABLE trainer_client;
 DROP TABLE trainer;
 DROP TABLE client;
@@ -34,6 +35,15 @@ CREATE TABLE client
 , profile_img_url   VARCHAR(200) 
 
 );
+-- Trainer's Description--
+Create TABLE trainer_description
+(      
+        trainer_id   INT           NOT NULL REFERENCES trainer(id)
+       , about_me    VARCHAR(1000)  NOT NULL
+       , my_mission  VARCHAR(500)  NOT NULL
+       , my_vision   VARCHAR(500)  NOT NULL         
+)
+
 -- content --
 CREATE TABLE content 
 ( id                 SERIAL NOT NULL PRIMARY KEY
@@ -260,7 +270,7 @@ INSERT INTO client ( customer_id
                           , 'fsdjfkj'
                           , 'jnkjn'
                           );  
-INSERT INTO client (     customer_id
+INSERT INTO client (customer_id
                         , first_name
                         , last_name
                         , profile_img_url) 
@@ -270,6 +280,22 @@ INSERT INTO client (     customer_id
                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_client.jpeg'
                         )
                         ;
+-- ----------------------------------------------- --
+-- ---------- POPULATE THE  Content ---------- --
+-- ----------------------------------------------- -- 
+INSERT INTO trainer_description(
+         trainer_id   
+       , about_me   
+       , my_mission  
+       , my_vision)
+       VALUES (11
+       , 'I am Jessica Gunn - wife, mother and personal trainer. A few years after having my four children I decided it was finally time to invest in myself by starting an exercise program and making better food choices. 
+       I was tired of feeling irritable and exhausted and knew it was time to make some changes. I have never been someone that values exercising and eating healthy and it was very difficult finding what worked for my body. 
+       After a few months I finally started seeing physical and mental changes. I was such a better wife and mother that I decided to get certified as a personal fitness trainer so that I could help other men and women gain 
+       confidence and strength as I help them with their fitness and nutrition goals. After a year of training I opened my own business and now train clients and teach group hiit classes. I specialize in core strengthening 
+       and hiit training. It’s the most rewarding job watching people realize they can do hard things. '
+       , 'I want to help you gain confidence and strength as we work together achieving your fitness and nutrition goals.'
+       , 'By the end of one of my programs, you will be a new person.' )
 
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
