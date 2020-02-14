@@ -48,7 +48,7 @@ Create TABLE trainer_description
 CREATE TABLE content 
 ( id                 SERIAL NOT NULL PRIMARY KEY
 , trainer_id         INT    NOT NULL REFERENCES trainer(id)
-, post_img_url       VARCHAR(100) NOT NULL
+, post_img_url       VARCHAR(200) NOT NULL
 , post_description   VARCHAR(100) NOT NULL
 , post_price         FLOAT        NOT NULL
 , difficulty         VARCHAR(50)  NOT NULL
