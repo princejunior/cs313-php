@@ -21,7 +21,7 @@
   <!-- Creates a drop down menu for cart -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <!-- To add and clear items from booking/cart -->
-  <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="../trainer/js/vendor/jquery.min.js"></script>
 </head>
 <body>
 <?php require 'navBarLW.php'?>
