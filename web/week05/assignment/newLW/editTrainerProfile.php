@@ -483,8 +483,10 @@
         </div>
       </div>
     </section>
+    </form>
   </main>
-  <footer class="probootstrap-footer">
+  <?php require 'footer.php';?>
+  <!-- <footer class="probootstrap-footer">
       <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
       <div class="container">
       <div class="row mb50">
@@ -539,10 +541,10 @@
          </div>
        </div>
      </div>
-  </form>
+
   </footer>  
   <script src="trainer/js/scripts.min.js"></script>
   <script src="trainer/js/main.min.js"></script>
-  <script src="trainer/js/custom.js"></script>
+  <script src="trainer/js/custom.js"></script> -->
 </body>
 </html>
