@@ -211,6 +211,17 @@ INSERT INTO trainer ( customer_id
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
                         , 'Pilates')
                         ;
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url
+                        ,speciality) 
+                 VALUES (11 
+                        ,'Jessica' 
+                        ,'Gunn'
+                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/trainerProfilePicture/jessica_Gunn_hori.jpeg'
+                        , 'Pilates')
+                        ;
 
 
 -- ----------------------------------------------- --
@@ -243,6 +254,16 @@ INSERT INTO client ( customer_id
                           , 'fsdjfkj'
                           , 'jnkjn'
                           );  
+INSERT INTO client (     customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url) 
+                 VALUES (11 
+                        ,'Jessica' 
+                        ,'Gunn'
+                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/trainerProfilePicture/jessica_Gunn_client.jpeg'
+                        , 'Pilates')
+                        ;
 
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
