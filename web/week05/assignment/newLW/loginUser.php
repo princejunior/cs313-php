@@ -18,6 +18,7 @@ try
     }
     if($password1 != $password2){
         echo "Password does not match!";
+        die(); 
     } else {
         if($customer_type == 'trainer'){
             $_SESSION['customer_type'] = $customer_type;

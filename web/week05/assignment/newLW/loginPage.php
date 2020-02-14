@@ -48,7 +48,7 @@
                 <input type="radio" name="options" id="option3" autocomplete="off" onfocus="login(3)"> Trainer Sign Up
             </label>
         </div>
-        <form id="login" class="form-signin" action="" method="POST">
+        <form id="login" class="form-signin" action="loginUser.php" method="POST">
             <label for="inputEmail" class="sr-only">Email address</label>
                 <input type="email" id="inputEmail" class="form-control"  name="email" placeholder="Email address" required="" autofocus="">
             <label for="inputPassword" class="sr-only">Password</label>
