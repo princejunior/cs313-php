@@ -41,7 +41,7 @@
     }
 ?>
   <!-- Accessed from trainer id -->
-<form action="../saveTrainerChanges.php/?id=$id" method="post"> 
+<form action="../saveTrainerChanges.php/?id=<?php echo $id;?>" method="post"> 
   <section class="probootstrap-intro probootstrap-intro-inner" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
