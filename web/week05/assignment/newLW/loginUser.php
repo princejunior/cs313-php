@@ -14,6 +14,8 @@ try
         $userId = $row['id'];
         $password2 = $row['password'];
         $customer_type = $row['customer_type'];
+        $customer_id = $_SESSION['id'];
+
     }
     if($password1 != $password2){
         echo "Password does not match!";
@@ -25,6 +27,7 @@ try
             die(); 
         } else {
             $_SESSION['customer_type'] = $customer_type;
+            
             header("Location: clientProfilePage.php/?id=$userId");
             die(); 
         }  
