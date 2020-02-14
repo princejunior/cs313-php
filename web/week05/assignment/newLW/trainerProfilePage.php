@@ -2,13 +2,13 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    $trainerData = NULL;
+    // $trainerData = NULL;
     $customer_id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Live W.O.W.</title>
     <meta name="description" content="">    
@@ -22,8 +22,7 @@
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <!-- To add and clear items from booking/cart -->
   <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
-  
-  </head>
+</head>
 <body>
 <?php require 'navBarLW.php'?>
 <?php
@@ -40,13 +39,13 @@
       $speciality = $row['speciality'];
     }
     $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
-  $statement2->execute();
-  while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
-    $about_me = $row2['about_me'];
-    $my_mission = $row2['my_mission'];
-    $my_vision = $row2['my_vision'];
+    $statement2->execute();
+    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
+    {
+      $about_me = $row2['about_me'];
+      $my_mission = $row2['my_mission'];
+      $my_vision = $row2['my_vision'];
   }
-
 ?>
   <!-- END: header -->
   

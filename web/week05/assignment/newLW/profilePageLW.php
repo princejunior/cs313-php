@@ -2,7 +2,7 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    
+    $_SESSION['customer_type'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
