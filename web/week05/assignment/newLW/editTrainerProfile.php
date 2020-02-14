@@ -40,7 +40,7 @@
     }
 ?>
   <!-- Accessed from trainer id -->
-  <form action="" method="post"> 
+<form action="saveTrainerChanges.php" method="post"> 
   <section class="probootstrap-intro probootstrap-intro-inner" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
@@ -61,6 +61,7 @@
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
+        <input type="submit" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Save Changes</button>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -72,10 +73,6 @@
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
                     <textarea  class="inputVision" placeholder="<?php echo $aboutMe;?>" rows="4" cols="50"></textarea>
-                    <!-- <input class="inputAboutMe" type="text" maxlength="500" placeholder="<?php echo $aboutMe;?>"> -->
-                    <!-- <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-primary">Read more about me</a></p> -->
                 </div>
             </div>
             <?php 
@@ -84,10 +81,8 @@
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <textarea  class="inputVision" placeholder="<?php echo $myMission;?>" rows="4" cols="50"></textarea>
-                    <!-- <input class="inputMission" type="text" maxlength="200" placeholder="<?php echo $myMission;?>">                     -->
-                    <!-- <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p> -->
-                </div>
+                    <textarea  class="inputVision" name="my_mission" value="<?php echo $myMission;?>" rows="4" cols="50"></textarea>
+                    </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Upcoming Events</h4>
                     <ul class="probootstrap-blog-list">
@@ -125,9 +120,7 @@
                 ?>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea  class="inputVision" placeholder="<?php echo $myVision;?>" rows="4" cols="50"></textarea>
-                    <!-- <input class="inputVision" type="text" maxlength="200" placeholder="<?php echo $myVision;?>">                     -->
-                    <!-- <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p> -->
+                    <textarea  class="inputVision" name="my_vision" value="<?php echo $myVision;?>" rows="4" cols="50"></textarea>
                 </div>
             </div>
         </div>
@@ -138,7 +131,7 @@
           <div class="col-md-12 probootstrap-relative">
             <div>
               <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-              <a href='editTrainerProfile.php/?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+              <a href='editTrainerProfile.php/?id=<?php echo $id?>' class="probootstrap-heading absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
             </div>  
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
@@ -295,9 +288,6 @@
                   // Go through each result
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                   {
-                    // The variable "row" now holds the complete record for that
-                    // row, and we can access the different values based on their
-                    // name
                     $post_img_url = $row['post_img_url'];
                     $post_description = $row['post_description'];
                     $post_price = $row['post_price'];
@@ -483,68 +473,8 @@
         </div>
       </div>
     </section>
-    </form>
-  </main>
+</form>
+</main>
   <?php require 'footer.php';?>
-  <!-- <footer class="probootstrap-footer">
-      <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
-      <div class="container">
-      <div class="row mb50">
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget">
-            <h4>About The Site</h4>
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli. <a href="#">Learn More</a></p>
-          </div>
-        </div>
-        <div class="col-md-3 col-md-push-1">
-          <div class="probootstrap-footer-widget">
-            <h4>Gym Hours</h4>
-            <ul class="probootstrap-footer-link">
-              <li>Week Days: 05:00 – 22:00</li>
-              <li>Saturday: CLOSED</li>
-              <li>Sunday: 05:00 - 22:00</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-5 col-md-push-1">
-          <div class="probootstrap-footer-widget">
-            <h4>Links</h4>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Join The Club</a></li>
-              <li><a href="#">Pricing</a></li>
-            </ul>
-          </div>
-          <div class="probootstrap-footer-widget">
-            <h4>Contact Info</h4>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
-            </ul>
-          </div>
-        </div>        
-      </div>
-       <div class="row">
-         <div class="col-md-12 text-center border-top">
-           <p class="mb0">© Copyright 2017 <a href="https://uicookies.com/">uiCookies:Trainer</a>. All Rights Reserved. <br> Designed by <a href="https://uicookies.com">uicookies.com</a> Demo Images Unsplash.com &amp; Pexels.com</p>
-         </div>
-       </div>
-     </div>
-
-  </footer>  
-  <script src="trainer/js/scripts.min.js"></script>
-  <script src="trainer/js/main.min.js"></script>
-  <script src="trainer/js/custom.js"></script> -->
 </body>
 </html>
