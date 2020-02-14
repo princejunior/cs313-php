@@ -288,7 +288,7 @@ INSERT INTO trainer_description(
        , about_me   
        , my_mission  
        , my_vision)
-       VALUES (11
+       VALUES (8
        , 'I am Jessica Gunn - wife, mother and personal trainer. A few years after having my four children I decided it was finally time to invest in myself by starting an exercise program and making better food choices. 
        I was tired of feeling irritable and exhausted and knew it was time to make some changes. I have never been someone that values exercising and eating healthy and it was very difficult finding what worked for my body. 
        After a few months I finally started seeing physical and mental changes. I was such a better wife and mother that I decided to get certified as a personal fitness trainer so that I could help other men and women gain 
