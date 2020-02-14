@@ -133,6 +133,12 @@ INSERT INTO customer (email
                   VALUES ( '10@gmail.com'
                          , '1234567'
                          , 'trainer');  
+INSERT INTO customer (email
+                         , password
+                         , customer_type) 
+                  VALUES ( '11@gmail.com'
+                         , '1234567'
+                         , 'trainer');  
 
 -- ----------------------------------------------- --
 -- --------- POPULATE THE TRAINER TABLE --------- --
