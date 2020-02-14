@@ -2,7 +2,7 @@
     $about_me_1 = $_POST['about_me'];
     $my_mission_1 = $_POST['my_mission'];
     $my_vision_1 = $_POST['my_vision'];
-    
+    $customer_id = $_SESSION['id'];
     $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = 
     (Select id FROM trainer WHERE customer_id = $customer_id");
     $statement->execute();
@@ -31,4 +31,6 @@
         $save = $db->prepare("INSERT INTO trainer_description(my_vision) VALUES ($my_vision_1)");
         $save->execute();
     }
+    header("Location: ../trainerProfilePage.php/?id=$customer_id");
+die();
 ?>
