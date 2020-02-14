@@ -5,16 +5,17 @@ $last = $_POST['last_name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $speciality = $_POST['speciality'];
-
+$customer_type = 'trainer';
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	$query1 = 'INSERT INTO customer (email, password) VALUES (:email, :password)' ;
+	$query1 = 'INSERT INTO customer (email, password, customer_type) VALUES (:email, :password, :customer_type)' ;
 	$statement1 = $db->prepare($query1);
 	$statement1->bindValue(':email', $email);
 	$statement1->bindValue(':password', $password);
+	$statement1->bindValue(':customer_type', $customerType);
 	$statement1->execute();
 	$customerId = $db->lastInsertId("customer_id_seq");
 	
