@@ -9,9 +9,10 @@ DROP TABLE customer;
 
 -- customer -- 
 CREATE TABLE customer
-( id         SERIAL       NOT NULL PRIMARY KEY
-, email      VARCHAR(50)  NOT NULL UNIQUE
-, password   VARCHAR(50)  NOT NULL
+( id                 SERIAL       NOT NULL PRIMARY KEY
+, email              VARCHAR(50)  NOT NULL UNIQUE
+, password           VARCHAR(50)  NOT NULL
+, customer_type      VARCHAR(10) NOT NULL
 );
 
 -- trainer -- 
@@ -73,45 +74,65 @@ CREATE TABLE client_order_content_items
 -- -------- POPULATE THE  MENU_ITEM TABLE -------- --
 -- ----------------------------------------------- --  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '1@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '2@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , trainer) 
                   VALUES ( '3@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '4@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'client');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '5@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'client');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '6@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'client');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '7@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '8@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '9@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 INSERT INTO customer (email
-                         , password) 
+                         , password
+                         , customer_type) 
                   VALUES ( '10@gmail.com'
-                         , '1234567');  
+                         , '1234567'
+                         , 'trainer');  
 
 -- ----------------------------------------------- --
 -- --------- POPULATE THE TRAINER TABLE --------- --
@@ -340,7 +361,7 @@ INSERT INTO client_order_content_items (client_order_id
                          VALUES ( 1
                                 , 1);    
 \echo '*********************List all customer info*********************'
-SELECT id, email, password FROM customer;
+SELECT * FROM customer;
 \echo '*********************List all trainer names*********************'
 SELECT first_name, last_name FROM trainer;
 \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
@@ -357,6 +378,7 @@ SELECT * FROM client_order_content_items;
 SELECT c.id     AS "Customer ID"
      , email      AS "eamil"
      , password     AS "Password"
+     , customer_type AS "Type"
      , t.first_name           AS "Trainer's First Name"
      , t.last_name           AS "Trainer's Last Name"
      , t.profile_img_url AS "Picture URL"
@@ -366,18 +388,19 @@ SELECT c.id     AS "Customer ID"
    SELECT c.id     AS "Customer ID"
      , email      AS "eamil"
      , password     AS "Password"
+     , customer_type AS "Type"
      , cl.first_name      AS "Client's First Name"
      , cl.last_name      AS "Client's Last Name"
      , cl.profile_img_url AS "Picture URL"
    FROM       customer      c 
    right JOIN client        cl ON c.id  = cl.customer_id;   
-\echo '************************view customer info of trainers************************'
-   SELECT co.id     AS "Content ID"
-     , post_img_url  AS "post_img_url"
-     , post_description      AS "Description"
-     , post_price     AS "Price"
-     , t.first_name      AS "Trainer's First Name"     
-     , t.last_name      AS "Trainer's Last Name"     
-   FROM       content      co 
-   LEFT JOIN trainer        t ON co.trainer_id  = t.id;  
+-- \echo '************************view customer info of trainers************************'
+--    SELECT co.id     AS "Content ID"
+--      , post_img_url  AS "post_img_url"
+--      , post_description      AS "Description"
+--      , post_price     AS "Price"
+--      , t.first_name      AS "Trainer's First Name"     
+--      , t.last_name      AS "Trainer's Last Name"     
+--    FROM       content      co 
+--    LEFT JOIN trainer        t ON co.trainer_id  = t.id;  
     
