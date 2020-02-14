@@ -225,7 +225,7 @@ INSERT INTO trainer ( customer_id
                  VALUES (11 
                         ,'Jessica' 
                         ,'Gunn'
-                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/trainerProfilePicture/jessica_Gunn_hori.jpeg'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
                         , 'Pilates')
                         ;
 
@@ -267,7 +267,7 @@ INSERT INTO client (     customer_id
                  VALUES (11 
                         ,'Jessica' 
                         ,'Gunn'
-                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/trainerProfilePicture/jessica_Gunn_client.jpeg'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_client.jpeg'
                         )
                         ;
 
