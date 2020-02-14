@@ -386,8 +386,8 @@ INSERT INTO content ( trainer_id
                      , title 
                      ) 
                   VALUES (8
-                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                         , 'gjhgjhgjhgj'
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'
+                     , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
                          , '3 Month leg Workout');  
@@ -399,7 +399,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                         , ''
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -412,7 +412,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                         , ''
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -425,7 +425,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                         , ''
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                        
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -438,7 +438,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (8
-                         , ''
+                     , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_vert.jpeg'                        
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
