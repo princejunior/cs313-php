@@ -22,7 +22,7 @@
   <!-- Creates a drop down menu for cart -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
-  <script type="text/javascript" src=".../jquery.min.js"></script>
+  <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
   </head>
 <body>
 <?php require 'navBarLW.php'?>
@@ -33,13 +33,13 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $trainer_id = $row['id'];
+      $id = $row['id'];
       $firstName = $row['first_name'];
       $lastName = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
   $statement2->execute();
   while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
     $about_me = $row2['about_me'];
@@ -95,8 +95,7 @@
           <div>
             <?php echo $my_mission;?>
           </div>
-          <!-- <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p> -->
-        </div>
+         </div>
         <div class="col-md-4 mb30">
           <h4 class="mb30">Upcoming Events</h4>
           <ul class="probootstrap-blog-list">
