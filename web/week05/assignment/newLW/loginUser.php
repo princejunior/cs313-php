@@ -1,9 +1,8 @@
 <?php
 	session_start();
-
 // retrieve POST data from the other page
-$email = $_POST['email'];
-$password1 = $_POST['password'];
+$email = htmlspecialchars($_POST['email']);
+$password1 = htmlspecialchars($_POST['password']);
 require("dbConnect.php");
 $db = get_db();
 
