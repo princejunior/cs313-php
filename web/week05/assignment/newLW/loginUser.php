@@ -21,11 +21,11 @@ try
     } else {
         if($customer_type == 'trainer'){
             $_SESSION['customer_type'] = $customer_type;
-            header("Location: editTrainerProfilePage.php/?id=$userId");
+            header("Location: editTrainerProfile.php/?id=$userId");
             die(); 
         } else {
             $_SESSION['customer_type'] = $customer_type;
-            header("Location: editClientProfilePage.php/?id=$userId");
+            header("Location: editClientProfile.php/?id=$userId");
             die(); 
         }  
     }
