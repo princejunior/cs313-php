@@ -295,7 +295,7 @@ INSERT INTO trainer_description(
        confidence and strength as I help them with their fitness and nutrition goals. After a year of training I opened my own business and now train clients and teach group hiit classes. I specialize in core strengthening 
        and hiit training. It’s the most rewarding job watching people realize they can do hard things. '
        , 'I want to help you gain confidence and strength as we work together achieving your fitness and nutrition goals.'
-       , 'By the end of one of my programs, you will be a new person.' )
+       , 'By the end of one of my programs, you will be a new person.' );
 
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
