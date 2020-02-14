@@ -34,7 +34,7 @@
     $profile_img_url = $row['profile_img_url'];
     $speciality = $row['speciality'];
   }
-  $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+  $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
   $statement2->execute();
   while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
     $about_me = $row2['first_name'];

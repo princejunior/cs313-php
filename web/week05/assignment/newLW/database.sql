@@ -236,7 +236,7 @@ INSERT INTO trainer ( customer_id
                         ,'Jessica' 
                         ,'Gunn'
                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
-                        , 'Pilates')
+                        , 'Core Strengthening and HIIT Training')
                         ;
 
 
