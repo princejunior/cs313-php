@@ -126,19 +126,8 @@
       </div>
       <div class="row">
         <div class="col-md-12 probootstrap-relative">
-          <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded">
-            <div class="owl-stage-outer owl-height" style="height: 480px;">
-              <div class="owl-stage" style="transform: translate3d(-740px, 0px, 0px); transition: 0s; width: 4070px;">
-                <!-- <div class="owl-item cloned" style="width: 350px; margin-right: 20px;">
-                  <div class="item">    
-                    <div class="probootstrap-program">
-                      <a href="#"><img src="trainer/img/img_6.jpg" alt="" class="img-responsive img-rounded"></a>
-                      <h3>DIP</h3>
-                      <p>Sets: 3, Reps: 8-10, Rest: 30 sec.</p>
-                      <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                    </div>
-                  </div>
-                </div> -->
+          <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
+          <div class="owl-carousel owl-carousel-carousel">
                 <?php
                   $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
                   $statement->execute();
@@ -149,7 +138,6 @@
                     $post_difficulty = $row['difficulty'];
                     $post_title = $row['title'];
                 ?>
-                <div class="owl-item" style="width: 350px; margin-right: 20px;">
                   <div class="item">
                     <div class="probootstrap-program">
                       <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
@@ -158,12 +146,12 @@
                       <p><?php echo $post_description;?></p>
                     </div>
                   </div>
-                </div>
+                <!-- </div> -->
                 <?php
                   }
                 ?>  
               </div>
-              <div class="owl-controls">
+              <!-- <div class="owl-controls">
                 <div class="owl-nav">
                   <div class="owl-prev" style="display: none;">
                     <i class="icon-keyboard_arrow_left owl-direction"></i>
@@ -174,11 +162,11 @@
                 </div>
                 <div class="owl-dots" style="display: none;">
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
-    </div> 
+      </div> 
   </section>
 </main>
   <footer class="probootstrap-footer">
