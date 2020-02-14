@@ -1,4 +1,5 @@
 <?php
+	session_start();
 // retrieve POST data from the other page
 $first = $_POST['first_name'];
 $last = $_POST['last_name'];
@@ -35,6 +36,7 @@ try
 	$statement3->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
+	$_SESSION['customer_type'] = $customer_type;	
 	$userId = $db->lastInsertId("trainer_id_seq");
 }
 catch (Exception $ex)

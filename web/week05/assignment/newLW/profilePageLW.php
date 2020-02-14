@@ -1,4 +1,4 @@
-<?php 
+<?php
     require "dbConnect.php";
     $db = get_db();
 ?>
@@ -21,8 +21,7 @@
   <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
   </head>
 <body>
-  <!-- START: header -->
-  <?php require 'navBarLW.php'?>
+<?php require 'navBarLW.php'?>
 <?php
   $id = $_GET['id'];
   $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");

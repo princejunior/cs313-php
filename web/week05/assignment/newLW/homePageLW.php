@@ -67,7 +67,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
-                                        <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button>
+                                        <!-- <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button> -->
                                     </div>
                                 </div> 
                             </div>

@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -10,7 +11,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-<!-- ../homePageLW.php -->
+            <!-- ../homePageLW.php -->
                 <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Home</a></li>
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Nutrionist</a></li>
@@ -39,7 +40,17 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <?php if($_SESSION['customer_type'] == 'trainer'){?>
+                    <li><a href="trainerProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <?php 
+                    } else if ($_SESSION['customer_type'] == 'trainer') { ?>
+                        <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <?php
+                    } else { ?>
+                        <li><a href="loginPage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    <?php
+                    }
+                ?>
                 <li><a href="loginPage.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>

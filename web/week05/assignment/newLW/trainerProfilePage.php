@@ -32,14 +32,10 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      // The variable "row" now holds the complete record for that
-      // row, and we can access the different values based on their
-      // name
-      $name = $row['name'];
+      $firstName = $row['first_name'];
+      $lastName = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
-      // $id = $row['id'];;
-      //  echo "<p><strong>$name $profile_img_url :$speciality </strong><p>";
     }
 ?>
   <!-- END: header -->
@@ -50,7 +46,10 @@
   <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><span><?php echo $name;?></span></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
+            <span><?php echo $firstName;?></span>
+            <?php echo $lastName;?>  
+          </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>
