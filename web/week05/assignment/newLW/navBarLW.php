@@ -43,7 +43,7 @@
                 <?php if($_SESSION['customer_type'] == 'trainer'){?>
                     <li><a href="trainerProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php 
-                    } else if ($_SESSION['customer_type'] == 'trainer') { ?>
+                    } else if ($_SESSION['customer_type'] == 'client') { ?>
                         <li><a href="clientProfilePage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php
                     } else { ?>
