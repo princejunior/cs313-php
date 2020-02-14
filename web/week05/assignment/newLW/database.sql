@@ -21,7 +21,7 @@ CREATE TABLE trainer
 , customer_id       INT          NOT NULL REFERENCES customer(id)
 , first_name        VARCHAR(100) NOT NULL
 , last_name         VARCHAR(100) NOT NULL
-, profile_img_url   VARCHAR(100) 
+, profile_img_url   VARCHAR(200) 
 , speciality        VARCHAR(50)  NOT NULL 
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE client
 , customer_id       INT          NOT NULL REFERENCES customer(id)
 , first_name        VARCHAR(100) NOT NULL
 , last_name         VARCHAR(100) NOT NULL
-, profile_img_url   VARCHAR(100) 
+, profile_img_url   VARCHAR(200) 
 
 );
 -- content --
@@ -262,7 +262,7 @@ INSERT INTO client (     customer_id
                         ,'Jessica' 
                         ,'Gunn'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/trainerProfilePicture/jessica_Gunn_client.jpeg'
-                        , 'Pilates')
+                        )
                         ;
 
 -- ----------------------------------------------- --
