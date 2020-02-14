@@ -37,9 +37,9 @@
   $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
   $statement2->execute();
   while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
-    $about_me = $row2['first_name'];
-    $my_mission = $row2['last_name'];
-    $my_vision = $row2['profile_img_url'];
+    $about_me = $row2['about_me'];
+    $my_mission = $row2['my_mission'];
+    $my_vision = $row2['my_vision'];
   }
 
 ?>
