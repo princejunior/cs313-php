@@ -33,12 +33,13 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
+      $trainer_id = $row['id'];
       $firstName = $row['first_name'];
       $lastName = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
   $statement2->execute();
   while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
     $about_me = $row2['about_me'];
