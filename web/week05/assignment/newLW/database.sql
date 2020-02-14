@@ -87,7 +87,7 @@ INSERT INTO customer (email
                          , 'trainer');  
 INSERT INTO customer (email
                          , password
-                         , trainer) 
+                         , customer_type) 
                   VALUES ( '3@gmail.com'
                          , '1234567'
                          , 'trainer');  
