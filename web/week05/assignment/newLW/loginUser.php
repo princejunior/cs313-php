@@ -8,7 +8,7 @@ $db = get_db();
 
 try
 {
-    $statement = $db->prepare("SELECT * FROM customer WHERE email = $email");
+    $statement = $db->prepare("SELECT * FROM customer WHERE email = ($email)");
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $userId = $row['id'];
