@@ -27,7 +27,7 @@
 
 <?php
     // $id = $_GET['id'];
-    $statement = $db->prepare("SELECT * FROM trainer WHERE customer_id = $id");
+    $statement = $db->prepare("SELECT * FROM client WHERE customer_id = $id");
     $statement->execute();
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -35,9 +35,9 @@
       // The variable "row" now holds the complete record for that
       // row, and we can access the different values based on their
       // name
-      $name = $row['name'];
+      $first_name = $row['first_name'];
+      $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
-      $speciality = $row['speciality'];
     }
 ?>
 <section class="probootstrap-intro probootstrap-intro-inner">

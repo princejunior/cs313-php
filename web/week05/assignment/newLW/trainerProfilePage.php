@@ -3,7 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     $trainerData = NULL;
-    $id = $_SESSION['id'];
+    $customer_id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
 <?php require 'navBarLW.php'?>
 <?php
     // $id = $_GET['id'];
-    $statement = $db->prepare("SELECT * FROM trainer WHERE customer_id = $id");
+    $statement = $db->prepare("SELECT * FROM trainer WHERE customer_id = $customer_id");
     $statement->execute();
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))

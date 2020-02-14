@@ -36,6 +36,7 @@ try
 	$statement3->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
+	$_SESSION['customer_id'] = $customerId;
 	$_SESSION['customer_type'] = $customer_type;	
 	$userId = $db->lastInsertId("trainer_id_seq");
 }
