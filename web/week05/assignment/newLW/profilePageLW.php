@@ -160,7 +160,7 @@
                     <div class="probootstrap-program">
                       <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
                       <h3><?php echo $post_title;?></h3>
-                      <p>"$"<?php echo $post_price;?></p>
+                      <p>$<?php echo $post_price;?></p>
                       <p><?php echo $post_description;?></p>
                     </div>
                   </div>

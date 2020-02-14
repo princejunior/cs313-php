@@ -159,6 +159,18 @@ INSERT INTO trainer ( customer_id
                         , profile_img_url
                         ,speciality) 
                  VALUES (1 
+                        ,'Jessica' 
+                        ,'Gunn'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
+                        , 'Core Strengthening and HIIT')
+                        ;
+
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url
+                        ,speciality) 
+                 VALUES (2
                         ,'Spencer'
                         , 'Serranilla'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -169,22 +181,13 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (2 
+                 VALUES (3 
                         ,'Elijah'
                         ,'Elliott'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg'
                         , 'Power Lifter'
                         );
-INSERT INTO trainer ( customer_id
-                        , first_name
-                        , last_name
-                        , profile_img_url
-                        ,speciality)
-                 VALUES (3 
-                        ,'Meghan'
-                        , 'Hutson'
-                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                        , 'Yoga');
+
 INSERT INTO trainer ( customer_id
                         , first_name
                         , last_name
@@ -231,14 +234,12 @@ INSERT INTO trainer ( customer_id
                         , first_name
                         , last_name
                         , profile_img_url
-                        ,speciality) 
+                        ,speciality)
                  VALUES (11 
-                        ,'Jessica' 
-                        ,'Gunn'
-                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
-                        , 'Core Strengthening and HIIT')
-                        ;
-
+                        ,'Meghan'
+                        , 'Hutson'
+                        , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                        , 'Yoga');
 
 -- ----------------------------------------------- --
 -- -------- POPULATE THE RESTAURANT TABLE -------- --
@@ -308,84 +309,6 @@ INSERT INTO content ( trainer_id
                      , title 
                      ) 
                   VALUES (1
-                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month leg Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (1
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Hypertrophey Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (1
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Power Lifting Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (1
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Abs Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (1
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Yoga Workout');  
-INSERT INTO content (trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty 
-                     , title  
-                     ) 
-                  VALUES (1
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
-                         , 'Beginner'
-                         , '3 Month Cardio Workout');  
-INSERT INTO content ( trainer_id  
-                     , post_img_url       
-                     , post_description   
-                     , post_price
-                     , difficulty
-                     , title 
-                     ) 
-                  VALUES (8
                      , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'
                      , 'Only have a barbell and weighted plates then this is the workout for you!' 
                          , 20.00
@@ -398,7 +321,7 @@ INSERT INTO content (trainer_id
                      , difficulty 
                      , title  
                      ) 
-                  VALUES (8
+                  VALUES (1
                      , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                        
                          , 'You need this program since it only requires you! This program will help stregthen your core with out weights.'
                          , 20.00
@@ -411,7 +334,7 @@ INSERT INTO content (trainer_id
                      , difficulty 
                      , title  
                      ) 
-                  VALUES (8
+                  VALUES (1
                      , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
@@ -424,7 +347,7 @@ INSERT INTO content (trainer_id
                      , difficulty 
                      , title  
                      ) 
-                  VALUES (8
+                  VALUES (1
                      , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
@@ -437,12 +360,91 @@ INSERT INTO content (trainer_id
                      , difficulty 
                      , title  
                      ) 
-                  VALUES (8
+                  VALUES (1
                      , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_Vert.jpeg'                        
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
                          , '3 Month Yoga Workout');  
+INSERT INTO content ( trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty
+                     , title 
+                     ) 
+                  VALUES (2
+                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month leg Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (2
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Hypertrophey Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (2
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Power Lifting Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (2
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Abs Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (2
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Yoga Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (2
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Cardio Workout');  
+
 -- ----------------------------------------------- --
 -- ----- POPULATE THE client_order TABLE ----- --
 -- ----------------------------------------------- --
