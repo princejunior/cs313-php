@@ -421,12 +421,14 @@ SELECT first_name, last_name FROM trainer;
 SELECT * FROM trainer;
 \echo '************************List  all clients************************'
 SELECT * FROM client;
-\echo '************************List  all clients orders************************'
-SELECT * FROM client_order;
-\echo '************************List  all trainers items************************'
-SELECT * FROM content_items;
-\echo '************************List  all clients orders of trainer items************************'
-SELECT * FROM client_order_content_items;
+\echo '************************List  all trainer_description************************'
+SELECT * FROM trainer_description;
+-- \echo '************************List  all clients orders************************'
+-- SELECT * FROM client_order;
+-- \echo '************************List  all trainers items************************'
+-- SELECT * FROM content_items;
+-- \echo '************************List  all clients orders of trainer items************************'
+-- SELECT * FROM client_order_content_items;
 \echo '************************view customer info of trainer************************'
 SELECT c.id     AS "Customer ID"
      , email      AS "eamil"
