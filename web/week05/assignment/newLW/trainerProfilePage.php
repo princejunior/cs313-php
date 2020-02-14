@@ -73,7 +73,7 @@
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <a href='editTrainerProfile.php/?id=<?php echo $_SESSION['id']?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Content</button></a>
+            <a href='../editTrainerProfile.php/?id=<?php echo $_SESSION['id']?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Content</button></a>
             <div class="row probootstrap-gutter60 mb50">
             <div class="col-md-6">
           <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
