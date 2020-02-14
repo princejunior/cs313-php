@@ -3,6 +3,7 @@
     $my_mission_1 = $_POST['my_mission'];
     $my_vision_1 = $_POST['my_vision'];
     $customer_id = $_SESSION['id'];
+    try{
     $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = 
     (Select id FROM trainer WHERE customer_id = $customer_id");
     $statement->execute();
@@ -31,6 +32,11 @@
         $save = $db->prepare("INSERT INTO trainer_description(my_vision) VALUES ($my_vision_1)");
         $save->execute();
     }
+} catch (Exception $ex)
+{
+    echo "Error with DB. Details: $ex";
+	die();
+}
     header("Location: ../trainerProfilePage.php/?id=$customer_id");
 die();
 ?>
