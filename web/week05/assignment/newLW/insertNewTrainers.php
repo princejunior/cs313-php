@@ -15,7 +15,7 @@ try
 	$statement1 = $db->prepare($query1);
 	$statement1->bindValue(':email', $email);
 	$statement1->bindValue(':password', $password);
-	$statement1->bindValue(':customer_type', $customerType);
+	$statement1->bindValue(':customer_type', $customer_type);
 	$statement1->execute();
 	$customerId = $db->lastInsertId("customer_id_seq");
 	
