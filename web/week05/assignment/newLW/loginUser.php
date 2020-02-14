@@ -11,7 +11,7 @@ try
     $statement = $db->prepare("SELECT * FROM customer WHERE email = '$email'");
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-        $userId = $row['id'];
+        $id = $row['id'];
         $password2 = $row['password'];
         $customer_type = $row['customer_type'];
         $customer_id = $_SESSION['id'];
@@ -23,12 +23,12 @@ try
     } else {
         if($customer_type == 'trainer'){
             $_SESSION['customer_type'] = $customer_type;
-            header("Location: trainerProfilePage.php/?id=$userId");
+            header("Location: trainerProfilePage.php/?id=$id");
             die(); 
         } else {
             $_SESSION['customer_type'] = $customer_type;
             
-            header("Location: clientProfilePage.php/?id=$userId");
+            header("Location: clientProfilePage.php/?id=$id");
             die(); 
         }  
     }
