@@ -42,7 +42,7 @@ Create TABLE trainer_description
        , about_me    VARCHAR(1000)  NOT NULL
        , my_mission  VARCHAR(500)  NOT NULL
        , my_vision   VARCHAR(500)  NOT NULL         
-)
+);
 
 -- content --
 CREATE TABLE content 
