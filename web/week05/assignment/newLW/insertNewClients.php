@@ -24,10 +24,11 @@
 	$statement2->bindValue(':first', $first);
 	$statement2->bindValue(':last', $last);
 	$statement2->execute();
+	$_SESSION['id'] = $userId;
 	$_SESSION['customer_type'] = $customer_type;
-	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
-	// get id of last inserted row - save in $userId
 	$userId = $db->lastInsertId("client_id_seq");
+	$_SESSION['id'] = $userId;
+	$_SESSION['customer_type'] = $customer_type;
 	} catch (Exception $ex){
 		echo "Error with DB. Details: $ex";
 		die();
