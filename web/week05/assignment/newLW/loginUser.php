@@ -14,7 +14,7 @@ try
         $id = $row['id'];
         $password2 = $row['password'];
         $customer_type = $row['customer_type'];
-        $customer_id = $_SESSION['id'];
+        $_SESSION['id'] = $customer_id;
 
     }
     if($password1 != $password2){
