@@ -3,6 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     $trainerData = NULL;
+    $id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +41,7 @@
     }
 ?>
   <!-- Accessed from trainer id -->
-<form action="saveTrainerChanges.php" method="post"> 
+<form action="../saveTrainerChanges.php/?id=$id" method="post"> 
   <section class="probootstrap-intro probootstrap-intro-inner" 
     style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
@@ -61,7 +62,7 @@
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-        <input type="submit" class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Save Changes</button>
+            <button><input type="submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Save Changes</button>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -282,7 +283,7 @@
                   <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
                 </div>
                 <?php
-                  $id = $_GET['id'];
+                  
                   $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Intermediate'");
                   $statement->execute();
                   // Go through each result
