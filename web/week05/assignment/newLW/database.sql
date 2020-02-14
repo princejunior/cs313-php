@@ -378,7 +378,71 @@ INSERT INTO content (trainer_id
                          , 20.00
                          , 'Beginner'
                          , '3 Month Cardio Workout');  
-
+INSERT INTO content ( trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty
+                     , title 
+                     ) 
+                  VALUES (8
+                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month leg Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (8
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Hypertrophey Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (8
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Power Lifting Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (8
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Abs Workout');  
+INSERT INTO content (trainer_id  
+                     , post_img_url       
+                     , post_description   
+                     , post_price
+                     , difficulty 
+                     , title  
+                     ) 
+                  VALUES (8
+                         , ''
+                         , 'gjhgjhgjhgj'
+                         , 20.00
+                         , 'Beginner'
+                         , '3 Month Yoga Workout');  
 -- ----------------------------------------------- --
 -- ----- POPULATE THE client_order TABLE ----- --
 -- ----------------------------------------------- --

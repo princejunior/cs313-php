@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Creates a drop down menu for cart -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <!-- To add and clear items from booking/cart -->
   <script type="text/javascript" src="trainer/js/vendor/jquery.min.js"></script>
+  
   </head>
 <body>
 <?php require 'navBarLW.php'?>
@@ -93,7 +94,7 @@
           <ul class="probootstrap-blog-list">
             <li>
               <a href="#">
-                <figure class="probootstrap-image"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                <figure class="probootstrap-image"><img src="trainer/img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h4>Initial into the belt and made herself</h4>
                   <span class="meta">September, 14 2017</span>
@@ -102,7 +103,7 @@
             </li>
             <li>
               <a href="#">
-                <figure class="probootstrap-image"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                <figure class="probootstrap-image"><img src="trainer/img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h4>Far far away behind the word mountains</h4>
                   <span class="meta">September, 14 2017</span>
@@ -111,7 +112,7 @@
             </li>
             <li>
               <a href="#">
-                <figure class="probootstrap-image"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                <figure class="probootstrap-image"><img src="trainer/img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 <div class="probootstrap-text">
                   <h4>Bookmarksgrove right at the coast of the Semantics</h4>
                   <span class="meta">September, 14 2017</span>
@@ -163,23 +164,10 @@
                       <p><?php echo $post_description;?></p>
                     </div>
                   </div>
-                <!-- </div> -->
                 <?php
                   }
                 ?>  
               </div>
-              <!-- <div class="owl-controls">
-                <div class="owl-nav">
-                  <div class="owl-prev" style="display: none;">
-                    <i class="icon-keyboard_arrow_left owl-direction"></i>
-                  </div>
-                  <div class="owl-next" style="display: none;">
-                    <i class="icon-keyboard_arrow_right owl-direction"></i>
-                  </div>
-                </div>
-                <div class="owl-dots" style="display: none;">
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
