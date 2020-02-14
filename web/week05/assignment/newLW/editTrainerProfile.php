@@ -6,7 +6,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<?php require 'head.php';?>
+<!-- <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Live W.O.W.</title>
@@ -19,13 +20,13 @@
     <link rel="stylesheet" href="trainer/css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Creates a drop down menu for cart -->
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- To add and clear items from booking/cart -->
+
   <script type="text/javascript" src=".../jquery.min.js"></script>
-  </head>
+</head> -->
 <body>
-<?php require 'navBarLW.php'?>
+<?php require 'navBarLW.php';?>
 
 <?php
     $id = $_GET['id'];
@@ -137,7 +138,7 @@
           <div class="col-md-12 probootstrap-relative">
             <div>
               <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-              <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+              <a href='editTrainerProfile.php/?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
             </div>  
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
