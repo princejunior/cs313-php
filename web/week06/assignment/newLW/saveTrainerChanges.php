@@ -14,17 +14,17 @@
         $my_vision_2 = $row['my_vision'];
     }
     if ($about_me_1 != $about_me_2){
-        $query1 = 'UPDATE trainer_description SET about_me= \'$about_me_1\' WHERE trainer_id = $trainer_id';
+        $query1 = 'UPDATE trainer_description SET about_me= \'$about_me_1\' WHERE trainer_id = \'$trainer_id\'';
         $update = $db->prepare($query1);
         $update->execute();
     } 
     if ($my_mission_1 != $my_mission_2){
-        $query2 = 'UPDATE trainer_description SET my_mission=$my_mission_1  WHERE trainer_id = $trainer_id';
+        $query2 = 'UPDATE trainer_description SET my_mission=\'$my_mission_1\'  WHERE trainer_id = $trainer_id';
         $update = $db->prepare($query2);
         $update->execute();
     }
     if ($my_vision_1 != $my_vision_2){
-        $query3 = 'UPDATE trainer_description SET my_vision=my_vision_1  WHERE trainer_id = $trainer_id';
+        $query3 = 'UPDATE trainer_description SET my_vision=\'my_vision_1\'  WHERE trainer_id = $trainer_id';
         $update = $db->prepare($query3);
         $update->execute();
     }
