@@ -15,22 +15,19 @@
         $my_vision_2 = $row['my_vision'];
     }
     if ($about_me_1 != $about_me_2){
-        $delete = $db->prepare("DELETE about_me FROM trainer_description WHERE trainer_id = $trainer_id");
-        $delete->execute();
-        $save = $db->prepare("INSERT INTO trainer_description(about_me) VALUES ($about_me_1)");
-        $save->execute();
+        $query1 = 'UPDATE trainer_description SET about_me=$about_me_1  WHERE trainer_id = $trainer_id';
+        $update = $db->prepare($query1);
+        $update->execute();
     } 
     if ($my_mission_1 != $my_mission_2){
-        $delete = $db->prepare("DELETE my_mission FROM trainer_description WHERE trainer_id = $trainer_id");
-        $delete->execute();
-        $save = $db->prepare("INSERT INTO trainer_description(my_mission) VALUES ($my_mission_1)");
-        $save->execute();
+        $query2 = 'UPDATE trainer_description SET my_mission=$my_mission_1  WHERE trainer_id = $trainer_id';
+        $update = $db->prepare($query2);
+        $update->execute();
     }
     if ($my_vision_1 != $my_vision_2){
-        $delete = $db->prepare("DELETE my_vision FROM trainer_description WHERE trainer_id = $trainer_id");
-        $delete->execute();
-        $save = $db->prepare("INSERT INTO trainer_description(my_vision) VALUES ($my_vision_1)");
-        $save->execute();
+        $query3 = 'UPDATE trainer_description SET my_vision=my_vision_1  WHERE trainer_id = $trainer_id';
+        $update = $db->prepare($query3);
+        $update->execute();
     }
 } catch (Exception $ex)
 {
