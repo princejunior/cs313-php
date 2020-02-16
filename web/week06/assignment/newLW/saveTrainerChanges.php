@@ -4,8 +4,7 @@
     $my_vision_1 = $_POST['my_vision'];
     $customer_id = $_SESSION['id'];
     try{
-    $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = 
-    (Select id FROM trainer WHERE customer_id = $customer_id");
+    $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = (Select id FROM trainer WHERE customer_id = $customer_id)");
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
