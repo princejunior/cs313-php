@@ -14,7 +14,7 @@
         $my_vision_2 = $row['my_vision'];
     }
     if ($about_me_1 != $about_me_2){
-        $query1 = 'UPDATE trainer_description SET about_me=$about_me_1  WHERE trainer_id = $trainer_id';
+        $query1 = 'UPDATE trainer_description SET about_me= \'$about_me_1\' WHERE trainer_id = $trainer_id';
         $update = $db->prepare($query1);
         $update->execute();
     } 
