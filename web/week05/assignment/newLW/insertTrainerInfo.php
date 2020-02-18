@@ -23,7 +23,7 @@
         $profile_img_url = $row1['profile_img_url'];
         $speciality = $row1['speciality'];
     }
-    $_SESSION['trainer_id'];
+    
 ?>
   <!-- Accessed from trainer id -->
 <form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
@@ -33,7 +33,7 @@
         <div class="col-md-7 probootstrap-intro-text">
           <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <span><?php echo $first_name;?></span> 
-            <?php echo $last_name;echo $_SESSION['trainer_id'];?>
+            <?php echo $last_name;?>
           </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
