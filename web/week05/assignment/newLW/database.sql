@@ -177,7 +177,7 @@ INSERT INTO trainer ( customer_id
                  VALUES (2
                         ,'Paige'
                         , 'Bartlett'
-                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2_horiz.jpeg'
                         ,'HyperTrophy'
                         );
 INSERT INTO trainer ( customer_id
