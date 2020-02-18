@@ -32,6 +32,7 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
+    
       $first_name = $row['first_name'];
       $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];

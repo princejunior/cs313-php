@@ -17,10 +17,12 @@
     $statement1->execute();
     while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
+        $trainer_id = $row1['trainer_id'];
       $first_name = $row1['first_name'];
       $last_name = $row1['last_name'];
       $profile_img_url = $row1['profile_img_url'];
       $speciality = $row1['speciality'];
+      $_SESSION['trainer_id'];
     }
 ?>
   <!-- Accessed from trainer id -->
