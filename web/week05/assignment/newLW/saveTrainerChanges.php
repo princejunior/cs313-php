@@ -5,7 +5,7 @@
     $customer_id = $_SESSION['id'];
     try{
     $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = 
-    (Select id FROM trainer WHERE customer_id = $customer_id");
+    (Select id FROM trainer WHERE customer_id = $customer_id)");
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
@@ -16,24 +16,26 @@
     }
     if ($about_me_1 != $about_me_2){
         $query1 = 'UPDATE trainer_description SET about_me=$about_me_1  WHERE trainer_id = $trainer_id';
-        $update = $db->prepare($query1);
-        $update->execute();
+        $update1 = $db->prepare($query1);
+	    $update1->bindValue(':email', $email);
+
+        $update1->execute();
     } 
     if ($my_mission_1 != $my_mission_2){
         $query2 = 'UPDATE trainer_description SET my_mission=$my_mission_1  WHERE trainer_id = $trainer_id';
-        $update = $db->prepare($query2);
-        $update->execute();
+        $update2 = $db->prepare($query2);
+        $update2->execute();
     }
     if ($my_vision_1 != $my_vision_2){
         $query3 = 'UPDATE trainer_description SET my_vision=my_vision_1  WHERE trainer_id = $trainer_id';
-        $update = $db->prepare($query3);
-        $update->execute();
+        $update3 = $db->prepare($query3);
+        $update3->execute();
     }
 } catch (Exception $ex)
 {
     echo "Error with DB. Details: $ex";
 	die();
 }
-    header("Location: ../trainerProfilePage.php/?id=$customer_id");
-die();
+    header("Location: trainerProfilePage.php/?id=$customer_id");
+    die();
 ?>

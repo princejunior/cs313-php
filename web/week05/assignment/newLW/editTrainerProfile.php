@@ -8,30 +8,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require 'head.php';?>
-<!-- <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Live W.O.W.</title>
-    <title>uiCookies:Trainer — Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
-    <meta name="description" content=""> 
-    <link rel="stylesheet" type="text/css" href="cssFiles/editTrainerProfile.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="trainer/css/styles-merged.css">
-    <link rel="stylesheet" href="trainer/css/style.min.css">
-    <link rel="stylesheet" href="trainer/css/custom.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <script type="text/javascript" src=".../jquery.min.js"></script>
-</head> -->
 <body>
 <?php require 'navBarLW.php';?>
 
 <?php
     $id = $_GET['id'];
     $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+    $statement->execute();
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    {
+      $first_name = $row['first_name'];
+      $last_name = $row['last_name'];
+      $profile_img_url = $row['profile_img_url'];
+      $speciality = $row['speciality'];
+    }
+    $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
@@ -42,12 +33,14 @@
 ?>
   <!-- Accessed from trainer id -->
 <form action="../saveTrainerChanges.php/?id=<?php echo $id;?>" method="post"> 
-  <section class="probootstrap-intro probootstrap-intro-inner" 
-    style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
+<section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn"><span><?php echo $name;?></span></h1>
+          <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
+            <span><?php echo $first_name;?></span> 
+            <?php echo $last_name;?>
+          </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2>Personal Trainer</a></h2>
           </div>
@@ -57,12 +50,12 @@
     <span class="probootstrap-animate fadeInUp probootstrap-animated">
         <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
     </span>
-  </section>
+</section>
   <!-- END: section -->
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <button><input type="submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true">Save Changes</span></button>
+            <input type="submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true">Save Changes</span>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>

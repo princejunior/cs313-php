@@ -44,6 +44,14 @@ Create TABLE trainer_description
        , my_vision   VARCHAR(500)  NOT NULL         
 );
 
+Create TABLE client_description
+(      
+        client_id    INT           NOT NULL REFERENCES trainer(id)
+       , about_me    VARCHAR(1000) NOT NULL
+       , my_goals    VARCHAR(500)  NOT NULL
+       , my_vision   VARCHAR(500)  NOT NULL         
+);
+
 -- content --
 CREATE TABLE content 
 ( id                 SERIAL NOT NULL PRIMARY KEY
