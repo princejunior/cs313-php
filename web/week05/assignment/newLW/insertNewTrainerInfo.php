@@ -4,7 +4,7 @@
 $about_me = $_POST['about_me'];
 $my_mission = $_POST['my_mission'];
 $my_vision = $_POST['my_vision'];
-$customerId = $_GET['customerId'];
+$customer_id = $_SESSION['customerId'];
 require("dbConnect.php");
 $db = get_db();
 try
