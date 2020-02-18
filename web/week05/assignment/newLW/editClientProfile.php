@@ -3,7 +3,6 @@
     require "dbConnect.php";
     $db = get_db();
     $trainerData = NULL;
-    $id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,16 +10,17 @@
 <body>
 <?php require 'navBarLW.php';?>
 <?php
-    $id = $_GET['id'];
-    $statement1 = $db->prepare("SELECT * FROM client WHERE id = $id");
+    $id = $_GET['customer_id'];
+    $statement1 = $db->prepare("SELECT * FROM client WHERE customer_id = $id");
     $statement1->execute();
     while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
     {
+        $client_id = $row1['id'];
         $first_name = $row1['first_name'];
         $last_name = $row1['last_name'];
         $profile_img_url = $row1['profile_img_url'];
     }
-    $statement2 = $db->prepare("SELECT * FROM client_description WHERE client_id = $id");
+    $statement2 = $db->prepare("SELECT * FROM client_description WHERE client_id = $client_id");
     $statement2->execute();
     while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
     {
