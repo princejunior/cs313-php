@@ -13,7 +13,7 @@ try
 {
 	$query1 = 'INSERT INTO trainer_desscription (trainer_id, about_me, my_mission, my_vision) VALUES (:trainer_id, :about_me, :my_mission, :my_vision)' ;
     $statement1 = $db->prepare($query1);
-	$statement1->bindValue(':trainer', $trainer_id);    
+	$statement1->bindValue(':trainer_id', $trainer_id);    
 	$statement1->bindValue(':about_me', $about_me);
 	$statement1->bindValue(':my_mission', $my_mission);
 	$statement1->bindValue(':my_vision', $my_vision);
