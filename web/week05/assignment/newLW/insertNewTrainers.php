@@ -38,14 +38,14 @@ try
 	// get id of last inserted row - save in $userId
 	$_SESSION['customer_id'] = $customerId;
 	$_SESSION['customer_type'] = $customer_type;	
-	$userId = $db->lastInsertId("trainer_id_seq");
+	// $userId = $db->lastInsertId("trainer_id_seq");
 }
 catch (Exception $ex)
 {
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: trainerProfilePage.php/?id=$userId");
+header("Location: trainerProfilePage.php/?customer_id=$customerId");
 
 die(); 
 ?>
