@@ -24,6 +24,7 @@
         $speciality = $row1['speciality'];
         $_SESSION['trainer_id'];
     }
+        echo $_SESSION['trainer_id'];
 ?>
   <!-- Accessed from trainer id -->
 <form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
