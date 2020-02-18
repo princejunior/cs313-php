@@ -13,7 +13,7 @@ try
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-        $trainer_id = $row['trainer_id'];
+        $trainer_id = $row['id'];
     }
 	$query1 = 'INSERT INTO trainer_description (trainer_id, about_me, my_mission, my_vision) VALUES (:trainer_id, :about_me, :my_mission, :my_vision)' ;
     $statement1 = $db->prepare($query1);
