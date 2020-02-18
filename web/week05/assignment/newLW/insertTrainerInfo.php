@@ -14,7 +14,7 @@
 <?php
     $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $customer_id");
     $statement1->execute();
-    while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
       $first_name = $row1['first_name'];
       $last_name = $row1['last_name'];

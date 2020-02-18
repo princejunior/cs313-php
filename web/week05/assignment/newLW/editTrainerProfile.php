@@ -14,7 +14,7 @@
 <?php
     $statement1 = $db->prepare("SELECT * FROM trainer WHERE id = $id");
     $statement1->execute();
-    while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
       $first_name = $row1['first_name'];
       $last_name = $row1['last_name'];
@@ -23,7 +23,7 @@
     }
     $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
     $statement2->execute();
-    while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
     {
         $about_me = $row2['about_me'];
         $my_mission = $row2['my_mission'];

@@ -13,7 +13,7 @@
     $id = $_GET['customer_id'];
     $statement1 = $db->prepare("SELECT * FROM client WHERE customer_id = $id");
     $statement1->execute();
-    while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
         $client_id = $row1['id'];
         $first_name = $row1['first_name'];
@@ -22,7 +22,7 @@
     }
     $statement2 = $db->prepare("SELECT * FROM client_description WHERE client_id = $client_id");
     $statement2->execute();
-    while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
     {
         $about_me = $row2['about_me'];
         $my_goals = $row2['my_goals'];
