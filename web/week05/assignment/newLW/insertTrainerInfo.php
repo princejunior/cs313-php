@@ -12,7 +12,7 @@
 <?php require 'navBarLW.php';?>
 
 <?php
-    echo $customer_id;
+    // echo $customer_id;
     $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $customer_id");
     $statement1->execute();
     while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
