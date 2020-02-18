@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $speciality = $_POST['speciality'];
 $customer_type = 'trainer';
-$profile_img_url = 'https://polar-waters-71288.herokuapp.com/week05/assignment/photos_LW/defaultImg.png';
+$profile_img_url = 'https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/photos_LW/defaultImg.png';
 require("dbConnect.php");
 $db = get_db();
 try
@@ -19,7 +19,7 @@ try
 	$statement1->bindValue(':customer_type', $customer_type);
 	$statement1->execute();
 	$customerId = $db->lastInsertId("customer_id_seq");
-	
+	$_SESSION['customerId'];
 	echo $customerId;
 	$query2 = 'INSERT INTO trainer (customer_id, first_name, last_name, speciality,profile_img_url) VALUES (:customer_id, :first, :last, :speciality, :profile_img_url)';
 	$statement2 = $db->prepare($query2);
@@ -38,7 +38,7 @@ try
 	$statement3->execute();
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
-	$_SESSION['customer_id'] = $customerId;
+	// $_SESSION['customer_id'] = $customerId;
 	$_SESSION['customer_type'] = $customer_type;	
 	// $userId = $db->lastInsertId("trainer_id_seq");
 }
