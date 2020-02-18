@@ -13,7 +13,7 @@
 
 <?php
     $id = $_GET['id'];
-    $statement1 = $db->prepare("SELECT * FROM trainer WHERE cutomer_id = $id");
+    $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $id");
     $statement1->execute();
     while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
     {
@@ -23,7 +23,7 @@
       $profile_img_url = $row1['profile_img_url'];
       $speciality = $row1['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $client_id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
     $statement2->execute();
     while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
     {
