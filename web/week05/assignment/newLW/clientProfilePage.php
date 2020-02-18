@@ -2,7 +2,7 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    $id = $_SESSION['id'];
+    $customer_id = $_SESSION['customer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,14 +27,11 @@
 
 <?php
     // $id = $_GET['id'];
-    $statement = $db->prepare("SELECT * FROM client WHERE customer_id = $id");
+    $statement = $db->prepare("SELECT * FROM client WHERE customer_id = $customer_id");
     $statement->execute();
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      // The variable "row" now holds the complete record for that
-      // row, and we can access the different values based on their
-      // name
       $first_name = $row['first_name'];
       $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
@@ -42,7 +39,7 @@
 ?>
 <section class="probootstrap-intro probootstrap-intro-inner">
         <div class="container">
-            <a href='editTrainerProfile.php?id=<?php echo $id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
+            <a href='editClientProfile.php?customer_id=<?php echo $customer_id?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Profile</button></a>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>

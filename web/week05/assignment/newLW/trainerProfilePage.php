@@ -3,7 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     // $trainerData = NULL;
-    $customer_id = $_SESSION['id'];
+    $customer_id = $_SESSION['customer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +33,8 @@
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
       $id = $row['id'];
-      $firstName = $row['first_name'];
-      $lastName = $row['last_name'];
+      $first_name = $row['first_name'];
+      $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
@@ -56,8 +56,8 @@
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
           <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn" style="color:rgb(255, 255, 255);">
-            <span><?php echo $firstName;?></span>
-            <?php echo $lastName;?>  
+            <span><?php echo $first_name;?></span>
+            <?php echo $last_name;?>  
           </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2 style="color:rgb(255, 255, 255);">Personal Trainer</a></h2>
