@@ -2,7 +2,7 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    // $trainerData = NULL;
+    $trainerData = NULL;
     $customer_id = $_SESSION['customer_id'];
 ?>
 <!DOCTYPE html>
