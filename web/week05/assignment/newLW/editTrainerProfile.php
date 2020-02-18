@@ -13,22 +13,23 @@
 
 <?php
     $id = $_GET['id'];
-    $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
-    $statement->execute();
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    $statement1 = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+    $statement1->execute();
+    while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $first_name = $row['first_name'];
-      $last_name = $row['last_name'];
-      $profile_img_url = $row['profile_img_url'];
-      $speciality = $row['speciality'];
+      $trainer_id = $row1['id'];
+      $first_name = $row1['first_name'];
+      $last_name = $row1['last_name'];
+      $profile_img_url = $row1['profile_img_url'];
+      $speciality = $row1['speciality'];
     }
-    $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
-    $statement->execute();
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $client_id");
+    $statement2->execute();
+    while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $name = $row['name'];
-      $profile_img_url = $row['profile_img_url'];
-      $speciality = $row['speciality'];
+        $about_me = $row2['about_me'];
+        $my_mission = $row2['my_mission'];
+        $my_vision = $row2['my_vision'];
     }
 ?>
   <!-- Accessed from trainer id -->
@@ -60,22 +61,15 @@
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
                 </div>
-                <?php 
-                  $aboutMe = "The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.";
-                ?>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <textarea  class="inputVision" placeholder="<?php echo $aboutMe;?>" rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" rows="4" cols="50"><?php echo $about_me;?></textarea>
                 </div>
             </div>
-            <?php 
-              $myMission = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.";
-            ?>
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <textarea  class="inputVision" name="my_mission" value="<?php echo $myMission;?>" rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" name="my_mission" <?php echo $myMission;?> rows="4" cols="50"><?php echo $my_mission;?></textarea>
                     </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Upcoming Events</h4>
@@ -109,12 +103,9 @@
                         </li>
                     </ul>
                 </div>
-                <?php 
-                  $myVision = "The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.";
-                ?>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea  class="inputVision" name="my_vision" value="<?php echo $myVision;?>" rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" name="my_vision" rows="4" cols="50"><?php echo $my_vision;?></textarea>
                 </div>
             </div>
         </div>
