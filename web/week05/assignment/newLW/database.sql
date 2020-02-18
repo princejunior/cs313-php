@@ -149,7 +149,12 @@ INSERT INTO customer (email
                   VALUES ( '11@gmail.com'
                          , '1234567'
                          , 'trainer');  
-
+INSERT INTO customer (email
+                         , password
+                         , customer_type) 
+                  VALUES ( '12@gmail.com'
+                         , '1234567'
+                         , 'trainer');  
 -- ----------------------------------------------- --
 -- --------- POPULATE THE TRAINER TABLE --------- --
 -- ----------------------------------------------- --
@@ -164,13 +169,23 @@ INSERT INTO trainer ( customer_id
                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
                         , 'Core Strengthening and HIIT')
                         ;
-
 INSERT INTO trainer ( customer_id
                         , first_name
                         , last_name
                         , profile_img_url
                         ,speciality) 
                  VALUES (2
+                        ,'Paige'
+                        , 'Bartlett'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'
+                        ,'HyperTrophy'
+                        );
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url
+                        ,speciality) 
+                 VALUES (3
                         ,'Spencer'
                         , 'Serranilla'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -181,7 +196,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (3 
+                 VALUES (7 
                         ,'Elijah'
                         ,'Elliott'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg'
@@ -193,7 +208,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (7 
+                 VALUES (8 
                         ,'Elon'
                         , 'Musk'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -203,7 +218,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (8 
+                 VALUES (9 
                         ,'Bill'
                         ,'Gates'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -213,7 +228,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (9 
+                 VALUES (10
                         ,'Pete' 
                         ,'the Pilot'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -224,7 +239,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (10 
+                 VALUES (11 
                         ,'Jeff' 
                         ,'Bezos'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -235,7 +250,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (11 
+                 VALUES (12 
                         ,'Meghan'
                         , 'Hutson'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -281,6 +296,15 @@ INSERT INTO client ( customer_id
                           , 'fsdjfkj'
                           , 'jnkjn'
                           );  
+INSERT INTO client ( customer_id
+                        ,first_name
+                        ,last_name
+                        , profile_img_url) 
+                   VALUES (2
+                          ,'Paige'
+                          , 'Bartlett'
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'
+                          );  
 
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
@@ -298,7 +322,16 @@ INSERT INTO trainer_description(
        and hiit training. It’s the most rewarding job watching people realize they can do hard things. '
        , 'I want to help you gain confidence and strength as we work together achieving your fitness and nutrition goals.'
        , 'By the end of one of my programs, you will be a new person.' );
-
+INSERT INTO trainer_description(
+         trainer_id   
+       , about_me   
+       , my_mission  
+       , my_vision)
+       VALUES (2
+       , 'My name is Paige Bartlett! My fitness journey began back in high school when I developed an eating disorder due to severe body dysmorphia and lack of confidence in my body. I have a Bachelors of science in Public Health, a NASM cpt, and am currently working on a nutrition certification. Remember, I am on your team and will always be your biggest fan in your positive transformation!'
+       , 'I empower women with confidence in the best version of themselves through weightlifting'
+       , 'Helping you find your sweet spot in imperfect perfection; pushing yourself past what you thought was possible but embracing yourself when you need grace on the rough days.'
+       );
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
 -- ----------------------------------------------- -- 
