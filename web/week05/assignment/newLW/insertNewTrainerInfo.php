@@ -11,7 +11,7 @@ require("dbConnect.php");
 $db = get_db();
 try
 {
-	$query1 = 'INSERT INTO trainer_desscription (trainer_id, about_me, my_mission, my_vision) VALUES (:trainer_id, :about_me, :my_mission, :my_vision)' ;
+	$query1 = 'INSERT INTO trainer_description (trainer_id, about_me, my_mission, my_vision) VALUES (:trainer_id, :about_me, :my_mission, :my_vision)' ;
     $statement1 = $db->prepare($query1);
 	$statement1->bindValue(':trainer_id', $trainer_id);    
 	$statement1->bindValue(':about_me', $about_me);
