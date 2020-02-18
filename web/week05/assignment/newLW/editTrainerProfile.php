@@ -2,8 +2,8 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    $trainerData = NULL;
-    // $id = $_GET['id'];
+    // $trainerData = NULL;
+    $id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +12,16 @@
 <?php require 'navBarLW.php';?>
 
 <?php
-    $id = $_GET['id'];
-    $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $id");
+    $statement1 = $db->prepare("SELECT * FROM trainer WHERE id = $id");
     $statement1->execute();
     while ($row1 = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $trainer_id = $row1['id'];
       $first_name = $row1['first_name'];
       $last_name = $row1['last_name'];
       $profile_img_url = $row1['profile_img_url'];
       $speciality = $row1['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
     $statement2->execute();
     while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
     {
