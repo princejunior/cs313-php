@@ -409,10 +409,10 @@ INSERT INTO content ( trainer_id
                      ) 
                   VALUES (2
                          , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                         , 'Program-8 week hypertrophy'
+                         , 50.00
                          , 'Beginner'
-                         , '3 Month leg Workout');  
+                         , 'Program-8 week Hypertrophy');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -421,11 +421,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpeg'
+                         , 'Program-12 week fullbody dumbbell workouts '
+                         , 50.00
                          , 'Beginner'
-                         , '3 Month Hypertrophey Workout');  
+                         , 'Program-12 week fullbody dumbbell workouts ');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -434,11 +434,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'                         
+                         , 'Program-12 week strength/power'
                          , 20.00
                          , 'Beginner'
-                         , '3 Month Power Lifting Workout');  
+                         , 'Program-12 week strength/power');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -447,11 +447,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_4.jpeg'                         
+                         , '30 min'
+                         , 25.00
                          , 'Beginner'
-                         , '3 Month Abs Workout');  
+                         , '30 min');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -460,11 +460,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett.jpeg'                         
+                         , '60 min'
+                         , 45.00
                          , 'Beginner'
-                         , '3 Month Yoga Workout');  
+                         , '60 mint');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -473,7 +473,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -513,42 +513,42 @@ INSERT INTO client_order_content_items (client_order_id
                                 , content_item_id) 
                          VALUES ( 1
                                 , 1);    
-\echo '*********************List all customer info*********************'
-SELECT * FROM customer;
-\echo '*********************List all trainer names*********************'
-SELECT first_name, last_name FROM trainer;
-\echo '****************List trainer names name, id, customer_id, profile_img_url****************'
-SELECT * FROM trainer;
-\echo '************************List  all clients************************'
-SELECT * FROM client;
-\echo '************************List  all trainer_description************************'
-SELECT * FROM trainer_description;
+-- \echo '*********************List all customer info*********************'
+-- SELECT * FROM customer;
+-- \echo '*********************List all trainer names*********************'
+-- SELECT first_name, last_name FROM trainer;
+-- \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
+-- SELECT * FROM trainer;
+-- \echo '************************List  all clients************************'
+-- SELECT * FROM client;
+-- \echo '************************List  all trainer_description************************'
+-- SELECT * FROM trainer_description;
 -- \echo '************************List  all clients orders************************'
 -- SELECT * FROM client_order;
 -- \echo '************************List  all trainers items************************'
 -- SELECT * FROM content_items;
 -- \echo '************************List  all clients orders of trainer items************************'
 -- SELECT * FROM client_order_content_items;
-\echo '************************view customer info of trainer************************'
-SELECT c.id     AS "Customer ID"
-     , email      AS "eamil"
-     , password     AS "Password"
-     , customer_type AS "Type"
-     , t.first_name           AS "Trainer's First Name"
-     , t.last_name           AS "Trainer's Last Name"
-     , t.profile_img_url AS "Picture URL"
-   FROM       customer      c 
-   right JOIN trainer        t ON c.id  = t.customer_id;
-\echo '************************view customer info of clients************************'
-   SELECT c.id     AS "Customer ID"
-     , email      AS "eamil"
-     , password     AS "Password"
-     , customer_type AS "Type"
-     , cl.first_name      AS "Client's First Name"
-     , cl.last_name      AS "Client's Last Name"
-     , cl.profile_img_url AS "Picture URL"
-   FROM       customer      c 
-   right JOIN client        cl ON c.id  = cl.customer_id;   
+-- \echo '************************view customer info of trainer************************'
+-- SELECT c.id     AS "Customer ID"
+--      , email      AS "eamil"
+--      , password     AS "Password"
+--      , customer_type AS "Type"
+--      , t.first_name           AS "Trainer's First Name"
+--      , t.last_name           AS "Trainer's Last Name"
+--      , t.profile_img_url AS "Picture URL"
+--    FROM       customer      c 
+--    right JOIN trainer        t ON c.id  = t.customer_id;
+-- \echo '************************view customer info of clients************************'
+--    SELECT c.id     AS "Customer ID"
+--      , email      AS "eamil"
+--      , password     AS "Password"
+--      , customer_type AS "Type"
+--      , cl.first_name      AS "Client's First Name"
+--      , cl.last_name      AS "Client's Last Name"
+--      , cl.profile_img_url AS "Picture URL"
+--    FROM       customer      c 
+--    right JOIN client        cl ON c.id  = cl.customer_id;   
 -- \echo '************************view customer info of trainers************************'
 --    SELECT co.id     AS "Content ID"
 --      , post_img_url  AS "post_img_url"
