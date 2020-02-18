@@ -15,10 +15,9 @@
         $my_vision_2 = $row['my_vision'];
     }
     if ($about_me_1 != $about_me_2){
-        $query1 = 'UPDATE client_description SET about_me=$about_me_1  WHERE client_id = $client_id';
+        $query1 = "UPDATE client_description SET about_me='$about_me_1'  WHERE client_id = $client_id";
         $update1 = $db->prepare($query1);
-	    $update1->bindValue(':email', $email);
-
+	    // $update1->bindValue(':email', $email);
         $update1->execute();
     } 
     if ($my_mission_1 != $my_mission_2){
