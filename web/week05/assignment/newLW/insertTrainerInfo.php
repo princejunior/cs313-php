@@ -22,9 +22,8 @@
         $last_name = $row1['last_name'];
         $profile_img_url = $row1['profile_img_url'];
         $speciality = $row1['speciality'];
-        $_SESSION['trainer_id'];
     }
-        
+    $_SESSION['trainer_id'];
 ?>
   <!-- Accessed from trainer id -->
 <form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="post"> 

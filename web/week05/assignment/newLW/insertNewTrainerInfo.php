@@ -1,6 +1,6 @@
 <?php
 	session_start();
-// retrieve POST data from the other page
+
 $about_me = $_POST['about_me'];
 $my_mission = $_POST['my_mission'];
 $my_vision = $_POST['my_vision'];
