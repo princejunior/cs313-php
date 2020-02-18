@@ -408,7 +408,7 @@ INSERT INTO content ( trainer_id
                      , title 
                      ) 
                   VALUES (2
-                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
+                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpg'
                          , 'Program-8 week hypertrophy'
                          , 50.00
                          , 'Beginner'
@@ -421,7 +421,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpeg'
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpg'
                          , 'Program-12 week fullbody dumbbell workouts '
                          , 50.00
                          , 'Beginner'
@@ -460,11 +460,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett.jpeg'                         
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett.jpg'                         
                          , '60 min'
                          , 45.00
                          , 'Beginner'
-                         , '60 mint');  
+                         , '60 min');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
