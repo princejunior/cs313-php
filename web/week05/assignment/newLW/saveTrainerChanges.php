@@ -14,24 +14,28 @@
         $my_mission_2 = $row['my_mission'];
         $my_vision_2 = $row['my_vision'];
     }
-    if ($about_me_1 != $about_me_2){
-        $query1 = "UPDATE trainer_description SET about_me='$about_me_1'  WHERE client_id = $trainer_id";
-        // $query1 = 'UPDATE trainer_description SET about_me=$about_me_1  WHERE trainer_id = $trainer_id';
-        $update1 = $db->prepare($query1);
-	    $update1->bindValue(':email', $email);
-
-        $update1->execute();
-    } 
-    if ($my_mission_1 != $my_mission_2){
-        $query2 = 'UPDATE trainer_description SET my_mission=$my_mission_1  WHERE trainer_id = $trainer_id';
-        $update2 = $db->prepare($query2);
-        $update2->execute();
-    }
-    if ($my_vision_1 != $my_vision_2){
-        $query3 = 'UPDATE trainer_description SET my_vision=my_vision_1  WHERE trainer_id = $trainer_id';
-        $update3 = $db->prepare($query3);
-        $update3->execute();
-    }
+    $query1 = "UPDATE trainer_description SET about_me='$about_me_1', my_mission='$my_mission_1', my_vision='$my_vision_1' WHERE client_id = $trainer_id";
+    $update1 = $db->prepare($query1);
+	// $update1->bindValue(':email', $email);
+    $update1->execute();
+    
+    // if ($about_me_1 != $about_me_2){
+    //     $query1 = "UPDATE trainer_description SET about_me='$about_me_1'  WHERE client_id = $trainer_id";
+    //     // $query1 = 'UPDATE trainer_description SET about_me=$about_me_1  WHERE trainer_id = $trainer_id';
+    //     $update1 = $db->prepare($query1);
+	//     $update1->bindValue(':email', $email);
+    //     $update1->execute();
+    // } 
+    // if ($my_mission_1 != $my_mission_2){
+    //     $query2 = 'UPDATE trainer_description SET my_mission=$my_mission_1  WHERE trainer_id = $trainer_id';
+    //     $update2 = $db->prepare($query2);
+    //     $update2->execute();
+    // }
+    // if ($my_vision_1 != $my_vision_2){
+    //     $query3 = 'UPDATE trainer_description SET my_vision=my_vision_1  WHERE trainer_id = $trainer_id';
+    //     $update3 = $db->prepare($query3);
+    //     $update3->execute();
+    // }
 } catch (Exception $ex)
 {
     echo "Error with DB. Details: $ex";
