@@ -54,6 +54,16 @@
        </div>
      </div>
   </footer>  
-  <script src="trainer/js/scripts.min.js"></script>
-  <script src="trainer/js/main.min.js"></script>
-  <script src="trainer/js/custom.js"></script>
+  <?php 
+    if ($_GET['trainer_id'] != NULL) { ?>
+      <script src="trainer/js/scripts.min.js"></script>
+      <script src="trainer/js/main.min.js"></script>
+      <script src="trainer/js/custom.js"></script>
+<?php
+    } else { ?>
+      <script src="../trainer/js/scripts.min.js"></script>
+      <script src="../trainer/js/main.min.js"></script>
+      <script src="../trainer/js/custom.js"></script>
+<?php
+    }
+?>
