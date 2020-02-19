@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea class="inputVision" name="my_vision" rows="4" cols="50"><?php echo $my_vision;?></textarea>
+                    <textarea class="inputVision" name="my_vision" rows="4" cols="30"><?php echo $my_vision;?></textarea>
                 </div>
             </div>
         </div>
