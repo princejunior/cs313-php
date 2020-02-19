@@ -155,6 +155,7 @@
                 <h3><?php echo $post_title;?></h3>
                 <p>$<?php echo $post_price;?></p>
                 <p><?php echo $post_description;?></p>
+                <button><a href="" >Book Now</a></button>
               </div>
             </div>
             <?php } ?>  
