@@ -1,13 +1,12 @@
 <?php
 	session_start();
-
-$about_me = $_POST['about_me'];
-$my_mission = $_POST['my_mission'];
-$my_vision = $_POST['my_vision'];
-// $customer_id = $_SESSION['customer_id'];
-$customer_id = $_SESSION['customer_id'];
-require("dbConnect.php");
-$db = get_db();
+	require("dbConnect.php");
+	$db = get_db();
+	$about_me = $_POST['about_me'];
+	$my_mission = $_POST['my_mission'];
+	$my_vision = $_POST['my_vision'];
+	$customer_id = $_SESSION['customer_id'];
+	echo $customer_id;
 try
 {
     $statement = $db->prepare("SELECT id FROM trainer WHERE customer_id = $customer_id");
@@ -30,7 +29,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: trainerProfilePage.php/?customer_id=$customerId");
+header("Location: trainerProfilePage.php/?customer_id=$customer_id");
 
 die(); 
 ?>

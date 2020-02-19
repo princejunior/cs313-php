@@ -14,7 +14,7 @@ try
         $customer_id = $row['id'];
         $password2 = $row['password'];
         $customer_type = $row['customer_type'];
-        $_SESSION['id'] = $customer_id;
+        $_SESSION['customer_id'] = $customer_id;
     }
     if($password1 != $password2){
         echo "Password does not match!";
