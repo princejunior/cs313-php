@@ -33,7 +33,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: trainerProfilePage.php/?customer_id=$customer_id");
+header("Location: ../trainerProfilePage.php/?customer_id=$customer_id");
 
 die(); 
 ?>
