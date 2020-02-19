@@ -3,6 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     $_SESSION['customer_type'];
+    $trainer_id = $_GET['trainer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +27,8 @@
 <body>
 <?php require 'navBarLW.php'?>
 <?php
-  $id = $_GET['id'];
-  $statement = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+  // $id = $_GET['id'];
+  $statement = $db->prepare("SELECT * FROM trainer WHERE id = $trainer_id");
   $statement->execute();
   while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
     $first_name = $row['first_name'];
@@ -35,7 +36,7 @@
     $profile_img_url = $row['profile_img_url'];
     $speciality = $row['speciality'];
   }
-  $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+  $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
   $statement2->execute();
   while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
     $about_me = $row2['about_me'];
@@ -73,12 +74,7 @@
         </div>
         <div class="col-md-6">
           <h2 class="probootstrap-heading">About Me</h2>
-          
             <?php echo $about_me;?>
-         
-          <!-- <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
-          <!-- <p><a href="#" class="btn btn-primary">Read more about me</a></p> -->
         </div>
       </div>
       <div class="row probootstrap-gutter60">
@@ -87,7 +83,6 @@
           <div>
             <?php echo $my_mission;?>
           </div>
-          <!-- <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”</p> -->
         </div>
         <div class="col-md-4 mb30">
           <h4 class="mb30">Upcoming Events</h4>
@@ -126,7 +121,6 @@
           <div>
             <?php echo $my_vision;?>
           </div>
-          <!-- <p>“The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.”</p> -->
         </div>
       </div>
     </div>

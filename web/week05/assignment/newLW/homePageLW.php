@@ -54,7 +54,7 @@
                     $last_name = $row['last_name'];
                     $profile_img_url = $row['profile_img_url'];
                     $speciality = $row['speciality'];
-                    $id = $row['id'];?>
+                    $trainer_id = $row['id'];?>
                     <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
                         <div class="card mb-4 box-shadow">
                             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
@@ -66,7 +66,7 @@
                                     Description</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
+                                        <a href='profilePageLW.php?customer_id=<?php echo $customer_id?> trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
                                         <!-- <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button> -->
                                     </div>
                                 </div> 
