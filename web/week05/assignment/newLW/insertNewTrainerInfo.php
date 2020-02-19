@@ -2,10 +2,10 @@
 	session_start();
 	require("dbConnect.php");
 	$db = get_db();
-	$about_me = $_POST['about_me'];
-	$my_mission = $_POST['my_mission'];
-	$my_vision = $_POST['my_vision'];
-	$customer_id = $_GET['customer_id'];
+	$about_me = htmlspecialchars($_POST["about_me"]);
+	$my_mission = htmlspecialchars($_POST['my_mission']);
+	$my_vision = htmlspecialchars($_POST['my_vision']);
+	$customer_id = htmlspecialchars($_GET['customer_id']);
 	echo $customer_id;
 try
 {
