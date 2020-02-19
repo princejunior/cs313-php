@@ -14,6 +14,15 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
             <!-- ../homePageLW.php -->
+            <?php 
+                if ($_SESSION['customer_type'] == 'client' || $_SESSION['customer_type'] == 'trainer') { ?>
+                    <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $_SESSION['customer_id'];?>">Home</a></li>
+            <?php
+                } else { ?>
+                    <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Home</a></li> 
+            <?php
+                }
+            ?>
                 <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $_SESSION['customer_id'];?>">Home</a></li>
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Nutrionist</a></li>
