@@ -1,7 +1,7 @@
 <?php 
     session_start();
-    echo $_SESSION['customer_id'];
-    // $customer_id = $_GET['customer_id'];
+    // echo $_SESSION['customer_id'];
+    $customer_id = $_GET['customer_id'];
 ?>
 <nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
     <div class="container-fluid">
@@ -18,7 +18,7 @@
             <!-- ../homePageLW.php -->
             <?php 
                 if ($_SESSION['customer_type'] == 'client' || $_SESSION['customer_type'] == 'trainer') { ?>
-                    <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $_SESSION['customer_id'];?>">Home</a></li>
+                    <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $customer_id;?>">Home</a></li>
             <?php
                 } else { ?>
                     <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Home</a></li> 
