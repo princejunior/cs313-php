@@ -49,7 +49,7 @@
 <form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="POST"> 
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <input type="submit" name="Submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true">Save Changes</span>
+            <button type="submit" name="Submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Save Changes</button>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
