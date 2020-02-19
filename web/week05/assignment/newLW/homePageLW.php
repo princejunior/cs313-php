@@ -55,7 +55,13 @@
                     $last_name = $row['last_name'];
                     $profile_img_url = $row['profile_img_url'];
                     $speciality = $row['speciality'];
-                    $trainer_id = $row['id'];?>
+                    $trainer_id = $row['id']; 
+                    $statement2 = $db->prepare("SELECT my_mission FROM trainer_description WHERE trainer_id = $trainer_id");
+                    $statement2->execute();
+                    while ($row2 = $statement->fetch(PDO::FETCH_ASSOC)){
+                            $my_mission = $row2['my_mission'];                        
+                        ?>
+                   
                     <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
                         <div class="card mb-4 box-shadow">
                             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
@@ -64,7 +70,8 @@
                                 <h3 class="card-title"><?php echo $first_name . ' '. $last_name;?></h3>
                                 <h5 class="card-title"><?php echo $speciality;?></h5>
                                 <p class="card-text">
-                                    Description</p>
+                                   <?php echo $my_mission;?>
+                                </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                     <?php 
@@ -84,7 +91,7 @@
                         </div>
                     </div>
                 <?php
-                    }
+                    }}
                 ?>
             </div>
         </div>
