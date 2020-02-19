@@ -7,7 +7,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<?php require 'head.php'?>
+<!-- <head>
   <title>Live W.O.W.</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +23,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- To add and clear items from booking/cart -->
   <!-- <script type="text/javascript" src=".../jquery.min.js"></script> -->
-</head>
+</head> -->
 <body>
 <?php require 'navBarLW.php'?>
 <main role="main">
