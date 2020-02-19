@@ -25,7 +25,7 @@
             <?php
                 }
             ?>
-                <!-- <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $_SESSION['customer_id'];?>">Home</a></li> -->
+                <!-- <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $customer_id;?>">Home</a></li> -->
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Nutrionist</a></li>
                 <li><a href="#">Physical Therapist</a></li>
@@ -54,10 +54,10 @@
                     </ul>
                 </li>
                 <?php if($_SESSION['customer_type'] == 'trainer'){?>
-                    <li><a href="../trainerProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    <li><a href="../trainerProfilePage.php/?customer_id=<?php echo $customer_id;?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php 
                     } else if ($_SESSION['customer_type'] == 'client') { ?>
-                        <li><a href="../clientProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="../clientProfilePage.php/?customer_id=<?php echo $customer_id;?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php
                     } else { ?>
                         <li><a href="loginPage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
