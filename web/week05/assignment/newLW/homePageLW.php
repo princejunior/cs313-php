@@ -59,7 +59,8 @@
                     $statement2 = $db->prepare("SELECT my_mission FROM trainer_description WHERE trainer_id = $trainer_id");
                     $statement2->execute();
                     while ($row2 = $statement->fetch(PDO::FETCH_ASSOC)){
-                            $my_mission = $row2['my_mission'];                        
+                            $my_mission = $row2['my_mission'];
+                    }                        
                         ?>
                    
                     <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
@@ -91,7 +92,7 @@
                         </div>
                     </div>
                 <?php
-                    }}
+                    }
                 ?>
             </div>
         </div>
