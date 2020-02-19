@@ -1,8 +1,8 @@
 <?php
-    $about_me_1 = $_POST['about_me'];
-    $my_mission_1 = $_POST['my_mission'];
-    $my_vision_1 = $_POST['my_vision'];
-    $customer_id = $_SESSION['id'];
+    $about_me_1 = htmlspecialchars($_POST["about_me"]);
+	$my_mission_1 = htmlspecialchars($_POST['my_mission']);
+	$my_vision_1 = htmlspecialchars($_POST['my_vision']);
+	$customer_id = htmlspecialchars($_GET['customer_id']);
     try{
     $statement = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = 
     (Select id FROM trainer WHERE customer_id = $customer_id)");
@@ -41,6 +41,6 @@
     echo "Error with DB. Details: $ex";
 	die();
 }
-    header("Location: trainerProfilePage.php/?id=$customer_id");
+    header("Location: ../trainerProfilePage.php/?customer_id=$customer_id");
     die();
 ?>
