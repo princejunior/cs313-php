@@ -71,7 +71,7 @@
                                             <a href='../profilePageLW.php?customer_id=<?php echo $customer_id?>&trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary">View Profile</button></a>
                                     <?php
                                         } else { ?>
-                                             <a href='/profilePageLW.php?trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary">View Profile</button></a>
+                                             <a href='profilePageLW.php?trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary">View Profile</button></a>
                                     <?php
                                         }
                                     ?>
