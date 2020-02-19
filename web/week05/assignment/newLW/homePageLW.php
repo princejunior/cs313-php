@@ -66,7 +66,7 @@
                                     Description</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href='profilePageLW.php?customer_id=<?php echo $customer_id?> trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
+                                        <a href='../profilePageLW.php?customer_id=<?php echo $customer_id?> trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
                                         <!-- <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button> -->
                                     </div>
                                 </div> 
