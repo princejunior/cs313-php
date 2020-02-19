@@ -138,35 +138,30 @@
       </div>
       <div class="row">
         <div class="col-md-12 probootstrap-relative">
-          <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
-                <?php
-                  echo "it stops after this";
-                  $statement3 = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
-                  $statement3->execute();
-                  while ($row3 = $statement3->fetch(PDO::FETCH_ASSOC)){
-                    $post_img_url = $row3['post_img_url'];
-                    $post_description = $row3['post_description'];
-                    $post_price = $row3['post_price'];
-                    $post_difficulty = $row3['difficulty'];
-                    $post_title = $row3['title'];
-                ?>
-                  <div class="item">
-                    <div class="probootstrap-program">
-                      <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
-                      <h3><?php echo $post_title;?></h3>
-                      <p>$<?php echo $post_price;?></p>
-                      <p><?php echo $post_description;?></p>
-                    </div>
-                  </div>
-                <?php
-                  }
-                ?>  
+            <?php
+              $statement3 = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
+              $statement3->execute();
+              while ($row3 = $statement3->fetch(PDO::FETCH_ASSOC)){
+                $post_img_url = $row3['post_img_url'];
+                $post_description = $row3['post_description'];
+                $post_price = $row3['post_price'];
+                $post_difficulty = $row3['difficulty'];
+                $post_title = $row3['title'];
+            ?>
+            <div class="item">
+              <div class="probootstrap-program">
+                <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
+                <h3><?php echo $post_title;?></h3>
+                <p>$<?php echo $post_price;?></p>
+                <p><?php echo $post_description;?></p>
               </div>
             </div>
+            <?php } ?>  
           </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </section>
 </main>
 <?php require 'footer.php';?>
