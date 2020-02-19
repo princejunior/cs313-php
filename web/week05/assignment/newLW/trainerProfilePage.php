@@ -68,10 +68,10 @@
     <span class="probootstrap-animate fadeInUp probootstrap-animated">
         <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
     </span>
-  </section>
+</section>
   <!-- END: section -->
-  <main>
-    <section id="next-section" class="probootstrap-section">
+<main>
+  <section id="next-section" class="probootstrap-section">
         <div class="container">
             <a href='../editTrainerProfile.php/?customer_id=<?php echo $customer_id;?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Content</button></a>
             <div class="row probootstrap-gutter60 mb50">
@@ -174,7 +174,7 @@
         </div>
       </div> 
   </section>
-    <section class="probootstrap-section probootstrap-border-top">
+    <!-- <section class="probootstrap-section probootstrap-border-top">
       <div class="container">
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
@@ -396,7 +396,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
   <footer class="probootstrap-footer">
       <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
