@@ -2,6 +2,7 @@ DROP TABLE client_order_content_items;
 DROP TABLE client_order;
 DROP TABLE content_items;
 DROP TABLE content;
+DROP TABLE client_description;
 DROP TABLE trainer_description;
 DROP TABLE trainer_client;
 DROP TABLE trainer;
@@ -41,6 +42,14 @@ Create TABLE trainer_description
         trainer_id   INT           NOT NULL REFERENCES trainer(id)
        , about_me    VARCHAR(1000)  NOT NULL
        , my_mission  VARCHAR(500)  NOT NULL
+       , my_vision   VARCHAR(500)  NOT NULL         
+);
+
+Create TABLE client_description
+(      
+        client_id    INT           NOT NULL REFERENCES trainer(id)
+       , about_me    VARCHAR(1000) NOT NULL
+       , my_goals    VARCHAR(500)  NOT NULL
        , my_vision   VARCHAR(500)  NOT NULL         
 );
 
@@ -149,7 +158,12 @@ INSERT INTO customer (email
                   VALUES ( '11@gmail.com'
                          , '1234567'
                          , 'trainer');  
-
+INSERT INTO customer (email
+                         , password
+                         , customer_type) 
+                  VALUES ( '12@gmail.com'
+                         , '1234567'
+                         , 'trainer');  
 -- ----------------------------------------------- --
 -- --------- POPULATE THE TRAINER TABLE --------- --
 -- ----------------------------------------------- --
@@ -164,13 +178,23 @@ INSERT INTO trainer ( customer_id
                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/jessica_Gunn_hori.jpeg'
                         , 'Core Strengthening and HIIT')
                         ;
-
 INSERT INTO trainer ( customer_id
                         , first_name
                         , last_name
                         , profile_img_url
                         ,speciality) 
                  VALUES (2
+                        ,'Paige'
+                        , 'Bartlett'
+                        , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2_horiz.jpg'
+                        ,'HyperTrophy'
+                        );
+INSERT INTO trainer ( customer_id
+                        , first_name
+                        , last_name
+                        , profile_img_url
+                        ,speciality) 
+                 VALUES (3
                         ,'Spencer'
                         , 'Serranilla'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -181,7 +205,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (3 
+                 VALUES (7 
                         ,'Elijah'
                         ,'Elliott'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwPose.jpg'
@@ -193,7 +217,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (7 
+                 VALUES (8 
                         ,'Elon'
                         , 'Musk'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -203,7 +227,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (8 
+                 VALUES (9 
                         ,'Bill'
                         ,'Gates'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -213,7 +237,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (9 
+                 VALUES (10
                         ,'Pete' 
                         ,'the Pilot'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -224,7 +248,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality) 
-                 VALUES (10 
+                 VALUES (11 
                         ,'Jeff' 
                         ,'Bezos'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -235,7 +259,7 @@ INSERT INTO trainer ( customer_id
                         , last_name
                         , profile_img_url
                         ,speciality)
-                 VALUES (11 
+                 VALUES (12 
                         ,'Meghan'
                         , 'Hutson'
                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
@@ -281,6 +305,15 @@ INSERT INTO client ( customer_id
                           , 'fsdjfkj'
                           , 'jnkjn'
                           );  
+INSERT INTO client ( customer_id
+                        ,first_name
+                        ,last_name
+                        , profile_img_url) 
+                   VALUES (2
+                          ,'Paige'
+                          , 'Bartlett'
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'
+                          );  
 
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
@@ -298,7 +331,16 @@ INSERT INTO trainer_description(
        and hiit training. It’s the most rewarding job watching people realize they can do hard things. '
        , 'I want to help you gain confidence and strength as we work together achieving your fitness and nutrition goals.'
        , 'By the end of one of my programs, you will be a new person.' );
-
+INSERT INTO trainer_description(
+         trainer_id   
+       , about_me   
+       , my_mission  
+       , my_vision)
+       VALUES (2
+       , 'My name is Paige Bartlett! My fitness journey began back in high school when I developed an eating disorder due to severe body dysmorphia and lack of confidence in my body. I have a Bachelors of science in Public Health, a NASM cpt, and am currently working on a nutrition certification. Remember, I am on your team and will always be your biggest fan in your positive transformation!'
+       , 'I empower women with confidence in the best version of themselves through weightlifting'
+       , 'Helping you find your sweet spot in imperfect perfection; pushing yourself past what you thought was possible but embracing yourself when you need grace on the rough days.'
+       );
 -- ----------------------------------------------- --
 -- ---------- POPULATE THE  Content ---------- --
 -- ----------------------------------------------- -- 
@@ -375,11 +417,11 @@ INSERT INTO content ( trainer_id
                      , title 
                      ) 
                   VALUES (2
-                         , 'https://polar-waters-71288.herokuapp.com/week03/assignment/photos_LW/lwrussiantwist.jpg'
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                         , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpg'
+                         , 'Program-8 week hypertrophy'
+                         , 50.00
                          , 'Beginner'
-                         , '3 Month leg Workout');  
+                         , 'Program-8 week Hypertrophy');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -388,11 +430,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_2.jpg'
+                         , 'Program-12 week fullbody dumbbell workouts '
+                         , 50.00
                          , 'Beginner'
-                         , '3 Month Hypertrophey Workout');  
+                         , 'Program-12 week fullbody dumbbell workouts ');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -401,11 +443,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'                         
+                         , 'Program-12 week strength/power'
                          , 20.00
                          , 'Beginner'
-                         , '3 Month Power Lifting Workout');  
+                         , 'Program-12 week strength/power');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -414,11 +456,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_4.jpeg'                         
+                         , '30 min'
+                         , 25.00
                          , 'Beginner'
-                         , '3 Month Abs Workout');  
+                         , '30 min');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -427,11 +469,11 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
-                         , 'gjhgjhgjhgj'
-                         , 20.00
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett.jpg'                         
+                         , '60 min'
+                         , 45.00
                          , 'Beginner'
-                         , '3 Month Yoga Workout');  
+                         , '60 min');  
 INSERT INTO content (trainer_id  
                      , post_img_url       
                      , post_description   
@@ -440,7 +482,7 @@ INSERT INTO content (trainer_id
                      , title  
                      ) 
                   VALUES (2
-                         , ''
+                          , 'https://polar-waters-71288.herokuapp.com/week05/assignment/trainerProfilePicture/paige_bartlett_3.jpeg'                         
                          , 'gjhgjhgjhgj'
                          , 20.00
                          , 'Beginner'
@@ -480,42 +522,42 @@ INSERT INTO client_order_content_items (client_order_id
                                 , content_item_id) 
                          VALUES ( 1
                                 , 1);    
-\echo '*********************List all customer info*********************'
-SELECT * FROM customer;
-\echo '*********************List all trainer names*********************'
-SELECT first_name, last_name FROM trainer;
-\echo '****************List trainer names name, id, customer_id, profile_img_url****************'
-SELECT * FROM trainer;
-\echo '************************List  all clients************************'
-SELECT * FROM client;
-\echo '************************List  all trainer_description************************'
-SELECT * FROM trainer_description;
+-- \echo '*********************List all customer info*********************'
+-- SELECT * FROM customer;
+-- \echo '*********************List all trainer names*********************'
+-- SELECT first_name, last_name FROM trainer;
+-- \echo '****************List trainer names name, id, customer_id, profile_img_url****************'
+-- SELECT * FROM trainer;
+-- \echo '************************List  all clients************************'
+-- SELECT * FROM client;
+-- \echo '************************List  all trainer_description************************'
+-- SELECT * FROM trainer_description;
 -- \echo '************************List  all clients orders************************'
 -- SELECT * FROM client_order;
 -- \echo '************************List  all trainers items************************'
 -- SELECT * FROM content_items;
 -- \echo '************************List  all clients orders of trainer items************************'
 -- SELECT * FROM client_order_content_items;
-\echo '************************view customer info of trainer************************'
-SELECT c.id     AS "Customer ID"
-     , email      AS "eamil"
-     , password     AS "Password"
-     , customer_type AS "Type"
-     , t.first_name           AS "Trainer's First Name"
-     , t.last_name           AS "Trainer's Last Name"
-     , t.profile_img_url AS "Picture URL"
-   FROM       customer      c 
-   right JOIN trainer        t ON c.id  = t.customer_id;
-\echo '************************view customer info of clients************************'
-   SELECT c.id     AS "Customer ID"
-     , email      AS "eamil"
-     , password     AS "Password"
-     , customer_type AS "Type"
-     , cl.first_name      AS "Client's First Name"
-     , cl.last_name      AS "Client's Last Name"
-     , cl.profile_img_url AS "Picture URL"
-   FROM       customer      c 
-   right JOIN client        cl ON c.id  = cl.customer_id;   
+-- \echo '************************view customer info of trainer************************'
+-- SELECT c.id     AS "Customer ID"
+--      , email      AS "eamil"
+--      , password     AS "Password"
+--      , customer_type AS "Type"
+--      , t.first_name           AS "Trainer's First Name"
+--      , t.last_name           AS "Trainer's Last Name"
+--      , t.profile_img_url AS "Picture URL"
+--    FROM       customer      c 
+--    right JOIN trainer        t ON c.id  = t.customer_id;
+-- \echo '************************view customer info of clients************************'
+--    SELECT c.id     AS "Customer ID"
+--      , email      AS "eamil"
+--      , password     AS "Password"
+--      , customer_type AS "Type"
+--      , cl.first_name      AS "Client's First Name"
+--      , cl.last_name      AS "Client's Last Name"
+--      , cl.profile_img_url AS "Picture URL"
+--    FROM       customer      c 
+--    right JOIN client        cl ON c.id  = cl.customer_id;   
 -- \echo '************************view customer info of trainers************************'
 --    SELECT co.id     AS "Content ID"
 --      , post_img_url  AS "post_img_url"

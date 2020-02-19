@@ -3,7 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     // $trainerData = NULL;
-    $customer_id = $_SESSION['id'];
+    $customer_id = $_GET['customer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,13 +32,13 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $id = $row['id'];
-      $firstName = $row['first_name'];
-      $lastName = $row['last_name'];
+      $trainer_id = $row['id'];
+      $first_name = $row['first_name'];
+      $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
     $statement2->execute();
     while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
     {
@@ -56,8 +56,8 @@
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
           <h1 class="probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn" style="color:rgb(255, 255, 255);">
-            <span><?php echo $firstName;?></span>
-            <?php echo $lastName;?>  
+            <span><?php echo $first_name;?></span>
+            <?php echo $last_name;?>  
           </h1>
           <div class="probootstrap-subtitle probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">
             <h2 style="color:rgb(255, 255, 255);">Personal Trainer</a></h2>
@@ -68,12 +68,12 @@
     <span class="probootstrap-animate fadeInUp probootstrap-animated">
         <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
     </span>
-  </section>
+</section>
   <!-- END: section -->
-  <main>
-    <section id="next-section" class="probootstrap-section">
+<main>
+  <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <a href='../editTrainerProfile.php/?id=<?php echo $_SESSION['id']?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Content</button></a>
+            <a href='../editTrainerProfile.php/?customer_id=<?php echo $customer_id;?>' class="probootstrap-owl-navigation absolute right"><button><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit Content</button></a>
             <div class="row probootstrap-gutter60 mb50">
             <div class="col-md-6">
           <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -148,7 +148,7 @@
           <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
                 <?php
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                     $post_img_url = $row['post_img_url'];
@@ -174,7 +174,7 @@
         </div>
       </div> 
   </section>
-    <section class="probootstrap-section probootstrap-border-top">
+    <!-- <section class="probootstrap-section probootstrap-border-top">
       <div class="container">
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
@@ -396,66 +396,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
-  <footer class="probootstrap-footer">
-      <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
-      <div class="container">
-      <div class="row mb50">
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget">
-            <h4>About The Site</h4>
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli. <a href="#">Learn More</a></p>
-          </div>
-        </div>
-        <div class="col-md-3 col-md-push-1">
-          <div class="probootstrap-footer-widget">
-            <h4>Gym Hours</h4>
-            <ul class="probootstrap-footer-link">
-              <li>Week Days: 05:00 – 22:00</li>
-              <li>Saturday: CLOSED</li>
-              <li>Sunday: 05:00 - 22:00</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-5 col-md-push-1">
-          <div class="probootstrap-footer-widget">
-            <h4>Links</h4>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-            <ul class="probootstrap-footer-link float">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Join The Club</a></li>
-              <li><a href="#">Pricing</a></li>
-            </ul>
-          </div>
-          <div class="probootstrap-footer-widget">
-            <h4>Contact Info</h4>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
-            </ul>
-          </div>
-        </div>        
-      </div>
-       <div class="row">
-         <div class="col-md-12 text-center border-top">
-           <p class="mb0">© Copyright 2017 <a href="https://uicookies.com/">uiCookies:Trainer</a>. All Rights Reserved. <br> Designed by <a href="https://uicookies.com">uicookies.com</a> Demo Images Unsplash.com &amp; Pexels.com</p>
-         </div>
-       </div>
-     </div>
-  </footer>  
-  <script src="../trainer/js/scripts.min.js"></script>
-  <script src="../trainer/js/main.min.js"></script>
-  <script src="../trainer/js/custom.js"></script>
+  <?php require 'footer.php';?> 
 </body>
 </html>

@@ -7,22 +7,18 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<?php require 'head.php'?>
+<!-- <head>
   <title>Live W.O.W.</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <!-- Inside folder -->
   <link rel="stylesheet" type="text/css" href="homePageStlye.css">
-  <!-- Linking BootStrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Creates a drop down menu for cart -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- To add and clear items from booking/cart -->
-  <!-- <script type="text/javascript" src=".../jquery.min.js"></script> -->
-</head>
+</head> -->
 <body>
 <?php require 'navBarLW.php'?>
 <main role="main">
@@ -54,7 +50,14 @@
                     $last_name = $row['last_name'];
                     $profile_img_url = $row['profile_img_url'];
                     $speciality = $row['speciality'];
-                    $id = $row['id'];?>
+                    $trainer_id = $row['id']; 
+                    $statement2 = $db->prepare("SELECT my_mission FROM trainer_description WHERE trainer_id = $trainer_id");
+                    $statement2->execute();
+                    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
+                            $my_mission = $row2['my_mission'];
+                    }                        
+                        ?>
+                   
                     <div class="col-md-4" style="margin-bottom: 25px;" id=<?php echo "trainers[".$i."]"?>>
                         <div class="card mb-4 box-shadow">
                             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
@@ -63,10 +66,20 @@
                                 <h3 class="card-title"><?php echo $first_name . ' '. $last_name;?></h3>
                                 <h5 class="card-title"><?php echo $speciality;?></h5>
                                 <p class="card-text">
-                                    Description</p>
+                                   <?php echo $my_mission;?>
+                                </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href='profilePageLW.php?id=<?php echo $id?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a>
+                                    <?php 
+                                        if ($customer_id != NULL) { ?>
+                                            <a href='../profilePageLW.php?customer_id=<?php echo $customer_id?>&trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary">View Profile</button></a>
+                                    <?php
+                                        } else { ?>
+                                             <a href='profilePageLW.php?trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary">View Profile</button></a>
+                                    <?php
+                                        }
+                                    ?>
+                                        <!-- <a href='../profilePageLW.php?customer_id=<?php echo $customer_id?>&trainer_id=<?php echo $trainer_id;?>'><button class="btn btn-primary" value="<?php echo $id?>">View Profile</button></a> -->
                                         <!-- <button class="btn btn-primary" value="<?php echo $id;?>">Add to Book</button> -->
                                     </div>
                                 </div> 
@@ -80,5 +93,6 @@
         </div>
     </div>
 </main>
+<?php require 'footer.php';?>
 </body>
 </html>

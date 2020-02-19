@@ -2,7 +2,7 @@
     session_start();
     require "dbConnect.php";
     $db = get_db();
-    // $trainerData = NULL;
+    $trainerData = NULL;
     $customer_id = $_GET['customer_id'];
 ?>
 <!DOCTYPE html>
@@ -12,27 +12,20 @@
 <?php require 'navBarLW.php';?>
 
 <?php
+    // echo $customer_id;
     $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $customer_id");
     $statement1->execute();
     while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
-      $trainer_id = $row1['id'];
-      $first_name = $row1['first_name'];
-      $last_name = $row1['last_name'];
-      $profile_img_url = $row1['profile_img_url'];
-      $speciality = $row1['speciality'];
+        $trainer_id = $row1['trainer_id'];
+        $first_name = $row1['first_name'];
+        $last_name = $row1['last_name'];
+        $profile_img_url = $row1['profile_img_url'];
+        $speciality = $row1['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
-    $statement2->execute();
-    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
-    {
-        $about_me = $row2['about_me'];
-        $my_mission = $row2['my_mission'];
-        $my_vision = $row2['my_vision'];
-    }
+    
 ?>
   <!-- Accessed from trainer id -->
-<!-- <form action="../saveTrainerChanges.php/?customer_id=<?php echo $customer_id;?>" method="post">  -->
 <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
@@ -53,7 +46,7 @@
 </section>
   <!-- END: section -->
   <main>
-<form action="../saveTrainerChanges.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
+<form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="POST"> 
     <section id="next-section" class="probootstrap-section">
         <div class="container">
             <button type="submit" name="Submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Save Changes</button>
@@ -63,17 +56,17 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <textarea  class="inputVision" name="about_me" rows="4" cols="50"><?php echo $about_me;?></textarea>
+                    <textarea  class="inputVision" value="about_me" name="about_me"rows="4" cols="50"></textarea>
                 </div>
             </div>
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <textarea  class="inputVision" name="my_mission" <?php echo $myMission;?> rows="4" cols="50"><?php echo $my_mission;?></textarea>
+                    <textarea  class="inputVision" value="my_mission" name="my_mission" rows="4" cols="50"></textarea>
                     </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Upcoming Events</h4>
-                    <ul class="probootstrap-blog-list">
+                    <!-- <ul class="probootstrap-blog-list">
                         <li>
                             <a href="#">
                                 <figure class="probootstrap-image"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -101,65 +94,32 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea class="inputVision" name="my_vision" rows="4" cols="30"><?php echo $my_vision;?></textarea>
+                    <textarea  class="inputVision" value="my_vision" name="my_vision" rows="4" cols="50"></textarea>
                 </div>
             </div>
         </div>
     </section>
     </form>
+    <?php 
+        if (isset($_POST['Submit'])) {
+            $_POST['about_me'];
+            $_POST['my_mission'];
+            $_POST['my_vision'];
+        }
+    ?>
+
+
     <section id="next-section" class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 probootstrap-relative">
-          <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-          <ul class="probootstrap-owl-navigation absolute right">
-            <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
-            <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 probootstrap-relative">
-          <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
-          <div class="owl-carousel owl-carousel-carousel">
-                <?php
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
-                  $statement->execute();
-                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                    $post_img_url = $row['post_img_url'];
-                    $post_description = $row['post_description'];
-                    $post_price = $row['post_price'];
-                    $post_difficulty = $row['difficulty'];
-                    $post_title = $row['title'];
-                ?>
-                  <div class="item">
-                    <div class="probootstrap-program">
-                      <a href="#"><img src="<?php echo $post_img_url;?>" alt="<?php echo $post_title;?>" class="img-responsive img-rounded"></a>
-                      <h3><?php echo $post_title;?></h3>
-                      <p>$<?php echo $post_price;?></p>
-                      <p><?php echo $post_description;?></p>
-                    </div>
-                  </div>
-                <?php
-                  }
-                ?>  
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> 
-  </section>
-    <!-- <section id="next-section" class="probootstrap-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
             <div>
               <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-              <a href='editTrainerProfile.php/?customer_id=<?php echo $customer_id?>' class="probootstrap-heading absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+              <a href='editTrainerProfile.php/?id=<?php echo $id?>' class="probootstrap-heading absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
             </div>  
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
@@ -280,8 +240,8 @@
           </div>
         </div>
       </div>
-    </section> -->
-<!-- </form> -->
+    </section>
+
 </main>
   <?php require 'footer.php';?>
 </body>
