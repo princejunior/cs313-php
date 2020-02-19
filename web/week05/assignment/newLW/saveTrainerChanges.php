@@ -17,7 +17,7 @@
             $my_mission_2 = $row['my_mission'];
             $my_vision_2 = $row['my_vision'];
         }
-        $query1 = "UPDATE trainer_description SET about_me='$about_me_1', my_mission='$my_mission_1', my_vision='$my_vision_1' WHERE client_id = $trainer_id";
+        $query1 = "UPDATE trainer_description SET about_me='$about_me_1', my_mission='$my_mission_1', my_vision='$my_vision_1' WHERE trainer_id = $trainer_id";
         $update1 = $db->prepare($query1);
 	    // $update1->bindValue(':email', $email);
         $update1->execute();
