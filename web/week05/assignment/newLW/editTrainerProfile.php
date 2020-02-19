@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <textarea  class="inputVision" name="my_about" rows="4" cols="50"><?php echo $about_me;?></textarea>
+                    <textarea  class="inputVision" name="about_me" rows="4" cols="50"><?php echo $about_me;?></textarea>
                 </div>
             </div>
             <div class="row probootstrap-gutter60">
