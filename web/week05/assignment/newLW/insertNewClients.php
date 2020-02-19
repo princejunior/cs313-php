@@ -16,12 +16,12 @@
 	$statement1->bindValue(':password', $password);
 	$statement1->bindValue(':customer_type', $customer_type);
 	$statement1->execute();
-	$customerId = $db->lastInsertId("customer_id_seq");
-	$_SESSION['customer_id'] = $customerId;
+	$customer_id = $db->lastInsertId("customer_id_seq");
+	$_SESSION['customer_id'] = $customer_id;
 	echo $customerId;
 	$query2 = 'INSERT INTO client (customer_id, first_name, last_name) VALUES (:customer_id, :first, :last)';
 	$statement2 = $db->prepare($query2);
-	$statement2->bindValue(':customer_id', $customerId);
+	$statement2->bindValue(':customer_id', $customer_id);
 	$statement2->bindValue(':first', $first);
 	$statement2->bindValue(':last', $last);
 	$statement2->execute();
@@ -33,6 +33,6 @@
 		echo "Error with DB. Details: $ex";
 		die();
 	}
-	header("Location: clientProfilePage.php/?customer_id=$customerId");
+	header("Location: clientProfilePage.php/?customer_id=$customer_id");
 	die(); 
 ?>

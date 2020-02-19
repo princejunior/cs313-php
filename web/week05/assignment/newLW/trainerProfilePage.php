@@ -32,13 +32,13 @@
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-      $id = $row['id'];
+      $trainer_id = $row['id'];
       $first_name = $row['first_name'];
       $last_name = $row['last_name'];
       $profile_img_url = $row['profile_img_url'];
       $speciality = $row['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
     $statement2->execute();
     while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
     {
@@ -148,7 +148,7 @@
           <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
                 <?php
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                     $post_img_url = $row['post_img_url'];

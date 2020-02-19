@@ -2,7 +2,7 @@
     $about_me_1 = $_POST['about_me'];
     $my_goals_1 = $_POST['my_goals'];
     $my_vision_1 = $_POST['my_vision'];
-    $customer_id = $_SESSION['id'];
+    $customer_id = $_SESSION['customer_id'];
     try{
     $statement = $db->prepare("SELECT * FROM client_description WHERE client_id = 
     (Select id FROM client WHERE customer_id = $customer_id)");

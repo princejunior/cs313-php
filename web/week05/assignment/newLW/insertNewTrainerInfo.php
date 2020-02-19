@@ -26,10 +26,6 @@ try
 }
 catch (Exception $ex)
 {
-	echo 'dfgljadshfjklasdjklf';
-	echo $_GET['customer_id'];
-	echo $_SESSION['customer_id'];
-	echo $customer_id;
 	echo "Error with DB. Details: $ex";
 	die();
 }

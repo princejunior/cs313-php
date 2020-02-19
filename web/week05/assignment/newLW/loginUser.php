@@ -22,10 +22,10 @@ try
     } else {
         $_SESSION['customer_type'] = $customer_type;
         if($customer_type == 'trainer'){
-            header("Location: trainerProfilePage.php/?id=$customer_id");
+            header("Location: trainerProfilePage.php/?customer_id=$customer_id");
             die(); 
         } else {
-            header("Location: editClientProfile.php/?customer_id=$customer_id");
+            header("Location: clientProfilePage.php/?customer_id=$customer_id");
             die(); 
         }  
     }
@@ -36,6 +36,5 @@ catch (Exception $ex)
     echo "email is not found";
 	die();
 }
-// header("Location: trainerProfilePage.php/?id=$userId");
 die(); 
 ?>

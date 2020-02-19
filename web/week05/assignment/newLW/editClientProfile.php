@@ -10,8 +10,8 @@
 <body>
 <?php require 'navBarLW.php';?>
 <?php
-    $id = $_GET['customer_id'];
-    $statement1 = $db->prepare("SELECT * FROM client WHERE customer_id = $id");
+    $customer_id = $_GET['customer_id'];
+    $statement1 = $db->prepare("SELECT * FROM client WHERE customer_id = $customer_id");
     $statement1->execute();
     while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
@@ -30,7 +30,7 @@
     }
 ?>
   <!-- Accessed from trainer id -->
-<form action="../saveClientChanges.php/?id=<?php echo $id;?>" method="post"> 
+<form action="../saveClientChanges.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
   <main>
     <section id="next-section" class="probootstrap-section">
         <div class="container">
