@@ -5,7 +5,7 @@
 	$about_me = $_POST['about_me'];
 	$my_mission = $_POST['my_mission'];
 	$my_vision = $_POST['my_vision'];
-	$customer_id = $_SESSION['customer_id'];
+	$customer_id = $_GET['customer_id'];
 	echo $customer_id;
 try
 {
@@ -26,6 +26,8 @@ try
 }
 catch (Exception $ex)
 {
+	echo 'dfgljadshfjklasdjklf';
+	echo $_GET['customer_id'];
 	echo $_SESSION['customer_id'];
 	echo $customer_id;
 	echo "Error with DB. Details: $ex";
