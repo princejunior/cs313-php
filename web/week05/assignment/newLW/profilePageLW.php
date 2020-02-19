@@ -141,7 +141,7 @@
           <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
                 <?php
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Beginner'");
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                     $post_img_url = $row['post_img_url'];
