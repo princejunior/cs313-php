@@ -141,14 +141,14 @@
           <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
                 <?php
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
-                  $statement->execute();
-                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-                    $post_img_url = $row['post_img_url'];
-                    $post_description = $row['post_description'];
-                    $post_price = $row['post_price'];
-                    $post_difficulty = $row['difficulty'];
-                    $post_title = $row['title'];
+                  $statement3 = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
+                  $statement3->execute();
+                  while ($row3 = $statement3->fetch(PDO::FETCH_ASSOC)){
+                    $post_img_url = $row3['post_img_url'];
+                    $post_description = $row3['post_description'];
+                    $post_price = $row3['post_price'];
+                    $post_difficulty = $row3['difficulty'];
+                    $post_title = $row3['title'];
                 ?>
                   <div class="item">
                     <div class="probootstrap-program">
