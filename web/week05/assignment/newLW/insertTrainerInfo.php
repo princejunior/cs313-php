@@ -26,7 +26,6 @@
     
 ?>
   <!-- Accessed from trainer id -->
-<form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
 <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
@@ -47,9 +46,10 @@
 </section>
   <!-- END: section -->
   <main>
+<form action="../insertNewTrainerInfo.php/?customer_id=<?php echo $customer_id;?>" method="POST"> 
     <section id="next-section" class="probootstrap-section">
         <div class="container">
-            <input type="submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true">Save Changes</span>
+            <input type="submit" name="Submit" class="probootstrap-owl-navigation absolute right"><span class="glyphicon glyphicon-edit" aria-hidden="true">Save Changes</span>
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure><img src="<?php echo $profile_img_url;?>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
@@ -103,6 +103,16 @@
             </div>
         </div>
     </section>
+    </form>
+    <?php 
+        if (isset($_POST['Submit'])) {
+            $_POST['about_me'];
+            $_POST['my_mission'];
+            $_POST['my_vision'];
+        }
+    ?>
+
+
     <section id="next-section" class="probootstrap-section">
       <div class="container">
         <div class="row">
@@ -231,7 +241,7 @@
         </div>
       </div>
     </section>
-</form>
+
 </main>
   <?php require 'footer.php';?>
 </body>
