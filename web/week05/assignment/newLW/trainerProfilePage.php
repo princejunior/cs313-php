@@ -3,7 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     // $trainerData = NULL;
-    $customer_id = $_SESSION['customer_id'];
+    $customer_id = $_GET['customer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
