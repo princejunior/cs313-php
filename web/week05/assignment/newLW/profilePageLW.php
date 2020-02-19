@@ -141,6 +141,7 @@
           <!-- <div class="owl-carousel owl-carousel-carousel owl-theme owl-loaded"> -->
           <div class="owl-carousel owl-carousel-carousel">
                 <?php
+                  echo "it stops after this";
                   $statement3 = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Beginner'");
                   $statement3->execute();
                   while ($row3 = $statement3->fetch(PDO::FETCH_ASSOC)){
