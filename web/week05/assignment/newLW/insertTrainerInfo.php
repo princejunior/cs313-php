@@ -56,13 +56,13 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="probootstrap-heading">About Me</h2>
-                    <textarea  class="inputVision" name="about_me"rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" value="about_me" name="about_me"rows="4" cols="50"></textarea>
                 </div>
             </div>
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <textarea  class="inputVision" name="my_mission" rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" value="my_mission" name="my_mission" rows="4" cols="50"></textarea>
                     </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Upcoming Events</h4>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Vision</h4>
-                    <textarea  class="inputVision" name="my_vision" rows="4" cols="50"></textarea>
+                    <textarea  class="inputVision" value="my_vision" name="my_vision" rows="4" cols="50"></textarea>
                 </div>
             </div>
         </div>
