@@ -58,7 +58,7 @@
                     $trainer_id = $row['id']; 
                     $statement2 = $db->prepare("SELECT my_mission FROM trainer_description WHERE trainer_id = $trainer_id");
                     $statement2->execute();
-                    while ($row2 = $statement->fetch(PDO::FETCH_ASSOC)){
+                    while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC)){
                             $my_mission = $row2['my_mission'];
                     }                        
                         ?>
