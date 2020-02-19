@@ -33,6 +33,6 @@
 		echo "Error with DB. Details: $ex";
 		die();
 	}
-	header("Location: clientProfilePage.php/?customer_id=$customer_id");
+	header("Location: insertClientInfo.php/?customer_id=$customer_id");
 	die(); 
 ?>
