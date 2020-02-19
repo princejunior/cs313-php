@@ -1,3 +1,6 @@
+<?php 
+    // $customer_id = $_GET['customer_id'];
+?>
 <nav class="navbar navbar-inverse" style="margin-bottom: 0px" >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -11,7 +14,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
             <!-- ../homePageLW.php -->
-                <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php">Home</a></li>
+                <li class="active"><a href="https://polar-waters-71288.herokuapp.com/week05/assignment/newLW/homePageLW.php/?customer_id=<?php echo $_SESSION['customer_id'];?>">Home</a></li>
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Nutrionist</a></li>
                 <li><a href="#">Physical Therapist</a></li>
