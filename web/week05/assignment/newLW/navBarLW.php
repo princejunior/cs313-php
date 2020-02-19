@@ -43,10 +43,10 @@
                     </ul>
                 </li>
                 <?php if($_SESSION['customer_type'] == 'trainer'){?>
-                    <li><a href="trainerProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    <li><a href="../trainerProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php 
                     } else if ($_SESSION['customer_type'] == 'client') { ?>
-                        <li><a href="clientProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="../clientProfilePage.php/?customer_id=<?php echo $_SESSION['customer_id'];?>"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                 <?php
                     } else { ?>
                         <li><a href="loginPage.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
