@@ -3,7 +3,7 @@
     require "dbConnect.php";
     $db = get_db();
     // $trainerData = NULL;
-    $id = $_GET['id'];
+    $customer_id = $_GET['customer_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +12,17 @@
 <?php require 'navBarLW.php';?>
 
 <?php
-    $statement1 = $db->prepare("SELECT * FROM trainer WHERE id = $id");
+    $statement1 = $db->prepare("SELECT * FROM trainer WHERE customer_id = $customer_id");
     $statement1->execute();
     while ($row1 = $statement1->fetch(PDO::FETCH_ASSOC))
     {
+      $trainer_id = $row1['id'];
       $first_name = $row1['first_name'];
       $last_name = $row1['last_name'];
       $profile_img_url = $row1['profile_img_url'];
       $speciality = $row1['speciality'];
     }
-    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $id");
+    $statement2 = $db->prepare("SELECT * FROM trainer_description WHERE trainer_id = $trainer_id");
     $statement2->execute();
     while ($row2 = $statement2->fetch(PDO::FETCH_ASSOC))
     {
@@ -31,7 +32,7 @@
     }
 ?>
   <!-- Accessed from trainer id -->
-<form action="../saveTrainerChanges.php/?id=<?php echo $id;?>" method="post"> 
+<form action="../saveTrainerChanges.php/?customer_id=<?php echo $customer_id;?>" method="post"> 
 <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(&quot;<?php echo $profile_img_url;?>&quot;); background-position: 0px 0px;" data-stellar-background-ratio="0.5"> 
   <div class="container">
       <div class="row">
@@ -114,7 +115,7 @@
           <div class="col-md-12 probootstrap-relative">
             <div>
               <h2 class="probootstrap-heading mt0 mb50">Programs (For Beginners)</h2>
-              <a href='editTrainerProfile.php/?id=<?php echo $id?>' class="probootstrap-heading absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
+              <a href='editTrainerProfile.php/?customer_id=<?php echo $customer_id?>' class="probootstrap-heading absolute right"><button><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Programs</button></a>            
             </div>  
             <ul class="probootstrap-owl-navigation absolute right">
               <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
@@ -266,7 +267,7 @@
                 </div>
                 <?php
                   
-                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $id AND difficulty = 'Intermediate'");
+                  $statement = $db->prepare("SELECT * FROM content WHERE trainer_id = $trainer_id AND difficulty = 'Intermediate'");
                   $statement->execute();
                   // Go through each result
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
